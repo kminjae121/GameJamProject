@@ -66,7 +66,7 @@ public class Enemy : Entity
             _currentTime += Time.deltaTime;
             if(_currentTime > showTextTime && !_hasPlayedTween)
             {
-                _hasPlayedTween=true;
+                _hasPlayedTween =true;
                 if (transform.position.x >= 0)
                 {
                     rightText.transform.DOScale(0.2f, 0.4f).SetEase(Ease.OutBounce);
@@ -79,19 +79,17 @@ public class Enemy : Entity
                 }
 
                 await Awaitable.WaitForSecondsAsync(1.5f);
+                rightText.transform.DOScale(0, 0.1f).SetEase(Ease.OutBounce);
+               leftText.transform.DOScale(0, 0.1f).SetEase(Ease.OutBounce);
 
-                if (_hasPlayedTween)
-                {
-                    rightText.transform.DOScale(0, 0.4f).SetEase(Ease.OutBounce);
-                    leftText.transform.DOScale(0, 0.4f).SetEase(Ease.OutBounce);
-                }
-                _currentTime = 0;
-                _hasPlayedTween = false;
-                _textCount++;
-                if (_textCount >= enemyTextList.text.Count)
-                {
-                    _textCount = 0;
-                }
+                    _currentTime = 0;
+           
+                    if (_textCount >= enemyTextList.text.Count)
+                    {
+                        _textCount = 0;
+                    }
+                    _textCount++;
+                    _hasPlayedTween = false;
             }
         }
     }
