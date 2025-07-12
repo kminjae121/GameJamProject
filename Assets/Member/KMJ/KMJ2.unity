@@ -575,6 +575,7 @@ MonoBehaviour:
   arrowObject: {fileID: 1629546484}
   projectilePrefab: {fileID: 7775947042608301330, guid: 653ec31778dcf3646a1aeecc71a07faa, type: 3}
   projectileParent: {fileID: 0}
+  coolTime: 0.1
   atkDamage: {fileID: 11400000, guid: 8e752a7d143f1e3418ceb31782255fbb, type: 2}
   atkcoolTime: {fileID: 11400000, guid: 7ad0fc27040596e49bd916076bdb2581, type: 2}
   _atkDamage: 0
@@ -1408,31 +1409,6 @@ MonoBehaviour:
   OnDeadEvent:
     m_PersistentCalls:
       m_Calls: []
-      m_Calls:
-      - m_Target: {fileID: 434353698}
-        m_TargetAssemblyTypeName: Member.KMin._00_Scene._01_Code.Feedbacks.PlayerDeadFeedback,
-          Assembly-CSharp
-        m_MethodName: CreateFeedback
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1565706502 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3585555839800109612, guid: d75c9679122792549a79fb973f039bc3, type: 3}
-  m_PrefabInstance: {fileID: 7143797622024623505}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f07877a51b7040740bd9efc5171db2b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1629546484
 GameObject:
   m_ObjectHideFlags: 0
@@ -2178,7 +2154,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1441701404709347972, guid: d24ebb21579c53c4cbe93de1e08a78cc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2139719157}
   m_SourcePrefab: {fileID: 100100000, guid: d24ebb21579c53c4cbe93de1e08a78cc, type: 3}
 --- !u!4 &2139719151 stripped
 Transform:
@@ -2201,6 +2180,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58b58d68c7361a040b57f276c8e9da2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &2139719157
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139719152}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 29add1c2ba214d744863ec45ba5a9d5a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &5672869442405482013
 PrefabInstance:
   m_ObjectHideFlags: 0
