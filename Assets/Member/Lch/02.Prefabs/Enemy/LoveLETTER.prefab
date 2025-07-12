@@ -51,6 +51,9 @@ MonoBehaviour:
   - stat: {fileID: 11400000, guid: eb2b424c4f843ab4c9719e67e94e1fdd, type: 2}
     isUseOverride: 1
     overrideValue: 100
+  - stat: {fileID: 11400000, guid: 8e752a7d143f1e3418ceb31782255fbb, type: 2}
+    isUseOverride: 1
+    overrideValue: 1
 --- !u!1 &1307019053080452457
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,6 +205,7 @@ MonoBehaviour:
   OnDeadEvent:
     m_PersistentCalls:
       m_Calls: []
+  attackDamageStat: {fileID: 11400000, guid: 8e752a7d143f1e3418ceb31782255fbb, type: 2}
 --- !u!1 &5694370444621881821
 GameObject:
   m_ObjectHideFlags: 0
