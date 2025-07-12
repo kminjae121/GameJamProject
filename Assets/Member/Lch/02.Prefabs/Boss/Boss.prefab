@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 713144792557457076, guid: 1f292344645a3104281b5351358df12f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -104,8 +104,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1f292344645a3104281b5351358df12f, type: 2}
+  m_sharedMaterial: {fileID: 713144792557457076, guid: 1f292344645a3104281b5351358df12f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -223,6 +223,7 @@ MonoBehaviour:
   rbCompo: {fileID: 2624964775331698954}
   moveSpeedStat: {fileID: 11400000, guid: 8525b9349a0b0d44e93f7845a06e05e5, type: 2}
   isLoveLetter: 0
+  <_moveSpeed>k__BackingField: 0
 --- !u!1 &4685360802548681178
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,8 +298,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7933266790940036821}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -346,7 +347,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 82adc4ad744faad40b62cfa2388732f1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -433,9 +434,9 @@ Transform:
   m_GameObject: {fileID: 6698126820870276548}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.5, y: 0.56, z: 0}
-  m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 0.099999994}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -2.32, y: 0.56, z: 0}
+  m_LocalScale: {x: 0.15, y: 0.099999994, z: 0.099999994}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2326137210610978505}
   m_Father: {fileID: 7933266790940036821}
@@ -555,7 +556,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 713144792557457076, guid: 1f292344645a3104281b5351358df12f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -599,8 +600,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1f292344645a3104281b5351358df12f, type: 2}
+  m_sharedMaterial: {fileID: 713144792557457076, guid: 1f292344645a3104281b5351358df12f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -911,12 +912,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statOverrides:
-  - stat: {fileID: 11400000, guid: 4dd32b34ad910a74782ee5a7a3258403, type: 2}
+  - stat: {fileID: 11400000, guid: 8525b9349a0b0d44e93f7845a06e05e5, type: 2}
     isUseOverride: 1
-    overrideValue: 2
+    overrideValue: 1
   - stat: {fileID: 11400000, guid: eb2b424c4f843ab4c9719e67e94e1fdd, type: 2}
     isUseOverride: 1
-    overrideValue: 500
+    overrideValue: 1500
   - stat: {fileID: 11400000, guid: 8e752a7d143f1e3418ceb31782255fbb, type: 2}
     isUseOverride: 1
     overrideValue: 5
@@ -946,8 +947,8 @@ Transform:
   m_GameObject: {fileID: 8050230242981983465}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.46, y: 0.557, z: 0}
-  m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 0.099999994}
+  m_LocalPosition: {x: 2.18, y: 0.557, z: 0}
+  m_LocalScale: {x: 0.15, y: 0.099999994, z: 0.099999994}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 699082083138721528}

@@ -71,12 +71,12 @@ public class Boss : Entity
                 _hasPlayedTween = true;
                 if (transform.position.x >= 0)
                 {
-                    rightText.transform.DOScale(0.1f, 0.4f).SetEase(Ease.OutBounce);
+                    rightText.transform.DOScale(0.2f, 0.4f).SetEase(Ease.OutBounce);
                     rightMeshPro.text = enemyTextList.text[_textCount];
                 }
                 else
                 {
-                    leftText.transform.DOScale(0.1f, 0.4f).SetEase(Ease.OutBounce);
+                    leftText.transform.DOScale(0.2f, 0.4f).SetEase(Ease.OutBounce);
                     leftMeshPro.text = enemyTextList.text[_textCount];
                 }
 
@@ -95,12 +95,15 @@ public class Boss : Entity
         _currentSpawnerTime += Time.deltaTime;
         if(_currentSpawnerTime > spawnTime)
         {
-            int spawnEnemy = Random.Range(0, spawnDataList.datas.Count);
-            Vector3 spawnPos = Random.insideUnitCircle.normalized * radius;
+            for(int i = 0; i < 2; i++)
+            {
+                int spawnEnemy = Random.Range(0, spawnDataList.datas.Count);
+                Vector3 spawnPos = Random.insideUnitCircle.normalized * radius;
 
-            Enemy enemy = spawnDataList.datas[spawnEnemy].enemy;
-            enemy = Instantiate(enemy, spawnPos + transform.position, Quaternion.identity);
+                Enemy enemy = spawnDataList.datas[spawnEnemy].enemy;
+                enemy = Instantiate(enemy, spawnPos + transform.position, Quaternion.identity);
 
+            }
             _currentSpawnerTime = 0;
         }
     }
