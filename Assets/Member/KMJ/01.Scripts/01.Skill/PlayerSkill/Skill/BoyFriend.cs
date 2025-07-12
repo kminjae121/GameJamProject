@@ -1,16 +1,29 @@
 using UnityEngine;
 
-public class BoyFriend : MonoBehaviour
+public class BoyFriend : SkillCompo
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private GameObject _boyFriend;
+    
+    
+    public override void GetSkill()
     {
-        
+        _boyFriend.SetActive(true);    
+        base.GetSkill();
+    }
+    
+    
+    protected override void Skill()
+    {
+        base.Skill();
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void SkillFeedback()
     {
-        
+        base.SkillFeedback();
+    }
+
+    public override void EventDefault()
+    {
+        base.EventDefault();
     }
 }
