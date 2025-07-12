@@ -33,11 +33,12 @@ namespace Code.Player
             if (collision.collider.TryGetComponent(out IDamageable damageable))
             {
                 DamageData data = new DamageData();
+                Vector3 direction = (transform.position - Vector3.zero).normalized;
                 data.damage = projectileSO.attackDamage;
                 data.hitPoint = collision.contacts[0].point;
                 data.hitNormal = collision.contacts[0].normal;
-                damageable.ApplyDamage(data, data.hitNormal);
                 
+                damageable.ApplyDamage(data, direction);
                 Destroy(gameObject);
             }
         }
