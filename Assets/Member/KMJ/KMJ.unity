@@ -5952,7 +5952,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _skillSO: {fileID: 11400000, guid: d29a0a72c0158fe4eb327391554d62a9, type: 2}
   _skillCompo: {fileID: 1757113970}
-  _maxskillPoint: 1
+  _maxskillPoint: 2
   _skillimage: {fileID: 1846145662}
   modifierValue: 0
   _atkCompo: {fileID: 1972759462}
@@ -7643,10 +7643,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: boyFriend
       objectReference: {fileID: 0}
-    - target: {fileID: 1441701404709347972, guid: d24ebb21579c53c4cbe93de1e08a78cc, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5245768259739950751, guid: d24ebb21579c53c4cbe93de1e08a78cc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -7691,17 +7687,10 @@ PrefabInstance:
       propertyPath: _girlFriendTrans
       value: 
       objectReference: {fileID: 2133881814}
-    m_RemovedComponents:
-    - {fileID: 6880475288003333224, guid: d24ebb21579c53c4cbe93de1e08a78cc, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1441701404709347972, guid: d24ebb21579c53c4cbe93de1e08a78cc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1734103774}
-    - targetCorrespondingSourceObject: {fileID: 1441701404709347972, guid: d24ebb21579c53c4cbe93de1e08a78cc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1734103773}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d24ebb21579c53c4cbe93de1e08a78cc, type: 3}
 --- !u!4 &1734103768 stripped
 Transform:
@@ -7724,79 +7713,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58b58d68c7361a040b57f276c8e9da2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!50 &1734103773
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1734103769}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!61 &1734103774
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1734103769}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.524, y: 2}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1.524, y: 2}
-  m_EdgeRadius: 0
 --- !u!1 &1734470047
 GameObject:
   m_ObjectHideFlags: 0
@@ -10045,8 +9961,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   killCnt: 0
-  <_maxkillCnt>k__BackingField: 1
-  <modifilerKillValue>k__BackingField: 1
+  <_maxkillCnt>k__BackingField: 00000000000000000000000000000000000000000000000000000000
+  <modifilerKillValue>k__BackingField: 0
   <waitingTime>k__BackingField: 0
   <coin>k__BackingField: 2147483647
   _isWaiting: 0
