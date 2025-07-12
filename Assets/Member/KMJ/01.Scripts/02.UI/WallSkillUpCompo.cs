@@ -10,7 +10,7 @@ public class WallSkillUpCompo : SkillUpCompo
     {
         base.UpSkillLevel();
 
-            _barrier.transform.localScale += new Vector3(2, 2, 0);
+            _barrier.transform.localScale += new Vector3(1, 1, 0);
 
     }
 }
