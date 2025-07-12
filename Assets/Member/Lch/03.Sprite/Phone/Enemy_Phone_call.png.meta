@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 3f6154f667bc05945b48ce9ef0c953aa
+guid: bdf332280273e234bbbaceba34089f99
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -154866121147543294
-    second: pngfind.com-heart-silhouette-png-52885_0
+      213: -6518924324748271118
+    second: Enemy_Phone_call_0
+  - first:
+      213: -9118938127466122782
+    second: Enemy_Phone_call_1
+  - first:
+      213: 6736719050740611174
+    second: Enemy_Phone_call_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,7 +81,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pngfind.com-heart-silhouette-png-52885_0
+      name: Enemy_Phone_call_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 89
         y: 0
-        width: 1024
-        height: 769
+        width: 391
+        height: 346
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2011245551ec9ddf0800000000000000
-      internalID: -154866121147543294
+      spriteID: 2f1e9b98dd02885a0800000000000000
+      internalID: -6518924324748271118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Phone_call_1
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 345
+        width: 118
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e1bd975616037180800000000000000
+      internalID: -9118938127466122782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Phone_call_2
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 185
+        width: 110
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6683003b842ad7d50800000000000000
+      internalID: 6736719050740611174
       vertices: []
       indices: 
       edges: []
@@ -125,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pngfind.com-heart-silhouette-png-52885_0: -154866121147543294
+      Enemy_Phone_call_0: -6518924324748271118
+      Enemy_Phone_call_1: -9118938127466122782
+      Enemy_Phone_call_2: 6736719050740611174
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
