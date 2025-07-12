@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 32b3e780cc59bbb4c9e05f0de610ce5c
+guid: 9afb52ed4d714704e810d5806307d569
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6396061365311109393
-    second: Image_broken_heart_0
+      213: -154866121147543294
+    second: pngfind.com-heart-silhouette-png-52885_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 500
+  spritePixelsToUnits: 1500
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Image_broken_heart_0
+      name: pngfind.com-heart-silhouette-png-52885_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 500
-        height: 454
+        width: 1024
+        height: 769
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fe608077310ac37a0800000000000000
-      internalID: -6396061365311109393
+      spriteID: 2011245551ec9ddf0800000000000000
+      internalID: -154866121147543294
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Image_broken_heart_0: -6396061365311109393
+      pngfind.com-heart-silhouette-png-52885_0: -154866121147543294
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
