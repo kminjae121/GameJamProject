@@ -1,0 +1,467 @@
+fileFormatVersion: 2
+guid: 19fa78ab4e45ab2478b7509c03ad9c04
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7708817482508808163
+    second: Different Shape Message Bubbles Blue and Grey_0
+  - first:
+      213: 4868921779976664521
+    second: Different Shape Message Bubbles Blue and Grey_1
+  - first:
+      213: -6522087633330531924
+    second: Different Shape Message Bubbles Blue and Grey_2
+  - first:
+      213: -6342333277294712499
+    second: Different Shape Message Bubbles Blue and Grey_3
+  - first:
+      213: 7642720323781262580
+    second: Different Shape Message Bubbles Blue and Grey_4
+  - first:
+      213: -3163656671742022771
+    second: Different Shape Message Bubbles Blue and Grey_5
+  - first:
+      213: 5762438142778487418
+    second: Different Shape Message Bubbles Blue and Grey_6
+  - first:
+      213: -269017343061327823
+    second: Different Shape Message Bubbles Blue and Grey_7
+  - first:
+      213: 2430848089781812320
+    second: Different Shape Message Bubbles Blue and Grey_8
+  - first:
+      213: -7068889858134853051
+    second: Different Shape Message Bubbles Blue and Grey_9
+  - first:
+      213: 8051965934021378444
+    second: Different Shape Message Bubbles Blue and Grey_10
+  - first:
+      213: -2699166586999359108
+    second: Different Shape Message Bubbles Blue and Grey_11
+  - first:
+      213: -421208423694452098
+    second: Different Shape Message Bubbles Blue and Grey_12
+  - first:
+      213: -5816608859738429940
+    second: Different Shape Message Bubbles Blue and Grey_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Different Shape Message Bubbles Blue and Grey_0
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 3357
+        width: 1057
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ef224348a83bfa60800000000000000
+      internalID: 7708817482508808163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Different Shape Message Bubbles Blue and Grey_1
+      rect:
+        serializedVersion: 2
+        x: 1709
+        y: 3356
+        width: 1188
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c5fbaeef82e19340800000000000000
+      internalID: 4868921779976664521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Different Shape Message Bubbles Blue and Grey_2
+      rect:
+        serializedVersion: 2
+        x: 3370
+        y: 3356
+        width: 1187
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca19d5d5ad3ec75a0800000000000000
+      internalID: -6522087633330531924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Different Shape Message Bubbles Blue and Grey_3
+      rect:
+        serializedVersion: 2
+        x: 4746
+        y: 3356
+        width: 1056
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d49a5b7cc718bf7a0800000000000000
+      internalID: -6342333277294712499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Different Shape Message Bubbles Blue and Grey_4
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 2768
+        width: 802
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fcf3a044a5601a60800000000000000
+      internalID: 7642720323781262580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Different Shape Message Bubbles Blue and Grey_5
+      rect:
+        serializedVersion: 2
+        x: 1373
+        y: 2768
+        width: 1524
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8ba581d40f6814d0800000000000000
+      internalID: -3163656671742022771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Different Shape Message Bubbles Blue and Grey_6
+      rect:
+        serializedVersion: 2
+        x: 3370
+        y: 2767
+        width: 1525
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a72397cc5fa48ff40800000000000000
+      internalID: 5762438142778487418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Different Shape Message Bubbles Blue and Grey_7
+      rect:
+        serializedVersion: 2
+        x: 5020
+        y: 2766
+        width: 804
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 130096cd622444cf0800000000000000
+      internalID: -269017343061327823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Different Shape Message Bubbles Blue and Grey_8
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 2178
+        width: 2454
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06cb16e557b1cb120800000000000000
+      internalID: 2430848089781812320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Different Shape Message Bubbles Blue and Grey_9
+      rect:
+        serializedVersion: 2
+        x: 3370
+        y: 2178
+        width: 2454
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54ab289602246ed90800000000000000
+      internalID: -7068889858134853051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Different Shape Message Bubbles Blue and Grey_10
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 1303
+        width: 2454
+        height: 727
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8104e81b545ebf60800000000000000
+      internalID: 8051965934021378444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Different Shape Message Bubbles Blue and Grey_11
+      rect:
+        serializedVersion: 2
+        x: 3370
+        y: 1303
+        width: 2454
+        height: 727
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c79bc483a42aa8ad0800000000000000
+      internalID: -2699166586999359108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Different Shape Message Bubbles Blue and Grey_12
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 188
+        width: 2454
+        height: 971
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7a3a499b21972af0800000000000000
+      internalID: -421208423694452098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Different Shape Message Bubbles Blue and Grey_13
+      rect:
+        serializedVersion: 2
+        x: 3370
+        y: 188
+        width: 2454
+        height: 971
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c06a6ed4f01474fa0800000000000000
+      internalID: -5816608859738429940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
