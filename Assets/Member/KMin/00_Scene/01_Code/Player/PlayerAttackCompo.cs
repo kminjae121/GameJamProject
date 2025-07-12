@@ -1,5 +1,5 @@
 using System;
-using Code.Player;
+using Code.Entities;
 using Unity.Mathematics;
 using UnityEngine;
 

@@ -683,6 +683,7 @@ GameObject:
   - component: {fileID: 2624964775331698954}
   - component: {fileID: 2178704206482681370}
   - component: {fileID: 8346550111481820963}
+  - component: {fileID: 1229820119749533012}
   m_Layer: 7
   m_Name: Boss
   m_TagString: Untagged
@@ -850,6 +851,21 @@ MonoBehaviour:
   radius: 2
   spawnTime: 4
   showTextTime: 2
+--- !u!114 &1229820119749533012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7065587605000786264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70fb456f2cc377b49a85f1b3f4ea3aaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageText: {fileID: 3921705052374551305, guid: b78c412ab83a3ec4fa65e8899368ade2, type: 3}
+  hpStat: {fileID: 11400000, guid: eb2b424c4f843ab4c9719e67e94e1fdd, type: 2}
+  <CurrentHealth>k__BackingField: 0
 --- !u!1 &7773393347309751853
 GameObject:
   m_ObjectHideFlags: 0

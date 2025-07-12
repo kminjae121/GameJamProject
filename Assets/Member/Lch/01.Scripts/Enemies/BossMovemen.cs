@@ -8,7 +8,7 @@ public class BossMovemen : MonoBehaviour,IEntityComponent
     private EntityStat _statCompo;
 
     private float _timeElapsed = 0f;
-    public float _moveSpeed { get; set; }
+    [field : SerializeField]public float _moveSpeed { get; set; }
     Vector3 _moveDir;
     private Boss _enemy;
 

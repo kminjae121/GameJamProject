@@ -1,8 +1,9 @@
 using System;
 using Code.Combat;
+using Code.Entities;
 using UnityEngine;
 
-namespace Code.Player
+namespace Code.Entities
 {
     public class Projectile : MonoBehaviour
     {
