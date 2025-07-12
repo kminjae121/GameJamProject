@@ -31,7 +31,7 @@ public class SkillUpCompo : MonoBehaviour
     {
     }
         
-    public void UpSkillLevel()
+    public virtual void UpSkillLevel()
     {
         if (_skillSO == null)
         {

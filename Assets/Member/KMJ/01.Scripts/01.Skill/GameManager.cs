@@ -9,7 +9,7 @@ public class GameManager : Monosingleton<GameManager>
     [field: SerializeField] public int _maxkillCnt { get; private set; }
     
     [field: SerializeField] public int modifilerKillValue { get; set; }
-    public int level{ get; set; }
+    public int level { get; set; } = 1;
 
     [field: SerializeField] public float waitingTime { get; set; }
     [SerializeField] private float _endwaitingTime { get; set; }
@@ -37,11 +37,12 @@ public class GameManager : Monosingleton<GameManager>
     {
         killCnt += KillCnt;
 
+        _killTxt.text = $"KillCount : {killCnt}";
+        
         if (killCnt >= _maxkillCnt)
         {
             _currentwave += 1;
             _maxkillCnt += modifilerKillValue;
-            _killTxt.text = $"KillCount : {killCnt}";
             ShowPanel();
         }
     }

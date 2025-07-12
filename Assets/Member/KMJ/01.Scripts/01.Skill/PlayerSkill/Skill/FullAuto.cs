@@ -1,7 +1,9 @@
+using Code.Player;
 using UnityEngine;
 
 public class FullAuto : SkillCompo
 {
+    private Projectile _playerAttackCompo;
     public override void GetSkill()
     {
         base.GetSkill();

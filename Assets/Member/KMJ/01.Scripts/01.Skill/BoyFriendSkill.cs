@@ -1,4 +1,5 @@
 using System;
+using Code.Combat;
 using UnityEngine;
 
 public class BoyFriendSkill : MonoBehaviour
@@ -11,6 +12,15 @@ public class BoyFriendSkill : MonoBehaviour
 
     private float angle;
     [SerializeField] private float radius;
+
+    private DamageData _damageData;
+
+
+    private void Awake()
+    {
+        _damageData.damage = 1f;
+    }
+
     private void Update()
     {
         if (_girlFriendTrans != null)
@@ -27,6 +37,9 @@ public class BoyFriendSkill : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        
+        if (((1 << other.gameObject.layer) & _whatIsEnemy) != 0)
+        {
+            other.transform.GetComponentInChildren<EntityHealth>().ApplyDamage(_damageData,transform.position,null);
+        }
     }
 }
