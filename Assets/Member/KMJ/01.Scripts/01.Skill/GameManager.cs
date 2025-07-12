@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
                 FadeUI.Instance.FadeTxt(0, 3, "StageTxt");
                 OnWaveChangeEvent?.Invoke(_currentwave);
                 ShowPanel();
-                if (_maxkillCnt[currentKillCnt] ==  30)
+                if (currentKillCnt ==  30)
                 {
                     isEnd = true;
                 }
