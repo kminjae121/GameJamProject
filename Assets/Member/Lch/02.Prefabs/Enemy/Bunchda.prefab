@@ -47,7 +47,7 @@ MonoBehaviour:
   statOverrides:
   - stat: {fileID: 11400000, guid: 4dd32b34ad910a74782ee5a7a3258403, type: 2}
     isUseOverride: 1
-    overrideValue: 5
+    overrideValue: 3
   - stat: {fileID: 11400000, guid: eb2b424c4f843ab4c9719e67e94e1fdd, type: 2}
     isUseOverride: 1
     overrideValue: 100
