@@ -1,4 +1,5 @@
 using System;
+using Blade.Core;
 using Code.Combat;
 using UnityEngine;
 
@@ -15,10 +16,12 @@ public class BoyFriendSkill : MonoBehaviour
 
     private DamageData _damageData;
 
+    [SerializeField] private GameEventChannel _channel;
+
 
     private void Awake()
     {
-        _damageData.damage = 20f;
+        _damageData.damage = 50;
     }
 
     private void Update()
@@ -39,7 +42,8 @@ public class BoyFriendSkill : MonoBehaviour
     {
         if (((1 << other.gameObject.layer) & _whatIsEnemy) != 0)
         {
-            print(other.gameObject.name);
+            _channel.RaiseEvent(EnemyStateChannel.stunEvt.Initialize(true, 1));
+            
             other.GetComponent<EntityHealth>().ApplyDamage(_damageData,transform.position,null);
         }
     }
