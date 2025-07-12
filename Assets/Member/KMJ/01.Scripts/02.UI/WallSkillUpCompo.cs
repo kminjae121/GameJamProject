@@ -9,6 +9,14 @@ public class WallSkillUpCompo : SkillUpCompo
     public override void UpSkillLevel()
     {
         base.UpSkillLevel();
-        _barrier.modifierValue += modifierValue;
+        if (_skillSO != null)
+        {
+            _barrier.gameObject.SetActive(true);
+        }
+        else
+        {
+            _barrier.modifierValue += modifierValue;
+        }
+
     }
 }

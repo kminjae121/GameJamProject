@@ -406,7 +406,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 158407483}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 528406972}
+        m_TargetAssemblyTypeName: WallSkillUpCompo, Assembly-CSharp
+        m_MethodName: UpSkillLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1268436258}
+        m_TargetAssemblyTypeName: Member.KMJ._01.Scripts.CardSystem, Assembly-CSharp
+        m_MethodName: Hide
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &158407483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -819,7 +843,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 175416518}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1158387760}
+        m_TargetAssemblyTypeName: MultiplyShootUpGrade, Assembly-CSharp
+        m_MethodName: UpSkillLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1268436258}
+        m_TargetAssemblyTypeName: Member.KMJ._01.Scripts.CardSystem, Assembly-CSharp
+        m_MethodName: Hide
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &175416518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1908,7 +1956,7 @@ MonoBehaviour:
   _txt: {fileID: 489971048}
   _isInfnity: 1
   _explainTxt:
-  - "\uC2A4\uD0AC 3\uC774\uC5D0\uC694"
+  - Skill3
 --- !u!114 &515215537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2019,7 +2067,7 @@ MonoBehaviour:
   _txt: {fileID: 837980851}
   _isInfnity: 1
   _explainTxt:
-  - "\uC2A4\uD0AC4\uC774\uAD6C\uC694"
+  - Skill4
 --- !u!114 &528406972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2981,7 +3029,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &938245395
 Transform:
   m_ObjectHideFlags: 0
@@ -3606,7 +3654,7 @@ MonoBehaviour:
   _txt: {fileID: 639903013}
   _isInfnity: 1
   _explainTxt:
-  - "\uC2A4\uD0AC2\uC774\uAD6C\uC694"
+  - Skill2
 --- !u!114 &1158387760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3882,8 +3930,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1435930205
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8f7543198978a2d45aececc727bde984, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3978,7 +4026,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1302302283}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1871622076}
+        m_TargetAssemblyTypeName: BoyFriendSkillUpCompo, Assembly-CSharp
+        m_MethodName: UpSkillLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1268436258}
+        m_TargetAssemblyTypeName: Member.KMJ._01.Scripts.CardSystem, Assembly-CSharp
+        m_MethodName: Hide
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1302302283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4094,6 +4166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <skillCoolTime>k__BackingField: 0
   <currentcoolTime>k__BackingField: 0
+  _playerAttackCompo: {fileID: 1664029139}
 --- !u!114 &1331143864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4214,7 +4287,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1612950562
 Transform:
   m_ObjectHideFlags: 0
@@ -4520,7 +4593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitSprite: {fileID: 21300000, guid: 985c364fbe167d9409ee9835643797bd, type: 3}
-  idelSprite: {fileID: 21300000, guid: 8f7543198978a2d45aececc727bde984, type: 3}
+  idleSprite: {fileID: 21300000, guid: 8f7543198978a2d45aececc727bde984, type: 3}
   hitColor: {r: 1, g: 0.56289303, b: 0.9658869, a: 1}
 --- !u!1 &1775275031
 GameObject:
@@ -5274,7 +5347,7 @@ MonoBehaviour:
   _txt: {fileID: 2117080256}
   _isInfnity: 1
   _explainTxt:
-  - "\uC2A4\uD0AC1\uC785\uB2C8\uB2E4."
+  - Skill1
 --- !u!114 &1871622076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5921,8 +5994,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   killCnt: 0
-  <_maxkillCnt>k__BackingField: 3
-  <modifilerKillValue>k__BackingField: 5
+  <_maxkillCnt>k__BackingField: 1
+  <modifilerKillValue>k__BackingField: 1
   <waitingTime>k__BackingField: 0
   _isWaiting: 0
   _WaveTxt: {fileID: 1874430207}
@@ -6024,7 +6097,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2131454980}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 515215537}
+        m_TargetAssemblyTypeName: SkillUpCompo, Assembly-CSharp
+        m_MethodName: UpSkillLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1268436258}
+        m_TargetAssemblyTypeName: Member.KMJ._01.Scripts.CardSystem, Assembly-CSharp
+        m_MethodName: Hide
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2131454980
 MonoBehaviour:
   m_ObjectHideFlags: 0
