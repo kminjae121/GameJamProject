@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Karaoke
   enemy: {fileID: 8813522034923137191, guid: 95ca5556ab034e64680edaba54dec896, type: 3}
-  SpawnLevel: 1
+  SpawnLevel: 2
