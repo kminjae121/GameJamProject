@@ -11,7 +11,20 @@ public class BarrierCompo : MonoBehaviour
     {
         if (((1 << other.gameObject.layer) & _whatIsEnemy) != 0)
         {
-            other.transform.GetComponentInChildren<EnemyMovement>()._moveSpeed -= modifierValue;
+           if(other.gameObject.TryGetComponent(out Enemy enemy))
+            {
+                enemy.gameObject.GetComponentInChildren<EnemyMovement>()._moveSpeed -= modifierValue;
+            }
+
+           if(other.gameObject.TryGetComponent(out MinBoss minBoss))
+            {
+                minBoss.gameObject.GetComponentInChildren<MinBossMovement>()._moveSpeed -= modifierValue;
+            }
+
+           if(other.gameObject.TryGetComponent(out Boss boss))
+            {
+                boss.gameObject.GetComponentInChildren<BossMovemen>()._moveSpeed -= modifierValue;
+            }
         }
     }
 }
