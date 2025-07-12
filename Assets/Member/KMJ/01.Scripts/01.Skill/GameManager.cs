@@ -36,7 +36,7 @@ public class GameManager : Monosingleton<GameManager>
 
     protected override void Awake()
     {
-        _killTxt.text = $"남은 킬 : {_maxkillCnt}";
+        _killTxt.text = $"남은 킬 : {_maxkillCnt[currentKillCnt]}";
         _WaveTxt.text = $"Level : {level}";
         base.Awake();
     }
