@@ -135,6 +135,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -459,7 +485,21 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Different Shape Message Bubbles Blue and Grey_0: 7708817482508808163
+      Different Shape Message Bubbles Blue and Grey_1: 4868921779976664521
+      Different Shape Message Bubbles Blue and Grey_10: 8051965934021378444
+      Different Shape Message Bubbles Blue and Grey_11: -2699166586999359108
+      Different Shape Message Bubbles Blue and Grey_12: -421208423694452098
+      Different Shape Message Bubbles Blue and Grey_13: -5816608859738429940
+      Different Shape Message Bubbles Blue and Grey_2: -6522087633330531924
+      Different Shape Message Bubbles Blue and Grey_3: -6342333277294712499
+      Different Shape Message Bubbles Blue and Grey_4: 7642720323781262580
+      Different Shape Message Bubbles Blue and Grey_5: -3163656671742022771
+      Different Shape Message Bubbles Blue and Grey_6: 5762438142778487418
+      Different Shape Message Bubbles Blue and Grey_7: -269017343061327823
+      Different Shape Message Bubbles Blue and Grey_8: 2430848089781812320
+      Different Shape Message Bubbles Blue and Grey_9: -7068889858134853051
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

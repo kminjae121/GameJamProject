@@ -11,6 +11,8 @@ public class SkillUpCompo : MonoBehaviour
     private SkillCompo _skill;
     private int _countIdx;
     private int _currentSkill = 0;
+
+    [SerializeField] private int _maxskillPoint;
     
     [SerializeField] private Image _skillimage;
 

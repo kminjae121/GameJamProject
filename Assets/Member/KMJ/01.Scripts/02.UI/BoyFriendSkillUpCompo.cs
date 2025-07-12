@@ -4,7 +4,7 @@ public class BoyFriendSkillUpCompo : SkillUpCompo
 {
     [SerializeField] private BoyFriendSkill _boyFriend;
 
-    [SerializeField] private int modifierValue;
+    [SerializeField] private float modifierValue;
     public override void UpSkillLevel()
     {
         base.UpSkillLevel();
