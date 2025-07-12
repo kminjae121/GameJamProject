@@ -7,17 +7,24 @@ namespace Code.Player
     {
         [SerializeField] private ProjectileSO projectileSO;
 
+        private Rigidbody2D _rigidCompo;
+
+        private void Awake()
+        {
+            _rigidCompo = GetComponent<Rigidbody2D>();
+        }
+
         private void Update()
         {
             MoveProjectile();
         }
 
-        private void MoveProjectile() => transform.right *= projectileSO.speed;
+        private void MoveProjectile()
+            => _rigidCompo.linearVelocity = transform.right * projectileSO.speed;
 
-        public void SetTarget(Transform target)
+        public void InitProjectile(float angle)
         {
-            Vector3 dir = (target.position - transform.position).normalized;
-            transform.rotation = Quaternion.LookRotation(dir);
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
     }
 }

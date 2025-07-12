@@ -10,6 +10,7 @@ public class InputReader : ScriptableObject, Controls.IPlayerActions
     private Controls _controls;
     public event Action OnJumpEvent;
     public event Action OnMoveEvent;
+    public event Action OnClickEvent;
     public event Action<Vector2> OnPointerEvent;
     
     public event Action OnAttackEvent;
@@ -47,5 +48,11 @@ public class InputReader : ScriptableObject, Controls.IPlayerActions
     public void OnPointer(InputAction.CallbackContext context)
     {
         OnPointerEvent?.Invoke(context.ReadValue<Vector2>());
+    }
+
+    public void OnClick(InputAction.CallbackContext context)
+    {
+        if(context.performed)
+            OnClickEvent?.Invoke();
     }
 }
