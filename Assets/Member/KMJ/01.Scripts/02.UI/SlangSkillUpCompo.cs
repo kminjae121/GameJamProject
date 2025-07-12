@@ -1,10 +1,9 @@
 using Member.KMJ._01.Scripts;
 using UnityEngine;
 
-public class MultiplyShootUpGrade : SkillUpCompo
+public class SlangSkillUpCompo : SkillUpCompo
 {
-    [SerializeField] private PlayerAttackCompo _atkCompo;
-    
+    [SerializeField] private SlangWord _slangSkillUpCompo;
     public void UpSkillLevel()
     {
         if (GameManager.Instance.coin >= price)
@@ -27,10 +26,11 @@ public class MultiplyShootUpGrade : SkillUpCompo
 
                     gameObject.SetActive(false);
                 }
+
+                _slangSkillUpCompo.coolTime -= 0.5f;
                 GameManager.Instance.MinusCoin(price);
                 price += modifierValue;
                 gameObject.SetActive(false);
-                _atkCompo.shootCnt += 1;
                 priceTxt.text = $"가격 : {price}원";
                 return;
             }
@@ -44,7 +44,6 @@ public class MultiplyShootUpGrade : SkillUpCompo
                 GameManager.Instance.MinusCoin(price);
                 price += modifierValue;
                 gameObject.SetActive(false);
-                _atkCompo.shootCnt += 1;
                 priceTxt.text = $"가격 : {price}원";
                 return;
             }

@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
                 FadeUI.Instance.FadeTxt(0, 3, "StageTxt");
                 OnWaveChangeEvent?.Invoke(_currentwave);
                 ShowPanel();
-                if (_currentwave ==  30)
+                if (_currentwave == 25)
                 {
                     isEnd = true;
                 }

@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4157723271522244053}
   - component: {fileID: 6456223959484030899}
-  - component: {fileID: 3413742179642781608}
   - component: {fileID: -4803599644621880262}
   - component: {fileID: 9114988011954466802}
+  - component: {fileID: 2980919128997444772}
   m_Layer: 0
-  m_Name: BookBullet
+  m_Name: Test
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2353571312451627304, guid: 9f2c7274df0486d479897a0555da2d29, type: 3}
+  m_Sprite: {fileID: -5314469383292038561, guid: 5090caf75a2f97341a1f3a316115b3e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -90,24 +90,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3413742179642781608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 978593960268035859}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0e12a6945573b640854164bc87f90fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _whatIsEnemy:
-    serializedVersion: 2
-    m_Bits: 128
-  boxSize: {x: 1000, y: 1000}
-  speed: 5
-  damage: 5
 --- !u!50 &-4803599644621880262
 Rigidbody2D:
   serializedVersion: 5
@@ -173,7 +155,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.0488889, y: 1.1111112}
+    oldSize: {x: 5, y: 3.58}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -181,3 +163,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2980919128997444772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978593960268035859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbdc19eec10fcae48b6e75c2ae2ac2cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _whatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 128
+  boxSize: {x: 1000, y: 1000}
+  speed: 5
+  _bombSize: {x: 5, y: 5, z: 5}
+  damage: 10

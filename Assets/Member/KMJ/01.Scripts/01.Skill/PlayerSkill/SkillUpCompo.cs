@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Member.KMJ._01.Scripts;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,6 +20,9 @@ public class SkillUpCompo : MonoBehaviour
     [SerializeField] protected int price = 10;
 
     [SerializeField] protected int modifierValue;
+
+    [SerializeField] protected TextMeshProUGUI priceTxt;
+    
     private void Awake()
     {
         var type = Type.GetType(_skillSO.className);
@@ -30,6 +34,8 @@ public class SkillUpCompo : MonoBehaviour
             _skill = components[0] as SkillCompo;
         }
         _currentSkill = 0;
+
+        priceTxt.text = $"가격 : {price}원";
     }
 
     private void Update()
