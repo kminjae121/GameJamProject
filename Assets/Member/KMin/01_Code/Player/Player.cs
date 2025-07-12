@@ -1,12 +1,15 @@
 using UnityEngine;
 
-public class Player : Entity
+namespace Code.Entities
 {
-    public override void OnHit()
+    public class Player : Entity
     {
-    }
+        public override void OnHit()
+        {
+        }
 
-    public override void OnDead()
-    {
+        public override void OnDead()
+        {
+        }
     }
 }

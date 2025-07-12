@@ -1,7 +1,7 @@
-using System.Linq;
 using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using Code.Entities;
 
 namespace Code.Combat
 {
@@ -11,7 +11,7 @@ namespace Code.Combat
         private EntityStat _entityStat;
 
         //[SerializeField] private GameEventChannelSO eventChannel;
-        [SerializeField] private TextMeshProUGUI damageText;
+        [SerializeField] private GameObject damageText;
         [SerializeField] private StatSO hpStat;
         [field:SerializeField] public float CurrentHealth { get; private set; }
         public float MaxHealth { get; private set; }
@@ -45,14 +45,7 @@ namespace Code.Combat
         {
             Vector2 position = _entity.transform.position;
             position += Random.insideUnitCircle * 0.3f;
-            TextMeshProUGUI text = Instantiate(damageText, position, Quaternion.identity);
 
-            if (damageData.isCritical)
-            {
-                damageText.transform.localScale *= 1.2f;
-                damageText.color = Color.red;
-            }
-            
             CurrentHealth = Mathf.Clamp(CurrentHealth - damageData.damage, 0f, MaxHealth);
 
             if (CurrentHealth <= 0)
@@ -62,6 +55,17 @@ namespace Code.Combat
             }
 
             _entity.OnHitEvent?.Invoke();
+
+            if (dealer is Enemy)
+                return; 
+            
+            TextMeshProUGUI text = Instantiate(damageText, position, Quaternion.identity).GetComponent<TextMeshProUGUI>();
+            
+            if (damageData.isCritical)
+            {
+                text.transform.localScale *= 1.2f;
+                text.color = Color.red;
+            }
 
             await Awaitable.WaitForSecondsAsync(1f);
             Destroy(text);

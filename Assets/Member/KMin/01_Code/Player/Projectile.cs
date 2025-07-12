@@ -1,4 +1,5 @@
 using System;
+using Code.Combat;
 using UnityEngine;
 
 namespace Code.Player
@@ -25,6 +26,20 @@ namespace Code.Player
         public void InitProjectile(float angle)
         {
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        }
+
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (collision.collider.TryGetComponent(out IDamageable damageable))
+            {
+                DamageData data = new DamageData();
+                data.damage = projectileSO.attackDamage;
+                data.hitPoint = collision.contacts[0].point;
+                data.hitNormal = collision.contacts[0].normal;
+                damageable.ApplyDamage(data, data.hitNormal);
+                
+                Destroy(gameObject);
+            }
         }
     }
 }
