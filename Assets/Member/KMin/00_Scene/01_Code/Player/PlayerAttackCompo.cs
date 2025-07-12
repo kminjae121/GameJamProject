@@ -11,6 +11,7 @@ public class PlayerAttackCompo : MonoBehaviour, IEntityComponent, IAfterInitiali
     [SerializeField] private GameObject arrowObject;
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private Transform projectileParent;
+    [SerializeField] private float coolTime = 0.1f;
 
     [SerializeField] private StatSO atkDamage;
     [SerializeField] private StatSO atkcoolTime;
@@ -23,6 +24,9 @@ public class PlayerAttackCompo : MonoBehaviour, IEntityComponent, IAfterInitiali
     private Vector2 _direction;
     private float _angle;
 
+    private float _time;
+    private bool _canAttack;
+
     public void Initialize(Entity entity)
     {
         _statCompo = entity.GetCompo<EntityStat>();
@@ -32,6 +36,8 @@ public class PlayerAttackCompo : MonoBehaviour, IEntityComponent, IAfterInitiali
     {
         playerInput.OnPointerEvent += HandlePointer;
         playerInput.OnClickEvent += HandleClick;
+
+        _time = Time.time;
     }
     
     public void AfterInitialize()
@@ -43,6 +49,14 @@ public class PlayerAttackCompo : MonoBehaviour, IEntityComponent, IAfterInitiali
     {
         float changed = currentvalue - prevvalue;
         _atkDamage += changed;
+    }
+
+    private void Update()
+    {
+        if (Time.time - _time > coolTime)
+        {
+            _canAttack = true;
+        }
     }
 
     private void HandleClick() => SpawnProjectile();
@@ -66,7 +80,7 @@ public class PlayerAttackCompo : MonoBehaviour, IEntityComponent, IAfterInitiali
 
     private void SpawnProjectile()
     {
-        if (this == null) return;
+        if (this == null || _canAttack == false) return;
         Vector3 firePos = (Vector2)transform.position + _direction.normalized * 2f;
         if (shootCnt == 1)
         {
@@ -114,10 +128,9 @@ public class PlayerAttackCompo : MonoBehaviour, IEntityComponent, IAfterInitiali
                 }
                 else
                     projectile.InitProjectile(_angle);
-                
             }
         }
-
+        
         int a =  Random.Range(1, 3);
         
         if (a == 1)
@@ -129,5 +142,7 @@ public class PlayerAttackCompo : MonoBehaviour, IEntityComponent, IAfterInitiali
             AudioManager.Instance.PlaySFX("Shoot2");
         }
         
+        _canAttack = false;
+        _time = Time.time;
     }
 }
