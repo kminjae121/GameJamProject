@@ -1,7 +1,7 @@
 using Code.Combat;
 using UnityEngine;
 
-public abstract class Enemy : Entity
+public class Enemy : Entity
 {
     [SerializeField] private StatSO attackDamageStat;
     protected EnemyMovement movement;
