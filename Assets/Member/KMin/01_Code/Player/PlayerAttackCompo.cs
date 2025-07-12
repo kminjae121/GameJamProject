@@ -11,7 +11,9 @@ public class PlayerAttackCompo : MonoBehaviour, IEntityComponent
     
     private LineRenderer _attackDirLine;
     private Vector3 _mousePos;
+    public int shootCnt { get; set; } = 1;
     private float _angle;
+    
 
     public void Initialize(Entity entity)
     {
@@ -49,7 +51,48 @@ public class PlayerAttackCompo : MonoBehaviour, IEntityComponent
 
     private void SpawnProjectile()
     {
-        Projectile projectile = Instantiate(projectilePrefab, transform.position, quaternion.identity).GetComponent<Projectile>();
-        projectile.InitProjectile(_angle);
+        if (shootCnt == 1)
+        {
+            Projectile projectile = Instantiate(projectilePrefab, transform.position, quaternion.identity).GetComponent<Projectile>();
+            projectile.InitProjectile(_angle);
+        }
+        else if(shootCnt == 2)
+        {
+            for (int i = 1; i <= 3; i++)
+            {
+                Projectile projectile = Instantiate(projectilePrefab, transform.position, quaternion.identity).GetComponent<Projectile>();
+                if (i == 2)
+                {
+                    projectile.InitProjectile(_angle + 15);
+                }
+                else if (i == 3)
+                {
+                    projectile.InitProjectile(_angle - 15);
+                }
+            }
+        }
+        else if (shootCnt == 3)
+        {
+            for (int i = 1; i <= 5; i++)
+            {
+                Projectile projectile = Instantiate(projectilePrefab, transform.position, quaternion.identity).GetComponent<Projectile>();
+                if (i == 2)
+                {
+                    projectile.InitProjectile(_angle + 15);
+                }
+                else if (i == 3)
+                {
+                    projectile.InitProjectile(_angle - 15);
+                }
+                else if (i == 4)
+                {
+                    projectile.InitProjectile(_angle + 25);
+                }
+                else if (i == 5)
+                {
+                    projectile.InitProjectile(_angle - 25);
+                }
+            }
+        }
     }
 }
