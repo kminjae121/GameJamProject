@@ -16,10 +16,11 @@ public class Enemy : Entity
         _statCompo = GetCompo<EntityStat>();
     }
 
-    public override void OnDead()
+    public override async void OnDead()
     {
         IsDead = true;
         GameManager.Instance.AddKillCount(1);
+        await Awaitable.WaitForSecondsAsync(2f);
         Destroy(gameObject);
     }
        

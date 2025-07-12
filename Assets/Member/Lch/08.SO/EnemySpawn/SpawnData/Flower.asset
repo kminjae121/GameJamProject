@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Flower
   enemy: {fileID: 6180697275781384503, guid: 08458a38524a5a948b9bf14f0fe62f13, type: 3}
-  SpawnLevel: 2
+  SpawnLevel: 1
