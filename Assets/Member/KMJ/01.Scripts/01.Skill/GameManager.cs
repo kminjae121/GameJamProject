@@ -1,5 +1,6 @@
 using System;
 using Member.KMJ._01.Scripts;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : Monosingleton<GameManager>
@@ -19,11 +20,16 @@ public class GameManager : Monosingleton<GameManager>
 
     public bool _isWaiting;
     
+    [SerializeField] private TextMeshProUGUI _WaveTxt;
+    [SerializeField] private TextMeshProUGUI _killTxt;
+    
 
     public bool isEnd { get; private set; }
 
     protected override void Awake()
     {
+        _killTxt.text = $"KillCount : {killCnt}";
+        _WaveTxt.text = $"Level : {level}";
         base.Awake();
     }
 
@@ -35,7 +41,7 @@ public class GameManager : Monosingleton<GameManager>
         {
             _currentwave += 1;
             _maxkillCnt += modifilerKillValue;
-            
+            _killTxt.text = $"KillCount : {killCnt}";
             ShowPanel();
         }
     }
@@ -45,6 +51,7 @@ public class GameManager : Monosingleton<GameManager>
         if (_currentwave >= _nextWaveCnt)
         {
             level++;
+            _WaveTxt.text = $"Level : {level}";
             CardSystem.instance.Show();
         }
         else
