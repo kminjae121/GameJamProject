@@ -20,6 +20,9 @@ namespace Member.KMJ._01.Scripts
         [SerializeField] private List<GameObject> _selectObj;
 
         public GameObject _lockObj;
+
+        [SerializeField] private Sprite _lockSprite;
+        [SerializeField] private Sprite _unLockSprite;
         private void Awake()
         {
             instance = this;
@@ -36,9 +39,50 @@ namespace Member.KMJ._01.Scripts
             
         }
 
+        private void Update()
+        {
+            foreach (var skillObj in itemList)
+            {
+                Transform lockImg = FindDeepChild(skillObj.transform, "LockImg");
+
+                var img = lockImg.GetComponent<Image>();
+                
+                if (lockImg.transform.parent.gameObject == _lockObj)
+                {
+                    img.sprite = _lockSprite;
+                }
+                else
+                {
+                    img.sprite = _unLockSprite;
+                }
+                
+                
+            }
+        }
+        
+        Transform FindDeepChild(Transform parent, string name)
+        {
+            foreach (Transform child in parent)
+            {
+                if (child.name == name)
+                    return child;
+
+                var result = FindDeepChild(child, name);
+                if (result != null)
+                    return result;
+            }
+            return null;
+        }
+
+
         public void LockObject(GameObject lockObj)
         {
-            _lockObj = lockObj.transform.parent.gameObject;
+            if (_lockObj == lockObj)
+            {
+                _lockObj = null;
+                return;
+            }
+            _lockObj = lockObj;
         }
 
         private void SelectSecond()
