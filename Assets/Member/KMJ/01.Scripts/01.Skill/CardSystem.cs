@@ -77,11 +77,6 @@ namespace Member.KMJ._01.Scripts
 
         public void LockObject(GameObject lockObj)
         {
-            print(lockObj.gameObject.name);
-            
-            if(_lockObj != null)
-                print(_lockObj.gameObject.name);
-            
             if (_lockObj == lockObj)
             {
                 _lockObj = null;
