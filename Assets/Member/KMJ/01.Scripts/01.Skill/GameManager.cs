@@ -54,7 +54,7 @@ public class GameManager : Monosingleton<GameManager>
             FadeUI.Instance.FindTxt("StageTxt").gameObject.SetActive(true);
             FadeUI.Instance.FindTxt("StageTxt").alpha = 255f;
             
-            FadeUI.Instance.FindTxt("StageTxt").text = $"Stage{GameManager.Instance._currentwave}";
+            FadeUI.Instance.FindTxt("StageTxt").text = $"Wave{_currentwave}";
             FadeUI.Instance.FadeTxt(0, 3, "StageTxt");
             ShowPanel();
             
