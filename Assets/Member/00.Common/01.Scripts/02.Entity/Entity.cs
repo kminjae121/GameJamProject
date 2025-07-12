@@ -18,6 +18,8 @@ public abstract class Entity : MonoBehaviour
         AddComponents();
         InitializeComponents();
         AfterInitialize();
+        OnHitEvent.AddListener(OnHit);
+        OnDeadEvent.AddListener(OnDead);
     }
 
     protected virtual void AddComponents()
@@ -36,6 +38,10 @@ public abstract class Entity : MonoBehaviour
         _components.Values.OfType<IAfterInitialize>().ToList()
             .ForEach(compo => compo.AfterInitialize());
     }
+
+    public abstract void OnHit();
+
+    public abstract void OnDead();
 
     public T GetCompo<T>() where T : IEntityComponent
         => (T)_components.GetValueOrDefault(typeof(T));
