@@ -8,6 +8,14 @@ public class BoyFriendSkillUpCompo : SkillUpCompo
     public override void UpSkillLevel()
     {
         base.UpSkillLevel();
-        _boyFriend.speed += modifierValue;
+
+        if (_skillSO != null)
+        {
+            _boyFriend.gameObject.SetActive(true);
+        }
+        else
+        {
+            _boyFriend.speed += modifierValue;
+        }
     }
 }

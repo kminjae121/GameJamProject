@@ -6,7 +6,7 @@ public class EnemyMovement : MonoBehaviour, IEntityComponent,IAfterInitialize
     [SerializeField] private Rigidbody2D rbCompo;
     [SerializeField] protected StatSO moveSpeedStat;
     private EntityStat _statCompo;
-    private float _moveSpeed;
+    public float _moveSpeed { get; set; }
     Vector3 _moveDir;
     private Enemy _enemy;
 
