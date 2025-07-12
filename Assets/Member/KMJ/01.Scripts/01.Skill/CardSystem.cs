@@ -74,7 +74,6 @@ namespace Member.KMJ._01.Scripts
             isShow = false;
             Time.timeScale = 1;
             Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
             isShow = false;
             FadeUI.Instance.FindTxt("StageTxt").gameObject.SetActive(true);
             FadeUI.Instance.FindTxt("StageTxt").alpha = 255f;

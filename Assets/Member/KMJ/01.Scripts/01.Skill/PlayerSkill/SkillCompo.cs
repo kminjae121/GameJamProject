@@ -2,17 +2,16 @@ using UnityEngine;
 
 public class SkillCompo : MonoBehaviour
 {
-    public EntityAnimatorTrigger _triggerCompo;
 
     public int skillLevel { get; set; } = 1;
 
-    [SerializeField] protected Entity _entity;
+    protected Entity _entity;
     
     [field :SerializeField] public float skillCoolTime { get; set; }
     [field: SerializeField] public float currentcoolTime { get; private set; }
     
 
-    public int currentSkillEffectNameIdx { get; set; }
+    //public int currentSkillEffectNameIdx { get; set; }
     
     
 

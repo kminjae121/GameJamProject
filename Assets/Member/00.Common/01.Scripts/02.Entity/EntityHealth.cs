@@ -47,7 +47,7 @@ namespace Code.Combat
         {
             Vector2 position = _entity.transform.position;
             position += Random.insideUnitCircle * 0.3f;
-            _actionData.HitNormal = damageData.hitNormal;
+           _actionData.HitNormal = damageData.hitNormal;
             _actionData.HitPoint = damageData.hitPoint;
             _actionData.HitDir = direction;
 

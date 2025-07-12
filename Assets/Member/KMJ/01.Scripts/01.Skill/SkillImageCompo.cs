@@ -5,14 +5,13 @@ using UnityEngine.UI;
 public class SkillImageCompo : MonoBehaviour
 {
     [SerializeField] private Image skillFillImage;
-    [SerializeField] private string _skillname;
     [SerializeField] private EntitySkillCompo _skillCompo;
     private SkillCompo _skill;
-
+    [SerializeField] private SkillSO _skillSO;
 
     private void Awake()
     {
-        var type = Type.GetType(_skillname);
+        var type = Type.GetType(_skillSO.className);
             
         var components = _skillCompo.GetComponentsInChildren(type, true);
 
