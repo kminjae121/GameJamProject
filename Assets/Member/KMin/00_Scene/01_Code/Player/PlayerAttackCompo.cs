@@ -65,6 +65,7 @@ public class PlayerAttackCompo : MonoBehaviour, IEntityComponent, IAfterInitiali
 
     private void SpawnProjectile()
     {
+        if (this == null) return;
         Vector3 firePos = (Vector2)transform.position + _direction.normalized * 2f;
         if (shootCnt == 1)
         {

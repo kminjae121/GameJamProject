@@ -9,11 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Member/KMJ/KMJ2.unity
-    guid: 177b26e2c8fc066499b1b9645863e28c
-  - enabled: 1
     path: Assets/Member/KMin/00_Scene/GameOver.unity
     guid: 86c82bbdbc62b1b428a58fd2a4f0551a
+  - enabled: 1
+    path: Assets/Member/KMin/00_Scene/KimMin.unity
+    guid: c078195a91a43df4b9eade74fc351005
+  - enabled: 1
+    path: Assets/Member/Lch/00.Scene/TilteScene.unity
+    guid: 478b69b9597de084cb3dac7b6d92996b
   m_configObjects:
     com.unity.dt.app-ui: {fileID: 11400000, guid: 99f9c9493070a9d4c979a8fec7c5a8d3, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

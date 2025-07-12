@@ -19,6 +19,7 @@ namespace Member.KMin._00_Scene._01_Code.Misc
 
         private void HandleSceneChange()
         {
+            Debug.Log("SDF");
             SceneManager.LoadScene(sceneName);
         }
     }

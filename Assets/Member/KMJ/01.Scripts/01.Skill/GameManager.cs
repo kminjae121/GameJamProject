@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     
     [SerializeField] private TextMeshProUGUI _WaveTxt;
     [SerializeField] private TextMeshProUGUI _killTxt;
+    [SerializeField] private TextMeshProUGUI _coinTxt;
     
 
     public bool isEnd { get; private set; } = false;
@@ -38,6 +39,7 @@ public class GameManager : MonoBehaviour
     protected void Awake()
     {
         Instance = this;
+        _coinTxt.text = $": {this.coin}";
         _killTxt.text = $"남은 킬 : {_maxkillCnt[currentKillCnt]}";
         _WaveTxt.text = $"Level : {level}";
     }
