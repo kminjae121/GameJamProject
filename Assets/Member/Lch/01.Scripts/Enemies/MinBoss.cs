@@ -16,7 +16,6 @@ public class MinBoss : Entity
     [SerializeField] private float radius = 15;
     [SerializeField] private float showTextTime;
     [SerializeField] private float spawnTime;
-    protected EnemyMovement movement;
     private EntityStat _statCompo;
     private bool _isShow;
     private float _currentTime;
@@ -28,7 +27,6 @@ public class MinBoss : Entity
     protected override void Awake()
     {
         base.Awake();
-        movement = GetCompo<EnemyMovement>();
         _statCompo = GetCompo<EntityStat>();
         rightText.transform.DOScale(Vector2.zero, 0.2f);
         leftText.transform.DOScale(Vector2.zero, 0.2f);
@@ -69,7 +67,6 @@ public class MinBoss : Entity
                 TextMeshPro meshPro = isRight ? rightMeshPro : leftMeshPro;
                 GameObject textObject = isRight ? rightText : leftText;
 
-                // Tween ���� (���̱�)
                 if (textObject != null)
                 {
                     textObject.transform.DOScale(0.1f, 0.4f).SetEase(Ease.OutBounce);
