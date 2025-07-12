@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
     protected void Awake()
     {
         Instance = this;
-        _coinTxt.text = $": {this.coin}";
+        _coinTxt.text = $"Coin : {this.coin}";
         _killTxt.text = $"남은 킬 : {_maxkillCnt[currentKillCnt]}";
         _WaveTxt.text = $"Level : {level}";
     }
@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
                 FadeUI.Instance.FadeTxt(0, 3, "StageTxt");
                 OnWaveChangeEvent?.Invoke(_currentwave);
                 ShowPanel();
-                if (_maxkillCnt[currentKillCnt] ==  30)
+                if (currentKillCnt ==  30)
                 {
                     isEnd = true;
                 }
@@ -76,11 +76,13 @@ public class GameManager : MonoBehaviour
     public void GetCoin(int coin)
     {
         this.coin += coin;
+        _coinTxt.text = $"Coin : {this.coin}";
     }
 
     public void MinusCoin(int coin)
     {
         this.coin -= coin;
+        _coinTxt.text = $"Coin : {this.coin}";
     }
     
     private void ShowPanel()

@@ -37,6 +37,7 @@ public class Boss : Entity
     private void Start()
     {
         _isShow = true;
+        AudioManager.Instance.PlaySFX("Whistle");
     }
 
     public override void OnDead()
@@ -69,7 +70,7 @@ public class Boss : Entity
                 TextMeshPro meshPro = isRight ? rightMeshPro : leftMeshPro;
                 GameObject textObject = isRight ? rightText : leftText;
 
-                // Tween ½ÃÀÛ (º¸ÀÌ±â)
+                // Tween ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½Ì±ï¿½)
                 if (textObject != null)
                 {
                     textObject.transform.DOScale(0.15f, 0.4f).SetEase(Ease.OutBounce);
