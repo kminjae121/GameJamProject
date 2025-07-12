@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Message
   enemy: {fileID: 3606018887557097401, guid: 2e6a1b24f05c4c74ea00eab9817f950c, type: 3}
-  SpawnLevel: 2
+  SpawnLevel: 1
