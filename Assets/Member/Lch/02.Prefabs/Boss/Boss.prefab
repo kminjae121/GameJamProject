@@ -221,10 +221,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rbCompo: {fileID: 2624964775331698954}
-  moveSpeedStat: {fileID: 11400000, guid: 4dd32b34ad910a74782ee5a7a3258403, type: 2}
+  moveSpeedStat: {fileID: 11400000, guid: 8525b9349a0b0d44e93f7845a06e05e5, type: 2}
   isLoveLetter: 0
-  sinAmplitude: 0.5
-  sinFrequency: 5
 --- !u!1 &4685360802548681178
 GameObject:
   m_ObjectHideFlags: 0
@@ -685,6 +683,7 @@ GameObject:
   - component: {fileID: 2624964775331698954}
   - component: {fileID: 2178704206482681370}
   - component: {fileID: 8346550111481820963}
+  - component: {fileID: 1229820119749533012}
   m_Layer: 7
   m_Name: Boss
   m_TagString: Untagged
@@ -847,11 +846,26 @@ MonoBehaviour:
   leftText: {fileID: 6698126820870276548}
   leftMeshPro: {fileID: 5061728366046002793}
   rightMeshPro: {fileID: 5386741191206270500}
-  enemyTextList: {fileID: 0}
+  enemyTextList: {fileID: 11400000, guid: 319501bcbacf5904e8ea242d097e4f6d, type: 2}
   spawnDataList: {fileID: 11400000, guid: b0fc2e5fe259cea4fbea5e22bedddb6e, type: 2}
   radius: 2
   spawnTime: 4
   showTextTime: 2
+--- !u!114 &1229820119749533012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7065587605000786264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70fb456f2cc377b49a85f1b3f4ea3aaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageText: {fileID: 3921705052374551305, guid: b78c412ab83a3ec4fa65e8899368ade2, type: 3}
+  hpStat: {fileID: 11400000, guid: eb2b424c4f843ab4c9719e67e94e1fdd, type: 2}
+  <CurrentHealth>k__BackingField: 0
 --- !u!1 &7773393347309751853
 GameObject:
   m_ObjectHideFlags: 0

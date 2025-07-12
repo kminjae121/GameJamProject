@@ -1,4 +1,3 @@
-using Code.Player;
 using UnityEngine;
 
 public class MultipleShoot : SkillCompo

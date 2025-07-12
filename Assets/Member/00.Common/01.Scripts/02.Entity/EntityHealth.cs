@@ -1,7 +1,7 @@
+using Code.Entities;
 using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
-using Code.Entities;
 
 namespace Code.Combat
 {
@@ -60,7 +60,7 @@ namespace Code.Combat
 
             _entity.OnHitEvent?.Invoke();
 
-            if (dealer is Enemy)
+            if (dealer is not Player)
                 return; 
             
             TextMeshProUGUI text = Instantiate(damageText, position, Quaternion.identity).GetComponent<TextMeshProUGUI>();

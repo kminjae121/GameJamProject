@@ -8,7 +8,7 @@ public class BossMovemen : MonoBehaviour,IEntityComponent
     private EntityStat _statCompo;
 
     private float _timeElapsed = 0f;
-    public float _moveSpeed { get; set; }
+    [field : SerializeField]public float _moveSpeed { get; set; }
     Vector3 _moveDir;
     private Boss _enemy;
 
@@ -19,7 +19,7 @@ public class BossMovemen : MonoBehaviour,IEntityComponent
     }
     public void AfterInitialize()
     {
-        _moveSpeed = _statCompo.SubscribeStat(moveSpeedStat, HandleMoveSpeedChange, 6f);
+        _moveSpeed = _statCompo.SubscribeStat(moveSpeedStat, HandleMoveSpeedChange, 1.5f);
     }
 
     private void HandleMoveSpeedChange(StatSO stat, float currentValue, float prevValue)
@@ -44,6 +44,6 @@ public class BossMovemen : MonoBehaviour,IEntityComponent
     private void Move()
     {
         gameObject.transform.LookAt(_moveDir);
-        rbCompo.linearVelocity = _moveDir.normalized * _moveSpeed;
+        rbCompo.linearVelocity = _moveDir.normalized * _statCompo.GetStat(moveSpeedStat).Value;
     }
 }

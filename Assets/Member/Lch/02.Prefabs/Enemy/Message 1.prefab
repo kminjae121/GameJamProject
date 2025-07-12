@@ -10,8 +10,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1553690426007430633, guid: 32426ca20131782479604993b9ceb65f, type: 3}
       propertyPath: m_Name
-      value: Bunchda
+      value: Message 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2722546415526486568, guid: 32426ca20131782479604993b9ceb65f, type: 3}
+      propertyPath: enemyTextList
+      value: 
+      objectReference: {fileID: 11400000, guid: 154090e30a3461c43a2b4d02a1524889, type: 2}
     - target: {fileID: 5065761470846438034, guid: 32426ca20131782479604993b9ceb65f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

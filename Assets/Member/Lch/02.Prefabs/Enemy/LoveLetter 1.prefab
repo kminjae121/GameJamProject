@@ -13,6 +13,10 @@ PrefabInstance:
       value: LoveLetter 1
       objectReference: {fileID: 0}
     - target: {fileID: 2722546415526486568, guid: 32426ca20131782479604993b9ceb65f, type: 3}
+      propertyPath: enemyTextList
+      value: 
+      objectReference: {fileID: 11400000, guid: b8423ae35f575fd45ba5fbac7c3e1921, type: 2}
+    - target: {fileID: 2722546415526486568, guid: 32426ca20131782479604993b9ceb65f, type: 3}
       propertyPath: OnDeadEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 0}
