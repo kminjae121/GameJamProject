@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaskTransitions;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -17,9 +18,10 @@ namespace Member.KMin._00_Scene._01_Code.Misc
             _button.onClick.AddListener(HandleSceneChange);
         }
 
-        private void HandleSceneChange()
+        private async void HandleSceneChange()
         {
-            Debug.Log("SDF");
+            TransitionManager.Instance.PlayTransition(1.5f);
+            await Awaitable.WaitForSecondsAsync(0.5f);
             SceneManager.LoadScene(sceneName);
         }
     }
