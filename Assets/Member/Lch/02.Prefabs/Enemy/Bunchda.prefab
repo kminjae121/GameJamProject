@@ -156,7 +156,7 @@ MonoBehaviour:
   leftText: {fileID: 3063529509269428569}
   leftMeshPro: {fileID: 8221970865683200870}
   rightMeshPro: {fileID: 5548274351177214048}
-  enemyTextList: {fileID: 11400000, guid: 9f786422e07abc948a27bd73ef17951d, type: 2}
+  enemyTextList: {fileID: 11400000, guid: 11b7befcf050ab74f9f22f7ef0b422a2, type: 2}
   showTextTime: 2
 --- !u!50 &3550224687400661799
 Rigidbody2D:

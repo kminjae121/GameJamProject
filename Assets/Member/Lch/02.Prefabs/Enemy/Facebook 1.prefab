@@ -12,6 +12,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Facebook 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2722546415526486568, guid: 32426ca20131782479604993b9ceb65f, type: 3}
+      propertyPath: enemyTextList
+      value: 
+      objectReference: {fileID: 11400000, guid: a8fdb1a1b8cf7ca46acd04ed1f38134c, type: 2}
+    - target: {fileID: 2722546415526486568, guid: 32426ca20131782479604993b9ceb65f, type: 3}
+      propertyPath: OnDeadEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5065761470846438034, guid: 32426ca20131782479604993b9ceb65f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -221,10 +221,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rbCompo: {fileID: 2624964775331698954}
-  moveSpeedStat: {fileID: 11400000, guid: 4dd32b34ad910a74782ee5a7a3258403, type: 2}
+  moveSpeedStat: {fileID: 11400000, guid: 8525b9349a0b0d44e93f7845a06e05e5, type: 2}
   isLoveLetter: 0
-  sinAmplitude: 0.5
-  sinFrequency: 5
 --- !u!1 &4685360802548681178
 GameObject:
   m_ObjectHideFlags: 0
@@ -847,7 +845,7 @@ MonoBehaviour:
   leftText: {fileID: 6698126820870276548}
   leftMeshPro: {fileID: 5061728366046002793}
   rightMeshPro: {fileID: 5386741191206270500}
-  enemyTextList: {fileID: 0}
+  enemyTextList: {fileID: 11400000, guid: 319501bcbacf5904e8ea242d097e4f6d, type: 2}
   spawnDataList: {fileID: 11400000, guid: b0fc2e5fe259cea4fbea5e22bedddb6e, type: 2}
   radius: 2
   spawnTime: 4
