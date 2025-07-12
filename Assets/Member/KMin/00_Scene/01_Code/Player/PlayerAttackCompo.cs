@@ -2,6 +2,7 @@ using System;
 using Code.Entities;
 using Unity.Mathematics;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class PlayerAttackCompo : MonoBehaviour, IEntityComponent, IAfterInitialize
 {
@@ -128,6 +129,17 @@ public class PlayerAttackCompo : MonoBehaviour, IEntityComponent, IAfterInitiali
                 else
                     projectile.InitProjectile(_angle);
             }
+        }
+        
+        int a =  Random.Range(1, 3);
+        
+        if (a == 1)
+        {
+            AudioManager.Instance.PlaySFX("Shoot1");
+        }
+        else if (a == 2)
+        {
+            AudioManager.Instance.PlaySFX("Shoot2");
         }
         
         _canAttack = false;
