@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using Member.KMJ._01.Scripts;
 using TMPro;
 using UnityEngine;
@@ -6,10 +8,12 @@ using UnityEngine;
 public class GameManager : Monosingleton<GameManager>
 {
     public int killCnt;
-    [field: SerializeField] public int _maxkillCnt { get; private set; }
+    [field: SerializeField] public List<int> _maxkillCnt { get; private set; }
     
     [field: SerializeField] public int modifilerKillValue { get; set; }
     public int level { get; set; } = 1;
+
+    private int currentKillCnt;
 
     [field: SerializeField] public float waitingTime { get; set; }
     [SerializeField] private float _endwaitingTime { get; set; }
@@ -18,8 +22,8 @@ public class GameManager : Monosingleton<GameManager>
 
 
     public int _currentwave { get; private set; } = 1;
-    
-    public int coin { get; set; }
+
+    [field: SerializeField] public int coin { get; set; } = 0;
     public int _nextWaveCnt { get; private set; } = 3;
 
     public bool _isWaiting;
@@ -39,16 +43,22 @@ public class GameManager : Monosingleton<GameManager>
 
     public void AddKillCount(int KillCnt)
     {
-        killCnt += KillCnt;
+        _maxkillCnt[currentKillCnt] -= KillCnt;
 
-        _killTxt.text = $"KillCount : {killCnt}";
+        _killTxt.text = $"KillCount : {_maxkillCnt[currentKillCnt]}";
         
-        if (killCnt >= _maxkillCnt)
+        if (_maxkillCnt[currentKillCnt] <= 0)
         {
             _currentwave += 1;
-            _maxkillCnt += modifilerKillValue;
+            currentKillCnt++;
             ShowPanel();
         }
+    }
+
+
+    public void GetCoin(int coin)
+    {
+        this.coin += coin;
     }
     
     private void ShowPanel()
@@ -56,6 +66,7 @@ public class GameManager : Monosingleton<GameManager>
         if (_currentwave >= _nextWaveCnt)
         {
             level++;
+            _nextWaveCnt += 3;
             _WaveTxt.text = $"Level : {level}";
             OnWaveChangeEvent?.Invoke(level);
             CardSystem.instance.Show();

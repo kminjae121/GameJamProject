@@ -5,8 +5,8 @@ public class Wall : SkillCompo
     [SerializeField] private GameObject _WallObjPrefabs;
     public override void GetSkill()
     {
-        _WallObjPrefabs.SetActive(true);   
         base.GetSkill();
+        _WallObjPrefabs.SetActive(true);   
     }
     
     
