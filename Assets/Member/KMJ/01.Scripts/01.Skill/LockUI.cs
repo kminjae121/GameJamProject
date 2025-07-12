@@ -34,6 +34,8 @@ public class LockUI : MonoBehaviour
                 Debug.LogWarning($"'{skillObj.name}' 안에서 LockImg를 못 찾음");
             }
         }
+        if(_cardSystem._lockObj == null)
+            return;
         
         foreach (Transform child in _cardSystem._lockObj.transform)
         {

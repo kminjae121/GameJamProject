@@ -11,12 +11,17 @@ public class PlayerAttackCompo : MonoBehaviour, IEntityComponent
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private Transform projectileParent;
 
+    private EntityStat _statCompo;
+
+    [SerializeField] private StatSO _atkDamage;
+    [SerializeField] private StatSO _atkcoolTime;
     [field: SerializeField] public int shootCnt { get; set; } = 2;
     private Vector3 _mousePos;
     private float _angle;
 
     public void Initialize(Entity entity)
     {
+        _statCompo = entity.GetCompo<EntityStat>();
     }
     
     private void Awake()
