@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
                 FadeUI.Instance.FadeTxt(0, 3, "StageTxt");
                 OnWaveChangeEvent?.Invoke(_currentwave);
                 ShowPanel();
-                if (currentKillCnt ==  30)
+                if (_currentwave ==  30)
                 {
                     isEnd = true;
                 }
@@ -81,6 +81,9 @@ public class GameManager : MonoBehaviour
 
     public void MinusCoin(int coin)
     {
+        if (this.coin - coin < 0)
+            return;
+        
         this.coin -= coin;
         _coinTxt.text = $"Coin : {this.coin}";
     }

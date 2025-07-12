@@ -136,6 +136,8 @@ namespace Member.KMJ._01.Scripts
         
         public void Reroll()
         {
+            if (GameManager.Instance.coin < 10)
+                return;
             Show();
             GameManager.Instance.MinusCoin(10);
         }
