@@ -13,7 +13,10 @@ public class GameManager : Monosingleton<GameManager>
 
     [field: SerializeField] public float waitingTime { get; set; }
     [SerializeField] private float _endwaitingTime { get; set; }
-    
+
+    public event Action<int> OnWaveChangeEvent;
+
+
     public int _currentwave { get; private set; } = 1;
     
     public int coin { get; set; }
@@ -54,6 +57,7 @@ public class GameManager : Monosingleton<GameManager>
         {
             level++;
             _WaveTxt.text = $"Level : {level}";
+            OnWaveChangeEvent?.Invoke(level);
             CardSystem.instance.Show();
         }
         else
