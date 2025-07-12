@@ -61,7 +61,7 @@ public class Enemy : Entity
 
     private async void Update()
     {
-        if (_isShow)
+        if (_isShow && IsDead == false)
         {
             _currentTime += Time.deltaTime;
             if(_currentTime > showTextTime && !_hasPlayedTween)
