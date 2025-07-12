@@ -1,4 +1,4 @@
- using System;
+using System;
 using Code.Combat;
 using UnityEngine;
 
@@ -10,13 +10,9 @@ namespace Code.Player
 
         private Rigidbody2D _rigidCompo;
 
-        [SerializeField] private LayerMask _whatIsEnemy;
-
         private void Awake()
         {
             _rigidCompo = GetComponent<Rigidbody2D>();
-            
-            Destroy(gameObject, 10);
         }
 
         private void Update()
@@ -34,18 +30,16 @@ namespace Code.Player
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (((1 << collision.gameObject.layer) & _whatIsEnemy) != 0)
+            if (collision.collider.TryGetComponent(out IDamageable damageable))
             {
-                if (collision.collider.TryGetComponent(out IDamageable damageable))
-                {
-                    DamageData data = new DamageData();
-                    data.damage = projectileSO.attackDamage;
-                    data.hitPoint = collision.contacts[0].point;
-                    data.hitNormal = collision.contacts[0].normal;
-                    damageable.ApplyDamage(data, data.hitNormal);
+                DamageData data = new DamageData();
+                Vector3 direction = (transform.position - Vector3.zero).normalized;
+                data.damage = projectileSO.attackDamage;
+                data.hitPoint = collision.contacts[0].point;
+                data.hitNormal = collision.contacts[0].normal;
                 
-                    Destroy(gameObject);
-                }   
+                damageable.ApplyDamage(data, direction);
+                Destroy(gameObject);
             }
         }
     }
