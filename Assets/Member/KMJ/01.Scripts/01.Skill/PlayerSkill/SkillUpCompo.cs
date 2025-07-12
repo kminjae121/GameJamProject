@@ -62,11 +62,12 @@ public class SkillUpCompo : MonoBehaviour
             {
                 _skillCompo.AddSkill(_skillSO);
                 Color color = _skillimage.color;
-                color.a = Mathf.Clamp01(1);
+                color.a = 1;
                 _skillimage.color = color;
                 _skillSO = null;
             }
 
+            GameManager.Instance.MinusCoin(price);
             price += modifierValue;
         }
     }

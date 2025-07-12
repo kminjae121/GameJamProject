@@ -30,6 +30,7 @@ public class GameManager : Monosingleton<GameManager>
     
     [SerializeField] private TextMeshProUGUI _WaveTxt;
     [SerializeField] private TextMeshProUGUI _killTxt;
+    [SerializeField] private TextMeshProUGUI _coinTxt;
     
 
     public bool isEnd { get; private set; } = false;
@@ -38,6 +39,9 @@ public class GameManager : Monosingleton<GameManager>
     {
         _killTxt.text = $"남은 킬 : {_maxkillCnt[currentKillCnt]}";
         _WaveTxt.text = $"Level : {level}";
+        
+        _coinTxt.text = $": {this.coin}";
+        
         base.Awake();
     }
 
@@ -73,11 +77,17 @@ public class GameManager : Monosingleton<GameManager>
     public void GetCoin(int coin)
     {
         this.coin += coin;
+        _coinTxt.text = $": {this.coin}";
     }
 
     public void MinusCoin(int coin)
     {
+        if (this.coin - coin < 0)
+            return;
+        
         this.coin -= coin;
+        
+        _coinTxt.text = $": {this.coin}";
     }
     
     private void ShowPanel()
