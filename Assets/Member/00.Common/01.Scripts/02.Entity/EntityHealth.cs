@@ -1,7 +1,7 @@
-using System.Linq;
 using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using Code.Entities;
 
 namespace Code.Combat
 {
@@ -45,14 +45,8 @@ namespace Code.Combat
         {
             Vector2 position = _entity.transform.position;
             position += Random.insideUnitCircle * 0.3f;
-            TextMeshProUGUI text = Instantiate(damageText, position, Quaternion.identity);
-
-            if (damageData.isCritical)
-            {
-                damageText.transform.localScale *= 1.2f;
-                damageText.color = Color.red;
-            }
             
+            Debug.Log(damageData.damage);
             CurrentHealth = Mathf.Clamp(CurrentHealth - damageData.damage, 0f, MaxHealth);
 
             if (CurrentHealth <= 0)
@@ -60,11 +54,22 @@ namespace Code.Combat
                 _entity.OnDeadEvent?.Invoke();
                 CurrentHealth = MaxHealth;
             }
-
+            
             _entity.OnHitEvent?.Invoke();
 
-            await Awaitable.WaitForSecondsAsync(1f);
-            Destroy(text);
+            if (dealer is Entities.Player)
+            {
+                TextMeshProUGUI text = Instantiate(damageText, position, Quaternion.identity);
+                
+                if (damageData.isCritical)
+                {
+                    damageText.transform.localScale *= 1.2f;
+                    damageText.color = Color.red;
+                }
+                
+                await Awaitable.WaitForSecondsAsync(1f);
+                Destroy(text);
+            }
         }
     }
 }
