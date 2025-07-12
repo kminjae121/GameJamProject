@@ -5737,7 +5737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _image: {fileID: 1799673532}
-  health: {fileID: 0}
+  health: {fileID: 647103953}
 --- !u!114 &1799673532
 MonoBehaviour:
   m_ObjectHideFlags: 0
