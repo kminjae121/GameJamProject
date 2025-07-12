@@ -6,6 +6,6 @@ public class MultiplyShootUpGrade : SkillUpCompo
     public override void UpSkillLevel()
     {
         base.UpSkillLevel();
-        _atkCompo.shootCnt++;
+        _atkCompo.shootCnt += 1;
     }
 }
