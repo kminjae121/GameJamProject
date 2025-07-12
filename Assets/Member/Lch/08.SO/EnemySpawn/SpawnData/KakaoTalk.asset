@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: KakaoTalk
   m_EditorClassIdentifier: 
   enemyName: KakaoTalk
-  enemy: {fileID: -422041637605432031, guid: 73f56c7f296be534f9a57cc04506b2b4, type: 3}
+  enemy: {fileID: 1074742150217290043, guid: 3cd0e45038d61cb43bb694f32a35ad27, type: 3}
   SpawnLevel: 1
