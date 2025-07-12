@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 131fdf72fa07c9c4e95be331d538205b, type: 3}
-  m_Name: LoveletterText
+  m_Name: Phone
   m_EditorClassIdentifier: 
   text:
-  - "\uC0AC\uB791\uD558\uB294 \uADF8\uB300\uC5D0\uAC8C.."
-  - "\uC624\uB798\uC804\uBD80\uD130 \uC88B\uC544\uD574 \uC654\uC2B5\uB2C8\uB2E4"
-  - "\uADF8\uB300\uC758 \uB9C8\uC74C\uC744 \uCC28\uC9C0\uD558\uACA0\uC5B4\uC694"
+  - "\uBB50\uD574? \uC0AC\uADC8\uB798?"
+  - "\uC5EC\uBCF4\uC138\uC694? \uB098 \uC9C0\uAE08 \uD560\uB9D0\uC788\uC5B4.."
+  - "\uB098 \uB108 \uC88B\uC544\uD574 \uB098\uB791 \uB9CC\uB098\uBCFC\uB798?"
+  - "\uC790\uB2C8? \uC790\uB294\uAD6C\uB098.. \uC798\uC790"
