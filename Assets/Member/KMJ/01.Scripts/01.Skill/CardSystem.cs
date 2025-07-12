@@ -54,6 +54,9 @@ namespace Member.KMJ._01.Scripts
             RandomItem();
             Time.timeScale = 0;
             _rect.localScale = Vector3.one;
+            
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
             isShow = true;
         }
 
