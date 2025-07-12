@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a54ef5b8e0c23a94aa75ba29f9a07f8b, type: 3}
-  m_Name: EnemyTextListSO
+  m_Name: Loveletter
   m_EditorClassIdentifier: 
   enemyTexts:
   - {fileID: 11400000, guid: b8423ae35f575fd45ba5fbac7c3e1921, type: 2}
