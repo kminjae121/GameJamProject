@@ -485,7 +485,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _skillSO: {fileID: 11400000, guid: b980fe16dcf091a49aec4c01140d2df1, type: 2}
   _skillCompo: {fileID: 0}
+  _maxskillPoint: 0
   _skillimage: {fileID: 1812559428}
+  bookCompo: {fileID: 0}
 --- !u!114 &156501045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -596,6 +598,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _skillSO: {fileID: 11400000, guid: c6253d92056f6cc4a99d0afb15b02c36, type: 2}
   _skillCompo: {fileID: 0}
+  _maxskillPoint: 0
   _skillimage: {fileID: 1549766224}
   _boyFriend: {fileID: 0}
   modifierValue: 3
@@ -709,6 +712,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _skillSO: {fileID: 11400000, guid: b2a57818024bcf44589c9c7f84d2e0d4, type: 2}
   _skillCompo: {fileID: 0}
+  _maxskillPoint: 0
   _skillimage: {fileID: 659290930}
   _barrier: {fileID: 0}
   modifierValue: 2
@@ -1762,10 +1766,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 100350292241365016, guid: 969a7c9001675b040b82614fcad7fa93, type: 3}
-      propertyPath: radius
-      value: 15
-      objectReference: {fileID: 0}
     - target: {fileID: 3474216632489079927, guid: 969a7c9001675b040b82614fcad7fa93, type: 3}
       propertyPath: m_Name
       value: EnemySpawn
@@ -1810,20 +1810,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6963577987578960572, guid: 969a7c9001675b040b82614fcad7fa93, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 25
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 317493507905166153, guid: 969a7c9001675b040b82614fcad7fa93, type: 3}
-    - {fileID: 1375030456225658257, guid: 969a7c9001675b040b82614fcad7fa93, type: 3}
-    - {fileID: 4662955888620548456, guid: 969a7c9001675b040b82614fcad7fa93, type: 3}
-    - {fileID: 3410864348683504067, guid: 969a7c9001675b040b82614fcad7fa93, type: 3}
-    - {fileID: 7280207452734623482, guid: 969a7c9001675b040b82614fcad7fa93, type: 3}
-    - {fileID: 4175421614985105424, guid: 969a7c9001675b040b82614fcad7fa93, type: 3}
-    - {fileID: 3090262167400509423, guid: 969a7c9001675b040b82614fcad7fa93, type: 3}
-    - {fileID: 1093188328976689427, guid: 969a7c9001675b040b82614fcad7fa93, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 969a7c9001675b040b82614fcad7fa93, type: 3}
@@ -2976,6 +2964,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _skillSO: {fileID: 11400000, guid: d29a0a72c0158fe4eb327391554d62a9, type: 2}
   _skillCompo: {fileID: 0}
+  _maxskillPoint: 0
   _skillimage: {fileID: 1097970900}
   _atkCompo: {fileID: 0}
 --- !u!114 &980004647
@@ -4793,6 +4782,7 @@ MonoBehaviour:
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 128
+  arrowObject: {fileID: 0}
   projectilePrefab: {fileID: 7775947042608301330, guid: 653ec31778dcf3646a1aeecc71a07faa, type: 3}
   projectileParent: {fileID: 1394627396}
   <shootCnt>k__BackingField: 2

@@ -50,7 +50,7 @@ MonoBehaviour:
     overrideValue: 3
   - stat: {fileID: 11400000, guid: eb2b424c4f843ab4c9719e67e94e1fdd, type: 2}
     isUseOverride: 1
-    overrideValue: 1
+    overrideValue: 50
   - stat: {fileID: 11400000, guid: 8e752a7d143f1e3418ceb31782255fbb, type: 2}
     isUseOverride: 1
     overrideValue: 1
@@ -94,6 +94,7 @@ Transform:
   - {fileID: 6327401986302762275}
   - {fileID: 4534520051015480238}
   - {fileID: 8175005097962673174}
+  - {fileID: 7820007223987883258}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2722546415526486568
@@ -110,7 +111,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnHitEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4850533527621405110}
+        m_TargetAssemblyTypeName: HitFeedback, Assembly-CSharp
+        m_MethodName: CreateFeedback
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnDeadEvent:
     m_PersistentCalls:
       m_Calls:
@@ -794,6 +807,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &7154816407404613694
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7820007223987883258}
+  - component: {fileID: 4850533527621405110}
+  m_Layer: 7
+  m_Name: HitFeedback
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7820007223987883258
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7154816407404613694}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5065761470846438034}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4850533527621405110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7154816407404613694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2749a543b32102d48a529cf0ac7cb8c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitParticle: {fileID: 398731948856361975, guid: 668a5da44754bbf4881e14ad1b71526a, type: 3}
+  playDuration: 0.5
+  actionData: {fileID: 7287793046413931691}
 --- !u!1 &7873742513614903116
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,6 +900,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rbCompo: {fileID: 3550224687400661799}
   moveSpeedStat: {fileID: 11400000, guid: 4dd32b34ad910a74782ee5a7a3258403, type: 2}
+  isLoveLetter: 0
+  sinAmplitude: 0.5
+  sinFrequency: 5
 --- !u!1 &7930602115554554956
 GameObject:
   m_ObjectHideFlags: 0
