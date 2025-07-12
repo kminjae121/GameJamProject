@@ -38,6 +38,7 @@ public class Enemy : Entity
                 damageData.isCritical = false;
                 damageData.hitPoint = collision.contacts[0].point;
                 damageData.hitNormal = collision.contacts[0].normal;
+                Debug.Log(damageData.hitNormal);
                 damageable.ApplyDamage(damageData, transform.position);
                 Destroy(gameObject);
             }
