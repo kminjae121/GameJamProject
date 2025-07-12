@@ -11,7 +11,7 @@ public class Enemy : Entity
     [SerializeField] private GameObject leftText;
     [SerializeField] private TextMeshPro leftMeshPro;
     [SerializeField] private TextMeshPro rightMeshPro;
-    [SerializeField] private EnemyTextListSO enemyTextList;
+    [SerializeField] private EnemyTextSO enemyTextList;
     [SerializeField] private float showTextTime;
     protected EnemyMovement movement;
     private EntityStat _statCompo;
@@ -68,12 +68,12 @@ public class Enemy : Entity
                 if (transform.position.x >= 0)
                 {
                     rightText.transform.DOScale(0.1f, 0.4f).SetEase(Ease.OutBounce);
-                    rightMeshPro.text = enemyTextList.enemyTexts[_textCount].text;
+                    rightMeshPro.text = enemyTextList.text[_textCount];
                 }
                 else
                 {
                     leftText.transform.DOScale(0.1f, 0.4f).SetEase(Ease.OutBounce);
-                    leftMeshPro.text = enemyTextList.enemyTexts[_textCount].text;
+                    leftMeshPro.text = enemyTextList.text[_textCount];
                 }
 
                 _currentTime = 0;
@@ -81,7 +81,7 @@ public class Enemy : Entity
                 _textCount++;
                 rightText.transform.DOScale(0, 0.4f).SetEase(Ease.OutBounce);
                 leftText.transform.DOScale(0, 0.4f).SetEase(Ease.OutBounce);
-                if (_textCount >= enemyTextList.enemyTexts.Count)
+                if (_textCount >= enemyTextList.text.Count)
                 {
                     _textCount = 0;
                 }
