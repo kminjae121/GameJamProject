@@ -5,7 +5,7 @@ public class MultiplyShootUpGrade : SkillUpCompo
     [SerializeField] private PlayerAttackCompo _atkCompo;
     public override void UpSkillLevel()
     {
-        base.UpSkillLevel();
         _atkCompo.shootCnt += 1;
+        base.UpSkillLevel();
     }
 }
