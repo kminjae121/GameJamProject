@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BossMovemen : MonoBehaviour,IEntityComponent
+public class BossMovemen : MonoBehaviour,IEntityComponent, IAfterInitialize
 {
     [SerializeField] private Rigidbody2D rbCompo;
     [SerializeField] protected StatSO moveSpeedStat;
@@ -44,6 +44,6 @@ public class BossMovemen : MonoBehaviour,IEntityComponent
     private void Move()
     {
         gameObject.transform.LookAt(_moveDir);
-        rbCompo.linearVelocity = _moveDir.normalized * _statCompo.GetStat(moveSpeedStat).Value;
+        rbCompo.linearVelocity = _moveDir.normalized * _moveSpeed;
     }
 }

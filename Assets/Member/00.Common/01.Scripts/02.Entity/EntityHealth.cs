@@ -21,8 +21,18 @@ namespace Code.Combat
             _entity = entity;
             _entityStat = entity.GetCompo<EntityStat>();
             _actionData = entity.GetCompo<ActionData>();
+            GameManager.Instance.OnWaveChangeEvent += HandleWaveChange;
         }
-        
+
+        private void HandleWaveChange(int value)
+        {
+            if(_entity is Enemy)
+            {
+                float wave = value * 0.1f;
+                CurrentHealth = MaxHealth * wave;
+            }
+        }
+
         public void AfterInitialize()
         {
             CurrentHealth = MaxHealth = _entityStat.SubscribeStat(hpStat, HandleMaxHpChange, hpStat.Value);
@@ -59,17 +69,9 @@ namespace Code.Combat
             }
 
             _entity.OnHitEvent?.Invoke();
-
-            if (dealer is not Player)
-                return; 
             
-            TextMeshProUGUI text = Instantiate(damageText, position, Quaternion.identity).GetComponent<TextMeshProUGUI>();
-            
-            if (damageData.isCritical)
-            {
-                text.transform.localScale *= 1.2f;
-                text.color = Color.red;
-            }
+            GameObject text = Instantiate(damageText, position, Quaternion.identity);
+            text.GetComponent<DamageText>().SetDamageText(damageData.damage);
 
             await Awaitable.WaitForSecondsAsync(1f);
             Destroy(text.gameObject);

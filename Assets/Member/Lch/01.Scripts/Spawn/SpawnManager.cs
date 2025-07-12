@@ -7,8 +7,10 @@ using Random = UnityEngine.Random;
 public class SpawnManager : Monosingleton<SpawnManager>
 {
     [SerializeField] private EnemySpawnDataList spawnDataList;
+    [SerializeField] private List<MinBoss> minBossList;
     [SerializeField] private Boss bossPrefab;
     [SerializeField] private float radius = 15;
+    [SerializeField] private int minBossShowValue = 5;
     private float _spawnTime;
     private float _currentSpawnTime;
     private List<Enemy> _spawnEnemyList = new List<Enemy>();
@@ -25,6 +27,14 @@ public class SpawnManager : Monosingleton<SpawnManager>
         {
             if (GameManager.Instance.isEnd == false)
             {
+                if(minBossShowValue == GameManager.Instance._currentwave)
+                {
+                    int spawnEnemy = Random.Range(0, minBossList.Count);
+                    Vector3 spawnPos = Random.insideUnitCircle.normalized * radius;
+                    MinBoss enemy = minBossList[spawnEnemy];
+                    enemy = Instantiate(enemy, spawnPos, Quaternion.identity);
+                    minBossShowValue += 5;
+                }
                 _currentSpawnTime += Time.deltaTime;
 
                 foreach (EnemySpawnData data in spawnDataList.datas)
@@ -44,7 +54,6 @@ public class SpawnManager : Monosingleton<SpawnManager>
             {
                 if(_count == 0)
                 {
-
                     Vector3 spawnPos = Random.insideUnitCircle.normalized * radius;
                     Boss boss = Instantiate(bossPrefab, spawnPos, Quaternion.identity);
                     _count++;
