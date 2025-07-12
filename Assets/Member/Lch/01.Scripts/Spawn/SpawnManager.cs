@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
-public class SpawnManager : Monosingleton<SpawnManager>
+public class SpawnManager : MonoBehaviour
 {
     [SerializeField] private EnemySpawnDataList spawnDataList;
     [SerializeField] private List<MinBoss> minBossList;
@@ -15,6 +15,13 @@ public class SpawnManager : Monosingleton<SpawnManager>
     private float _currentSpawnTime;
     private List<Enemy> _spawnEnemyList = new List<Enemy>();
     private float _count = 0;
+
+    public static SpawnManager Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Start()
     {

@@ -8,7 +8,7 @@ namespace Code.Entities
     public class PlayerHitFeedback : Feedback, IEntityComponent
     {
         [SerializeField] private Sprite hitSprite;
-        [FormerlySerializedAs("idelSprite")] [SerializeField] private Sprite idleSprite;
+        [SerializeField] private Sprite idleSprite;
         [SerializeField] private Color hitColor;
         
         private SpriteRenderer _spriteRenderer;
@@ -19,6 +19,7 @@ namespace Code.Entities
         
         public override void CreateFeedback()
         {
+            Debug.Log("sdffsdfsfdSDF");
             _spriteRenderer.sprite = hitSprite;
             _spriteRenderer.DOColor(hitColor, 0.2f);
             

@@ -48,6 +48,8 @@ public class PlayerAttackCompo : MonoBehaviour, IEntityComponent, IAfterInitiali
 
     private void HandlePointer(Vector2 point)
     {
+        if (this == null) return;
+        
         _mousePos = Camera.main.ScreenToWorldPoint(point);
         Vector2 dir = (_mousePos - transform.position).normalized;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
@@ -63,6 +65,7 @@ public class PlayerAttackCompo : MonoBehaviour, IEntityComponent, IAfterInitiali
 
     private void SpawnProjectile()
     {
+        if (this == null) return;
         Vector3 firePos = (Vector2)transform.position + _direction.normalized * 2f;
         if (shootCnt == 1)
         {
