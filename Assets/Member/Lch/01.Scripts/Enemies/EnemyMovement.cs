@@ -5,7 +5,12 @@ public class EnemyMovement : MonoBehaviour, IEntityComponent,IAfterInitialize
 {
     [SerializeField] private Rigidbody2D rbCompo;
     [SerializeField] protected StatSO moveSpeedStat;
+    [SerializeField] protected bool isLoveLetter = false;
     private EntityStat _statCompo;
+    [SerializeField] private float sinAmplitude = 0.5f;  
+    [SerializeField] private float sinFrequency = 5f;
+
+    private float _timeElapsed = 0f;
     public float _moveSpeed { get; set; }
     Vector3 _moveDir;
     private Enemy _enemy;
@@ -41,9 +46,28 @@ public class EnemyMovement : MonoBehaviour, IEntityComponent,IAfterInitialize
 
     private void Move()
     {
-        
-        gameObject.transform.LookAt(_moveDir);
-        rbCompo.linearVelocity = _moveDir.normalized * _moveSpeed;
+        _timeElapsed += Time.deltaTime;
+        if (!isLoveLetter)
+        {
+            gameObject.transform.LookAt(_moveDir);
+            rbCompo.linearVelocity = _moveDir.normalized * _moveSpeed;
+
+        }
+        else
+        {
+            Vector2 forward = _moveDir.normalized;
+
+
+            Vector2 perpendicular = new Vector2(-forward.y, forward.x);
+
+
+            Vector2 sinOffset = perpendicular * Mathf.Sin(_timeElapsed * sinFrequency) * sinAmplitude;
+
+
+            Vector2 finalDir = forward + sinOffset;
+
+            rbCompo.linearVelocity = finalDir.normalized * _moveSpeed;
+        }
     }
 
 }
