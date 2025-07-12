@@ -8,10 +8,6 @@ public class LockStore : MonoBehaviour
 
     public void SetLockObject()
     {
-        cardSystem._lockObj = null;
-        if (cardSystem.gameObject == gameObject)
-            cardSystem._lockObj = null;
-        else
-            cardSystem.LockObject(this.gameObject);
+            cardSystem.LockObject(this.gameObject.transform.parent.gameObject);
     }
 }

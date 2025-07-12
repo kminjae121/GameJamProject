@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8893436242683131609
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6213707323231060158}
+  - component: {fileID: 3317294760117919140}
+  - component: {fileID: 4181964819938381463}
+  - component: {fileID: 2794441306988071441}
+  - component: {fileID: 6367177610365767911}
+  - component: {fileID: 6863286663362834543}
+  m_Layer: 0
+  m_Name: SkillCompo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6213707323231060158
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8893436242683131609}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3317294760117919140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8893436242683131609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8b5f9cda25307244ba486a052490fc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _skillList: []
+--- !u!114 &4181964819938381463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8893436242683131609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 285d0aa02369ee2429e2855461f9c6c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <skillCoolTime>k__BackingField: 0
+  <currentcoolTime>k__BackingField: 0
+  _boyFriend: {fileID: 0}
+--- !u!114 &2794441306988071441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8893436242683131609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8abe334e16ded9f4bb1bb8740e06bcdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <skillCoolTime>k__BackingField: 0
+  <currentcoolTime>k__BackingField: 0
+  _playerAttackCompo: {fileID: 0}
+--- !u!114 &6367177610365767911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8893436242683131609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a99782184cd7e2b44892404381b9cada, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <skillCoolTime>k__BackingField: 0
+  <currentcoolTime>k__BackingField: 0
+  _WallObjPrefabs: {fileID: 0}
+--- !u!114 &6863286663362834543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8893436242683131609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af0b74ad9d71b684bafb4542f37435b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <skillCoolTime>k__BackingField: 0
+  <currentcoolTime>k__BackingField: 0
+  _bookPrefabs: {fileID: 978593960268035859, guid: 9f1694b425792f74bb417b6129ed6ac0, type: 3}
+  <coolTime>k__BackingField: 5
