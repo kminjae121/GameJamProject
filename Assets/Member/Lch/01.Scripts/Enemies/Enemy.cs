@@ -79,18 +79,12 @@ public class Enemy : Entity
                 textObject.transform.DOScale(0.2f, 0.4f).SetEase(Ease.OutBounce);
                 meshPro.text = enemyTextList.text[_textCount];
 
-                try
-                {
-                    await Awaitable.WaitForSecondsAsync(2.5f);
-                }
-                finally
-                {
-                    textObject.transform.DOScale(0, 0.1f).SetEase(Ease.OutBounce);
+                DOVirtual.DelayedCall(5f, () => { });
+                textObject.transform.DOScale(0, 0.1f).SetEase(Ease.OutBounce);
 
-                    _currentTime = 0;
-                    _textCount = (_textCount + 1) % enemyTextList.text.Count;
-                    _hasPlayedTween = false;
-                }
+                _currentTime = 0;
+                _textCount = (_textCount + 1) % enemyTextList.text.Count;
+                _hasPlayedTween = false;
             }
         }
     }
