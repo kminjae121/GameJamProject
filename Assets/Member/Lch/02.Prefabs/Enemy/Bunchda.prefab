@@ -95,6 +95,7 @@ Transform:
   - {fileID: 4534520051015480238}
   - {fileID: 8175005097962673174}
   - {fileID: 7820007223987883258}
+  - {fileID: 8493423284508805328}
   - {fileID: 2935858292208909616}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -115,6 +116,19 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4850533527621405110}
         m_TargetAssemblyTypeName: HitFeedback, Assembly-CSharp
+        m_MethodName: CreateFeedback
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 231630640733471663}
+        m_TargetAssemblyTypeName: Member.KMin._00_Scene._01_Code.Feedbacks.EnemyShakeFeedback,
+          Assembly-CSharp
         m_MethodName: CreateFeedback
         m_Mode: 1
         m_Arguments:
@@ -238,6 +252,51 @@ MonoBehaviour:
   damageText: {fileID: 3921705052374551305, guid: b78c412ab83a3ec4fa65e8899368ade2, type: 3}
   hpStat: {fileID: 11400000, guid: eb2b424c4f843ab4c9719e67e94e1fdd, type: 2}
   <CurrentHealth>k__BackingField: 0
+--- !u!1 &3000933865081108624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8493423284508805328}
+  - component: {fileID: 231630640733471663}
+  m_Layer: 7
+  m_Name: ShakeFeedback
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8493423284508805328
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3000933865081108624}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5065761470846438034}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &231630640733471663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3000933865081108624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdf18d9c91c249b9b43977631d953df1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmplitude: 0.3
 --- !u!1 &3063529509269428569
 GameObject:
   m_ObjectHideFlags: 0
@@ -903,7 +962,6 @@ MonoBehaviour:
   rbCompo: {fileID: 3550224687400661799}
   moveSpeedStat: {fileID: 11400000, guid: 4dd32b34ad910a74782ee5a7a3258403, type: 2}
   isLoveLetter: 0
-  channel: {fileID: 11400000, guid: 3b0e5a13d32763d45bcf56c2ba81e87d, type: 2}
   sinAmplitude: 0.5
   sinFrequency: 5
 --- !u!1 &7930602115554554956
