@@ -34,7 +34,7 @@ namespace Code.Entities
             if (other.TryGetComponent(out IDamageable damageable))
             {
                 Vector3 hitPoint = other.ClosestPoint(transform.position);
-                Vector3 direction = transform.position - other.transform.position;
+                Vector3 direction = other.transform.position - transform.position;
                 Vector3 normal = direction.normalized;
                 
                 DamageData data = new DamageData();

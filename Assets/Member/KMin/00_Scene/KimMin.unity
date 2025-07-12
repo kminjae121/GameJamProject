@@ -9900,7 +9900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   killCnt: 0
-  <_maxkillCnt>k__BackingField: 1
+  <_maxkillCnt>k__BackingField: 
   <modifilerKillValue>k__BackingField: 1
   <waitingTime>k__BackingField: 0
   <coin>k__BackingField: 0
