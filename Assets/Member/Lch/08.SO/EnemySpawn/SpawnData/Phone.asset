@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Phone
   enemy: {fileID: 4750318707968438209, guid: c4fd5543ac0601249b5e6026d4234919, type: 3}
-  SpawnLevel: 1
+  SpawnLevel: 2

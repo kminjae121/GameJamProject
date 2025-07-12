@@ -9,6 +9,7 @@ namespace Code.Combat
     {
         private Entity _entity;
         private EntityStat _entityStat;
+        private ActionData _actionData;
 
         //[SerializeField] private GameEventChannelSO eventChannel;
         [SerializeField] private GameObject damageText;
@@ -19,6 +20,7 @@ namespace Code.Combat
         {
             _entity = entity;
             _entityStat = entity.GetCompo<EntityStat>();
+            _actionData = entity.GetCompo<ActionData>();
         }
         
         public void AfterInitialize()
@@ -45,6 +47,8 @@ namespace Code.Combat
         {
             Vector2 position = _entity.transform.position;
             position += Random.insideUnitCircle * 0.3f;
+            _actionData.HitNormal = damageData.hitNormal;
+            _actionData.HitPoint = damageData.hitPoint;
 
             CurrentHealth = Mathf.Clamp(CurrentHealth - damageData.damage, 0f, MaxHealth);
 
