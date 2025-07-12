@@ -10,17 +10,15 @@ public class EntitySkillCompo : MonoBehaviour, IEntityComponent, IAfterInitializ
     public float skillDamage { get; set; }
     public float BaseskillDamage { get; private set; }
     
-    [SerializeField] private StatSO _skilldamageSo;
-    
     public Dictionary<string, SkillCompo> SkillList;
 
-    //private Player player;
+    private Player player;
 
     private EntityStat _statCompo;
     
     public virtual void Initialize(Entity entity)
     {
-        //player = entity as Player;
+        player = entity as Player;
         SkillList = new Dictionary<string, SkillCompo>();
 
         if(SkillList == null)
@@ -63,15 +61,15 @@ public class EntitySkillCompo : MonoBehaviour, IEntityComponent, IAfterInitializ
 
         var type = Type.GetType(skillSO.className);
 
-        //var components = player.GetComponentsInChildren(type, true);
-        //
-        //if (components.Length > 0)
-        //{
-        //    SkillCompo component = components[0] as SkillCompo;
-        //     
-        //    SkillList.Add(skillSO.skillName, component);
-        //    SkillList.GetValueOrDefault(skillSO.skillName).GetSkill();
-        //}
+        var components = player.GetComponentsInChildren(type, true);
+        
+        if (components.Length > 0)
+        {
+            SkillCompo component = components[0] as SkillCompo;
+             
+            SkillList.Add(skillSO.skillName, component);
+            SkillList.GetValueOrDefault(skillSO.skillName).GetSkill();
+        }
 
     }
 
@@ -92,13 +90,7 @@ public class EntitySkillCompo : MonoBehaviour, IEntityComponent, IAfterInitializ
 
         SkillList.Values.ToList().ForEach(skill => skill.EventDefault());
     }
-    private void OnDestroy()
-    {
-        DefaltSkill();
-        StatSO targetStat = _statCompo.GetStat(_skilldamageSo);
-        Debug.Assert(targetStat != null, $"{_skilldamageSo.statName} stat could not be found");
-        targetStat.OnValueChanged -= HandleSkillChange;
-    }
+
    
     private void HandleSkillChange(StatSO stat, float currentValue, float previousValue)
     {
@@ -109,11 +101,7 @@ public class EntitySkillCompo : MonoBehaviour, IEntityComponent, IAfterInitializ
 
     public void AfterInitialize()
     {
-        StatSO targetStat = _statCompo.GetStat(_skilldamageSo);
-        Debug.Assert(targetStat != null, $"{_skilldamageSo.statName} stat could not be found");
-        targetStat.OnValueChanged += HandleSkillChange;
-        skillDamage = targetStat.BaseValue;
-        BaseskillDamage = targetStat.BaseValue;
+        
     }
 }
 
