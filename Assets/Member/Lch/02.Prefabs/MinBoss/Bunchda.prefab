@@ -493,6 +493,7 @@ MonoBehaviour:
   rbCompo: {fileID: 6778999145495380665}
   sprite: {fileID: 3355320501322030278}
   color: {r: 0.18238991, g: 0.16919819, b: 0.16919819, a: 1}
+  coin: 10
 --- !u!1 &5157305805719920183
 GameObject:
   m_ObjectHideFlags: 0
