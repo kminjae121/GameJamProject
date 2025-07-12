@@ -1,4 +1,5 @@
 using Code.Combat;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class Enemy : Entity
@@ -16,8 +17,9 @@ public class Enemy : Entity
 
     public override void OnDead()
     {
-        GameManager.Instance.AddKillCount(1);
-        Destroy(gameObject);
+        if(IsDead) return;
+        IsDead = true;
+        GameManager.Instance.AddKillCount(1);   
     }
 
     public override void OnHit()
@@ -27,8 +29,6 @@ public class Enemy : Entity
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("ASD");
-
         if (collision.gameObject.CompareTag("Player"))
         {
             if(collision.gameObject.TryGetComponent(out IDamageable damageable))

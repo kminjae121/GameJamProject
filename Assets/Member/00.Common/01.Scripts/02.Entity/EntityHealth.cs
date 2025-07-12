@@ -49,6 +49,7 @@ namespace Code.Combat
             position += Random.insideUnitCircle * 0.3f;
             _actionData.HitNormal = damageData.hitNormal;
             _actionData.HitPoint = damageData.hitPoint;
+            _actionData.HitDir = direction;
 
             CurrentHealth = Mathf.Clamp(CurrentHealth - damageData.damage, 0f, MaxHealth);
 

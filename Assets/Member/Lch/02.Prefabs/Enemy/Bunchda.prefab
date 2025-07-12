@@ -50,7 +50,7 @@ MonoBehaviour:
     overrideValue: 3
   - stat: {fileID: 11400000, guid: eb2b424c4f843ab4c9719e67e94e1fdd, type: 2}
     isUseOverride: 1
-    overrideValue: 100
+    overrideValue: 1
   - stat: {fileID: 11400000, guid: 8e752a7d143f1e3418ceb31782255fbb, type: 2}
     isUseOverride: 1
     overrideValue: 1
@@ -111,7 +111,19 @@ MonoBehaviour:
       m_Calls: []
   OnDeadEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1089799241375114256}
+        m_TargetAssemblyTypeName: DeadFeedback, Assembly-CSharp
+        m_MethodName: CreateFeedback
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   attackDamageStat: {fileID: 11400000, guid: 8e752a7d143f1e3418ceb31782255fbb, type: 2}
 --- !u!50 &3550224687400661799
 Rigidbody2D:
@@ -139,7 +151,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &4228297522290233068
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -379,7 +391,7 @@ GameObject:
   - component: {fileID: 6327401986302762275}
   - component: {fileID: 1089799241375114256}
   m_Layer: 7
-  m_Name: HitFeedback
+  m_Name: DeadFeedback
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -415,3 +427,5 @@ MonoBehaviour:
   hitParticle: {fileID: 7108232556059833557, guid: a1a11c93b88bc4f4fb5b3019cf606234, type: 3}
   playDuration: 0.5
   actionData: {fileID: 7287793046413931691}
+  rbCompo: {fileID: 3550224687400661799}
+  sprite: {fileID: 8486646714423165460}
