@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Code.Entities;
 using UnityEngine;
 
 public class EntitySkillCompo : MonoBehaviour, IEntityComponent, IAfterInitialize
