@@ -36,16 +36,7 @@ public class Boss : Entity
 
     private void Start()
     {
-        int textShowIndx = Random.Range(0, 11);
-        if (textShowIndx <= 3)
-        {
-            _isShow = true;
-
-        }
-        else
-        {
-            _isShow = false;
-        }
+        _isShow = true;
     }
 
     public override void OnDead()

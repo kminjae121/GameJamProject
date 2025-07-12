@@ -45,5 +45,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnDataList: {fileID: 11400000, guid: b0fc2e5fe259cea4fbea5e22bedddb6e, type: 2}
+  minBossList:
+  - {fileID: 8851117555337318984, guid: c3846849837f133419d7de5cafa82a01, type: 3}
+  - {fileID: 5107719805464984530, guid: 42bf143478701534eb5c012ebafa77df, type: 3}
+  - {fileID: 5107719805464984530, guid: 87d67733257dc624abe705dd2fb778d9, type: 3}
+  - {fileID: 5107719805464984530, guid: e824fc2c951b663419254762bb77ae83, type: 3}
+  - {fileID: 5107719805464984530, guid: 4ccfc2921f4d3ba49a1be32daec56c83, type: 3}
+  - {fileID: 5107719805464984530, guid: 6f6ca7db0aeca5249a14b491e4a44253, type: 3}
+  - {fileID: 5107719805464984530, guid: 88e866f3e0b47d244b2735ddcdaccddc, type: 3}
+  - {fileID: 5107719805464984530, guid: ab6941fddcfff214bb019776eb422733, type: 3}
+  - {fileID: 5107719805464984530, guid: cfc16b3f00c72ef46b6ed86a7db64552, type: 3}
   bossPrefab: {fileID: 8346550111481820963, guid: 9875483c1806ead4186e76b2c2f84d9c, type: 3}
   radius: 15
+  minBossShowValue: 5
