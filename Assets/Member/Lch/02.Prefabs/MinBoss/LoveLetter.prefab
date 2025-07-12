@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6336101920764109453, guid: c3846849837f133419d7de5cafa82a01, type: 3}
+      propertyPath: isLoveLetter
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8256776663404204484, guid: c3846849837f133419d7de5cafa82a01, type: 3}
       propertyPath: m_Name
       value: LoveLetter
@@ -64,6 +68,18 @@ PrefabInstance:
       propertyPath: spawnData
       value: 
       objectReference: {fileID: 11400000, guid: df4ef7d4654e3bf4d8da13f15ed4bf12, type: 2}
+    - target: {fileID: 8851117555337318984, guid: c3846849837f133419d7de5cafa82a01, type: 3}
+      propertyPath: enemyTextList
+      value: 
+      objectReference: {fileID: 11400000, guid: b8423ae35f575fd45ba5fbac7c3e1921, type: 2}
+    - target: {fileID: 8851117555337318984, guid: c3846849837f133419d7de5cafa82a01, type: 3}
+      propertyPath: OnDeadEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CreateFeedback
+      objectReference: {fileID: 0}
+    - target: {fileID: 8851117555337318984, guid: c3846849837f133419d7de5cafa82a01, type: 3}
+      propertyPath: OnDeadEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DeadFeedback, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
