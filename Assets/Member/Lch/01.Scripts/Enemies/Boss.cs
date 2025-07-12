@@ -42,6 +42,8 @@ public class Boss : Entity
     public override void OnDead()
     {
         IsDead = true;
+        DOTween.Kill(rightText.transform);
+        DOTween.Kill(leftText.transform);
         DOVirtual.DelayedCall(0.5f, () => Destroy(gameObject));
         GameManager.Instance.AddKillCount(1);
     }
@@ -52,33 +54,35 @@ public class Boss : Entity
             return;
     }
 
-    private void Update()
+    private async void Update()
     {
+        if (IsDead) return;
+
         if (_isShow)
         {
             _currentTime += Time.deltaTime;
             if (_currentTime > showTextTime && !_hasPlayedTween)
             {
                 _hasPlayedTween = true;
-                if (transform.position.x >= 0)
-                {
-                    rightText.transform.DOScale(0.15f, 0.4f).SetEase(Ease.OutBounce);
-                    rightMeshPro.text = enemyTextList.text[_textCount];
-                }
-                else
-                {
-                    leftText.transform.DOScale(0.15f, 0.4f).SetEase(Ease.OutBounce);
-                    leftMeshPro.text = enemyTextList.text[_textCount];
-                }
 
-                _currentTime = 0;
-                _hasPlayedTween = false;
-                _textCount++;
-                rightText.transform.DOScale(0, 0.4f).SetEase(Ease.OutBounce);
-                leftText.transform.DOScale(0, 0.4f).SetEase(Ease.OutBounce);
-                if (_textCount >= enemyTextList.text.Count)
+                bool isRight = transform.position.x >= 0;
+                TextMeshPro meshPro = isRight ? rightMeshPro : leftMeshPro;
+                GameObject textObject = isRight ? rightText : leftText;
+
+                textObject.transform.DOScale(0.2f, 0.4f).SetEase(Ease.OutBounce);
+                meshPro.text = enemyTextList.text[_textCount];
+
+                try
                 {
-                    _textCount = 0;
+                    await Awaitable.WaitForSecondsAsync(1.5f);
+                }
+                finally
+                {
+                    textObject.transform.DOScale(0, 0.1f).SetEase(Ease.OutBounce);
+
+                    _currentTime = 0;
+                    _textCount = (_textCount + 1) % enemyTextList.text.Count;
+                    _hasPlayedTween = false;
                 }
             }
         }
