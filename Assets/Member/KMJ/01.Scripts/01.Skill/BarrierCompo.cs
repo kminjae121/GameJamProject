@@ -5,7 +5,7 @@ public class BarrierCompo : MonoBehaviour
 {
     [SerializeField] private LayerMask _whatIsEnemy;
 
-    public float modifierValue { get; set; } = 0.1f;
+    public float modifierValue { get; set; } = 0.6f;
     public Vector3 nextRange { get; set; }
     private void OnTriggerEnter2D(Collider2D other)
     {
