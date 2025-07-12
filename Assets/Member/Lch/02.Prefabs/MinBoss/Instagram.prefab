@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: spawnData
       value: 
       objectReference: {fileID: 11400000, guid: ad58186d371d67843b719a9d93ba6685, type: 2}
+    - target: {fileID: 8851117555337318984, guid: c3846849837f133419d7de5cafa82a01, type: 3}
+      propertyPath: enemyTextList
+      value: 
+      objectReference: {fileID: 11400000, guid: 11a6f3c4c019f774795d110f1f1ce23d, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
