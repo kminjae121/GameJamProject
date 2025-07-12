@@ -12,6 +12,7 @@ public class DeadFeedback : Feedback
     [SerializeField] private Rigidbody2D rbCompo;
     [SerializeField] private SpriteRenderer sprite;
     [SerializeField] private Color color;
+    [SerializeField] private int coin;
     private ParticleSystem _playEffect;
     public override void CreateFeedback()
     {
@@ -25,6 +26,7 @@ public class DeadFeedback : Feedback
         Vector2 knockBackDirection = actionData.HitDir;
 
         rbCompo.AddForce(knockBackDirection * 6f,ForceMode2D.Impulse);
+        GameManager.Instance.GetCoin(coin);
         Destroy(_playEffect.gameObject);
         StopFeedback();
     }
