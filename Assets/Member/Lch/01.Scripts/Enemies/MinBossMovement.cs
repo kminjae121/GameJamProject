@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MinBossMovement : MonoBehaviour, IAfterInitialize
+public class MinBossMovement : MonoBehaviour,IEntityComponent, IAfterInitialize
 {
     [SerializeField] private Rigidbody2D rbCompo;
     [SerializeField] protected StatSO moveSpeedStat;
