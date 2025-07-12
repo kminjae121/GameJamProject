@@ -903,6 +903,7 @@ MonoBehaviour:
   rbCompo: {fileID: 3550224687400661799}
   moveSpeedStat: {fileID: 11400000, guid: 4dd32b34ad910a74782ee5a7a3258403, type: 2}
   isLoveLetter: 0
+  channel: {fileID: 11400000, guid: 3b0e5a13d32763d45bcf56c2ba81e87d, type: 2}
   sinAmplitude: 0.5
   sinFrequency: 5
 --- !u!1 &7930602115554554956

@@ -2,12 +2,14 @@ using System;
 using Blade.Core;
 using Code.Combat;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BoyFriendSkill : MonoBehaviour
 {
     [SerializeField] private LayerMask _whatIsEnemy;
 
     [field: SerializeField] public float speed;
+    public UnityAction StunActionEvnet;
 
     [SerializeField] private Transform _girlFriendTrans;
 
@@ -15,14 +17,6 @@ public class BoyFriendSkill : MonoBehaviour
     [SerializeField] private float radius;
 
     private DamageData _damageData;
-
-    [SerializeField] private GameEventChannel _channel;
-
-
-    private void Awake()
-    {
-        _damageData.damage = 50;
-    }
 
     private void Update()
     {
@@ -42,8 +36,9 @@ public class BoyFriendSkill : MonoBehaviour
     {
         if (((1 << other.gameObject.layer) & _whatIsEnemy) != 0)
         {
-            _channel.RaiseEvent(EnemyStateChannel.stunEvt.Initialize(true, 1));
-            
+            _damageData = new DamageData();
+            _damageData.damage = 15;
+            _damageData.isStun = true;
             other.GetComponent<EntityHealth>().ApplyDamage(_damageData,transform.position,null);
         }
     }

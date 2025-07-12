@@ -9,5 +9,6 @@ namespace Code.Combat
         public bool isCritical;
         public Vector2 hitPoint;
         public Vector2 hitNormal;
+        public bool isStun;
     }
 }

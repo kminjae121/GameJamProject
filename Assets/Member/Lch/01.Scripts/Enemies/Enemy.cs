@@ -61,7 +61,7 @@ public class Enemy : Entity
             return;
     }
 
-    private async void Update()
+    private void Update()
     {
         if (IsDead) return;
 
