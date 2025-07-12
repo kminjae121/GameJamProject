@@ -29,6 +29,7 @@ public class ItemEarnAnimation : MonoBehaviour
         coinUIRect.DOMove(coinRect.transform.position, 1.5f).SetEase(Ease.InExpo)
             .SetUpdate(true).OnComplete(() =>
         {
+            
             coinUI.SetActive(false);
         });
     }

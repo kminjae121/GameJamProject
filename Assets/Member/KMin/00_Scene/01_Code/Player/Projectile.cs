@@ -27,7 +27,7 @@ namespace Code.Entities
 
         public async void InitProjectile(float angle)
         {
-            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            transform.rotation = Quaternion.Euler(0, 0, angle + 90);
             DOVirtual.DelayedCall(5f, () =>
             {
                 Destroy(gameObject);
