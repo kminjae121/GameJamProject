@@ -17,6 +17,8 @@ public class DamageText : MonoBehaviour
     {
         mainCamera = Camera.main;
     }
+    
+    public void SetDamageText(float damage) => damageText.text = Mathf.RoundToInt(damage).ToString();
 
     private void OnEnable()
     {

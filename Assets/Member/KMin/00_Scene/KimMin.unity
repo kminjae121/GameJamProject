@@ -882,8 +882,9 @@ MonoBehaviour:
   _skillCompo: {fileID: 0}
   _maxskillPoint: 0
   _skillimage: {fileID: 2092435290}
+  modifierValue: 0
   _boyFriend: {fileID: 0}
-  modifierValue: 3
+  modifierValues: 0
 --- !u!114 &194198598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -996,6 +997,7 @@ MonoBehaviour:
   _skillCompo: {fileID: 0}
   _maxskillPoint: 0
   _skillimage: {fileID: 1951471212}
+  modifierValue: 0
   bookCompo: {fileID: 0}
 --- !u!114 &235730322
 MonoBehaviour:
@@ -3275,6 +3277,7 @@ MonoBehaviour:
   _isWaiting: 0
   _WaveTxt: {fileID: 461014207}
   _killTxt: {fileID: 1799146719}
+  <isEnd>k__BackingField: 0
 --- !u!4 &907909750
 Transform:
   m_ObjectHideFlags: 0
@@ -3401,6 +3404,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  _lockObj: {fileID: 0}
 --- !u!114 &1026867973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3886,8 +3890,9 @@ MonoBehaviour:
   _skillCompo: {fileID: 0}
   _maxskillPoint: 0
   _skillimage: {fileID: 1768784457}
+  modifierValue: 0
   _barrier: {fileID: 0}
-  modifierValue: 2
+  modifierValues: 0
 --- !u!114 &1246865067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4330,6 +4335,7 @@ MonoBehaviour:
   _skillCompo: {fileID: 0}
   _maxskillPoint: 0
   _skillimage: {fileID: 1780436458}
+  modifierValue: 0
   _atkCompo: {fileID: 0}
 --- !u!114 &1437622641
 MonoBehaviour:

@@ -25,7 +25,7 @@ public class GameManager : Monosingleton<GameManager>
     [SerializeField] private TextMeshProUGUI _killTxt;
     
 
-    public bool isEnd { get; private set; } = true;
+    [field: SerializeField] public bool isEnd { get; private set; } = true;
 
     protected override void Awake()
     {
