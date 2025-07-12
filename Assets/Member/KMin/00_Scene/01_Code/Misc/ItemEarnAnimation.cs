@@ -1,15 +1,24 @@
+using System;
+using Blade.Core;
 using DG.Tweening;
+using Member.KMin._00_Scene._01_Code.Misc;
 using UnityEngine;
 
 public class ItemEarnAnimation : MonoBehaviour
 {
+    [SerializeField] private GameEventChannel eventChannel;
     [SerializeField] private GameObject coinPrefab;
     [SerializeField] private RectTransform coinRect;
     [SerializeField] private RectTransform canvasRect;
-    
-    public void CoinAnim(Vector3 worldPosition)
+
+    private void Awake()
     {
-        Vector3 screenPos = Camera.main.WorldToScreenPoint(worldPosition);
+        eventChannel.AddListener<EnemyDeadEvent>(HandleEnemyDead);
+    }
+
+    private void HandleEnemyDead(EnemyDeadEvent channel)
+    {
+        Vector3 screenPos = Camera.main.WorldToScreenPoint(channel.deadPosition);
         
         GameObject coinUI = Instantiate(coinPrefab, canvasRect);
         RectTransform coinUIRect = coinUI.GetComponent<RectTransform>();
@@ -17,7 +26,8 @@ public class ItemEarnAnimation : MonoBehaviour
 
         coinUIRect.transform.localScale = Vector2.one * 2;
         coinUIRect.transform.DOScale(1f, 1f);
-        coinUIRect.DOMove(coinRect.transform.position, 1.5f).SetEase(Ease.InExpo).OnComplete(() =>
+        coinUIRect.DOMove(coinRect.transform.position, 1.5f).SetEase(Ease.InExpo)
+            .SetUpdate(true).OnComplete(() =>
         {
             coinUI.SetActive(false);
         });
