@@ -19,6 +19,7 @@ public class PlayerAttackCompo : MonoBehaviour, IEntityComponent, IAfterInitiali
     [SerializeField] private float _atkDamage;
     [field: SerializeField] public int shootCnt { get; set; } = 1;
     private Vector3 _mousePos;
+    private Vector2 _direction;
     private float _angle;
 
     public void Initialize(Entity entity)
@@ -53,25 +54,26 @@ public class PlayerAttackCompo : MonoBehaviour, IEntityComponent, IAfterInitiali
 
         _angle = angle;
 
+        _direction = dir;
         arrowObject.transform.position = (Vector2)transform.position + dir.normalized * 2f;
         arrowObject.transform.rotation = Quaternion.Euler(0, 0, angle + 90f);
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
     
-    
 
     private void SpawnProjectile()
     {
+        Vector3 firePos = (Vector2)transform.position + _direction.normalized * 2f;
         if (shootCnt == 1)
         {
-            Projectile projectile = Instantiate(projectilePrefab, transform.position, quaternion.identity).GetComponent<Projectile>();
+            Projectile projectile = Instantiate(projectilePrefab, firePos, quaternion.identity).GetComponent<Projectile>();
             projectile.InitProjectile(_angle);
         }
         else if(shootCnt == 2)
         {
             for (int i = 1; i <= 3; i++)
             {
-                Projectile projectile = Instantiate(projectilePrefab, transform.position, quaternion.identity).GetComponent<Projectile>();
+                Projectile projectile = Instantiate(projectilePrefab, firePos, quaternion.identity).GetComponent<Projectile>();
                 if (i == 2)
                 {
                     projectile.InitProjectile(_angle + 15);
@@ -89,7 +91,7 @@ public class PlayerAttackCompo : MonoBehaviour, IEntityComponent, IAfterInitiali
         {
             for (int i = 1; i <= 5; i++)
             {
-                Projectile projectile = Instantiate(projectilePrefab, transform.position, quaternion.identity).GetComponent<Projectile>();
+                Projectile projectile = Instantiate(projectilePrefab, firePos, quaternion.identity).GetComponent<Projectile>();
                 if (i == 2)
                 {
                     projectile.InitProjectile(_angle + 15);

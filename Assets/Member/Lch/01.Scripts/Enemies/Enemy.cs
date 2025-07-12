@@ -48,8 +48,8 @@ public class Enemy : Entity
 
     public override void OnDead()
     {
-        DOVirtual.DelayedCall(0.5f, () => Destroy(gameObject));
         IsDead = true;
+        DOVirtual.DelayedCall(0.5f, () => Destroy(gameObject));
         GameManager.Instance.AddKillCount(1);
     }
 
