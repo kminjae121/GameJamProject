@@ -27,8 +27,6 @@ public class Enemy : Entity
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("ASD");
-
         if (collision.gameObject.CompareTag("Player"))
         {
             if(collision.gameObject.TryGetComponent(out IDamageable damageable))
@@ -38,6 +36,7 @@ public class Enemy : Entity
                 damageData.isCritical = false;
                 damageData.hitPoint = collision.contacts[0].point;
                 damageData.hitNormal = collision.contacts[0].normal;
+                Debug.Log(damageData.hitNormal);
                 damageable.ApplyDamage(damageData, transform.position);
                 Destroy(gameObject);
             }
