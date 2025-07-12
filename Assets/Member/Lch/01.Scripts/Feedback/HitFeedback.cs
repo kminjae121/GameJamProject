@@ -1,23 +1,24 @@
 using DG.Tweening;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class HitFeedback : Feedback
 {
     [SerializeField] private ParticleSystem hitParticle;
-    [SerializeField] private float playDuration = 0.5f;
+    [SerializeField] private float playDuration = 0.1f;
     [SerializeField] private ActionData actionData;
-    private ParticleSystem _playEffect;
-    public override void CreateFeedback()
+    public override async void CreateFeedback()
     {
-        _playEffect = hitParticle;
+        ParticleSystem particleSystem = hitParticle;
         Quaternion rotation = Quaternion.LookRotation(actionData.HitNormal * -1);
-        _playEffect = Instantiate(_playEffect, actionData.HitPoint, rotation);
-        _playEffect.Play();
-        DOVirtual.DelayedCall(playDuration, () => StopFeedback());
+        particleSystem = Instantiate(particleSystem, actionData.HitPoint, rotation);
+        particleSystem.Play();
+        await Awaitable.WaitForSecondsAsync(playDuration);
+        Destroy(particleSystem.gameObject);
     }
 
     public override void StopFeedback()
     {
-        Destroy(_playEffect.gameObject);
+        
     }
 }
