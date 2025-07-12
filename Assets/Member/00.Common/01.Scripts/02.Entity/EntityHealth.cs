@@ -56,7 +56,6 @@ namespace Code.Combat
             if (CurrentHealth <= 0)
             {
                 _entity.OnDeadEvent?.Invoke();
-                CurrentHealth = MaxHealth;
             }
 
             _entity.OnHitEvent?.Invoke();
