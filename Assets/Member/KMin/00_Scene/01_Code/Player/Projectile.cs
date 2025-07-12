@@ -1,6 +1,7 @@
 using System;
 using Code.Combat;
 using Code.Entities;
+using DG.Tweening;
 using UnityEngine;
 
 namespace Code.Entities
@@ -24,9 +25,13 @@ namespace Code.Entities
         private void MoveProjectile()
             => _rigidCompo.linearVelocity = transform.right * projectileSO.speed;
 
-        public void InitProjectile(float angle)
+        public async void InitProjectile(float angle)
         {
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            DOVirtual.DelayedCall(5f, () =>
+            {
+                Destroy(gameObject);
+            });
         }
 
         private void OnTriggerEnter2D(Collider2D other)

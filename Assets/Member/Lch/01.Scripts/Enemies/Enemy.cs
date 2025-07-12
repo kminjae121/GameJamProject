@@ -63,7 +63,7 @@ public class Enemy : Entity
 
     private async void Update()
     {
-        if (IsDead || !this || !gameObject) return;
+        if (IsDead) return;
 
         if (_isShow)
         {
@@ -76,28 +76,15 @@ public class Enemy : Entity
                 TextMeshPro meshPro = isRight ? rightMeshPro : leftMeshPro;
                 GameObject textObject = isRight ? rightText : leftText;
 
-                // Tween 시작 (보이기)
-                if (textObject != null)
-                {
-                    textObject.transform.DOScale(0.2f, 0.4f).SetEase(Ease.OutBounce);
-                    meshPro.text = enemyTextList.text[_textCount];
-                }
+                textObject.transform.DOScale(0.2f, 0.4f).SetEase(Ease.OutBounce);
+                meshPro.text = enemyTextList.text[_textCount];
 
-                try
-                {
-                    await Awaitable.WaitForSecondsAsync(1.5f);
-                }
-                finally
-                {
-                    if (this != null && textObject != null)
-                    {
-                        textObject.transform.DOScale(0, 0.1f).SetEase(Ease.OutBounce);
-                    }
+                DOVirtual.DelayedCall(5f, () => { });
+                textObject.transform.DOScale(0, 0.1f).SetEase(Ease.OutBounce);
 
-                    _currentTime = 0;
-                    _textCount = (_textCount + 1) % enemyTextList.text.Count;
-                    _hasPlayedTween = false;
-                }
+                _currentTime = 0;
+                _textCount = (_textCount + 1) % enemyTextList.text.Count;
+                _hasPlayedTween = false;
             }
         }
     }
