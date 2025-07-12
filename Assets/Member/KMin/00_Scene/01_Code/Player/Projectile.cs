@@ -29,15 +29,18 @@ namespace Code.Entities
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
 
-        private void OnCollisionEnter2D(Collision2D collision)
+        private void OnTriggerEnter2D(Collider2D other)
         {
-            if (collision.collider.TryGetComponent(out IDamageable damageable))
+            if (other.TryGetComponent(out IDamageable damageable))
             {
+                Vector3 hitPoint = other.ClosestPoint(transform.position);
+                Vector3 direction = transform.position - other.transform.position;
+                Vector3 normal = direction.normalized;
+                
                 DamageData data = new DamageData();
-                Vector3 direction = (transform.position - Vector3.zero).normalized;
                 data.damage = projectileSO.attackDamage;
-                data.hitPoint = collision.contacts[0].point;
-                data.hitNormal = collision.contacts[0].normal;
+                data.hitPoint = hitPoint;
+                data.hitNormal = normal;
                 
                 damageable.ApplyDamage(data, direction);
                 Destroy(gameObject);
