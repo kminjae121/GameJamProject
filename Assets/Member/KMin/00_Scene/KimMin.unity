@@ -865,7 +865,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &194198597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -956,10 +956,10 @@ RectTransform:
   - {fileID: 617130603}
   m_Father: {fileID: 1026867971}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 151.17499, y: -244.04999}
-  m_SizeDelta: {x: 302.35, y: 488.1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &235730320
 GameObject:
@@ -980,7 +980,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &235730321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1070,10 +1070,10 @@ RectTransform:
   - {fileID: 23241316}
   m_Father: {fileID: 1026867971}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 976.375, y: -244.05}
-  m_SizeDelta: {x: 302.35, y: 488.1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &256437075
 GameObject:
@@ -3261,7 +3261,6 @@ MonoBehaviour:
   _isWaiting: 0
   _WaveTxt: {fileID: 461014207}
   _killTxt: {fileID: 1799146719}
-  <isEnd>k__BackingField: 1
 --- !u!4 &907909750
 Transform:
   m_ObjectHideFlags: 0
@@ -3364,8 +3363,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 108, y: -108}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 9, y: 0}
+  m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1026867972
 MonoBehaviour:
@@ -3389,6 +3388,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   _lockObj: {fileID: 0}
+  _lockSprite: {fileID: 0}
+  _unLockSprite: {fileID: 0}
 --- !u!114 &1026867973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3406,13 +3407,13 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 0
+  m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 1
-  m_CellSize: {x: 302.35, y: 488.1}
-  m_Spacing: {x: 110.25, y: -159}
-  m_Constraint: 0
-  m_ConstraintCount: 2
+  m_CellSize: {x: 300, y: 500}
+  m_Spacing: {x: 100, y: 0}
+  m_Constraint: 1
+  m_ConstraintCount: 4
 --- !u!222 &1026867974
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3835,7 +3836,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1246865065
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3853,10 +3854,10 @@ RectTransform:
   - {fileID: 1682767158}
   m_Father: {fileID: 1026867971}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1388.9751, y: -244.05}
-  m_SizeDelta: {x: 302.35, y: 488.1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1246865066
 MonoBehaviour:
@@ -4302,7 +4303,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1437622640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4392,10 +4393,10 @@ RectTransform:
   - {fileID: 1681252782}
   m_Father: {fileID: 1026867971}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 563.775, y: -244.05}
-  m_SizeDelta: {x: 302.35, y: 488.1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1439941988
 GameObject:
@@ -4554,7 +4555,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -622, y: 236}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1557046582
@@ -5287,6 +5288,8 @@ MonoBehaviour:
   arrowObject: {fileID: 2095940905}
   projectilePrefab: {fileID: 7775947042608301330, guid: 653ec31778dcf3646a1aeecc71a07faa, type: 3}
   projectileParent: {fileID: 1394627396}
+  _atkDamage: {fileID: 0}
+  _atkcoolTime: {fileID: 0}
   <shootCnt>k__BackingField: 2
 --- !u!120 &1780139389
 LineRenderer:

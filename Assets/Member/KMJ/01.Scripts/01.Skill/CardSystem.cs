@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -110,7 +111,8 @@ namespace Member.KMJ._01.Scripts
         {
             RandomItem();
             Time.timeScale = 0;
-            _rect.localScale = Vector3.one;
+            _rect.localScale = Vector3.zero;
+            _rect.transform.DOScale(1f, 0.5f);
             
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
