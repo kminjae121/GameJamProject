@@ -2168,67 +2168,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1075415465
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5666318045058709598, guid: 42bf143478701534eb5c012ebafa77df, type: 3}
-      propertyPath: m_Name
-      value: FaceBook
-      objectReference: {fileID: 0}
-    - target: {fileID: 5666318045058709598, guid: 42bf143478701534eb5c012ebafa77df, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7977156238809194614, guid: 42bf143478701534eb5c012ebafa77df, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7977156238809194614, guid: 42bf143478701534eb5c012ebafa77df, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7977156238809194614, guid: 42bf143478701534eb5c012ebafa77df, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7977156238809194614, guid: 42bf143478701534eb5c012ebafa77df, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7977156238809194614, guid: 42bf143478701534eb5c012ebafa77df, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7977156238809194614, guid: 42bf143478701534eb5c012ebafa77df, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7977156238809194614, guid: 42bf143478701534eb5c012ebafa77df, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7977156238809194614, guid: 42bf143478701534eb5c012ebafa77df, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7977156238809194614, guid: 42bf143478701534eb5c012ebafa77df, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7977156238809194614, guid: 42bf143478701534eb5c012ebafa77df, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 42bf143478701534eb5c012ebafa77df, type: 3}
 --- !u!1001 &1134882139
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5197,6 +5136,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1684701295909884664, guid: d75c9679122792549a79fb973f039bc3, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1684701295909884664, guid: d75c9679122792549a79fb973f039bc3, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 1684701295909884664, guid: d75c9679122792549a79fb973f039bc3, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 1773409909273708269, guid: d75c9679122792549a79fb973f039bc3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -5853,6 +5804,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 264
       objectReference: {fileID: 0}
+    - target: {fileID: 6725349009673715307, guid: d75c9679122792549a79fb973f039bc3, type: 3}
+      propertyPath: '_explainTxt.Array.data[0]'
+      value: "\uC5EC\uB7EC\uCD1D\uC54C\uC744 \uBC1C\uC0AC\uD569\uB2C8\uB2E4.\uC5BB\uC744
+        \uB54C \uB9C8\uB2E4 \uACF5\uACA9\uB825 5 \uAC10\uC18C"
+      objectReference: {fileID: 0}
     - target: {fileID: 6894336732070849395, guid: d75c9679122792549a79fb973f039bc3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -6052,7 +6008,6 @@ SceneRoots:
   - {fileID: 1050955829}
   - {fileID: 7143797622024623505}
   - {fileID: 1134882139}
-  - {fileID: 1075415465}
   - {fileID: 1764504771}
   - {fileID: 420844920}
   - {fileID: 16947790}

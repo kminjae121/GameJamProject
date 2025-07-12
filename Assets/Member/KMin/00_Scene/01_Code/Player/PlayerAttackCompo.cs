@@ -94,7 +94,7 @@ public class PlayerAttackCompo : MonoBehaviour, IEntityComponent, IAfterInitiali
         }
         else if(shootCnt == 2)
         {
-            _projectile.attackDamage = 12;
+            _projectile.attackDamage = 10;
             for (int i = 1; i <= 3; i++)
             {
                 Projectile projectile = Instantiate(projectilePrefab, firePos, quaternion.identity).GetComponent<Projectile>();
@@ -113,7 +113,7 @@ public class PlayerAttackCompo : MonoBehaviour, IEntityComponent, IAfterInitiali
         }
         else if (shootCnt == 3)
         {
-            _projectile.attackDamage = 9;
+            _projectile.attackDamage = 5;
             for (int i = 1; i <= 5; i++)
             {
                 Projectile projectile = Instantiate(projectilePrefab, firePos, quaternion.identity).GetComponent<Projectile>();

@@ -67,27 +67,13 @@ public class MinBoss : Entity
                 TextMeshPro meshPro = isRight ? rightMeshPro : leftMeshPro;
                 GameObject textObject = isRight ? rightText : leftText;
 
-                if (textObject != null)
-                {
+
                     textObject.transform.DOScale(0.1f, 0.4f).SetEase(Ease.OutBounce);
                     meshPro.text = enemyTextList.text[_textCount];
-                }
-
-                try
-                {
-                    await Awaitable.WaitForSecondsAsync(1.5f);
-                }
-                finally
-                {
-                    if (this != null && textObject != null)
-                    {
-                        textObject.transform.DOScale(0, 0.1f).SetEase(Ease.OutBounce);
-                    }
-
-                    _currentTime = 0;
+                    DOVirtual.DelayedCall(5f, () => { });
+                        textObject.transform.DOScale(0, 0.1f).SetEase(Ease.OutBounce); _currentTime = 0;
                     _textCount = (_textCount + 1) % enemyTextList.text.Count;
                     _hasPlayedTween = false;
-                }
             }
         }
 
