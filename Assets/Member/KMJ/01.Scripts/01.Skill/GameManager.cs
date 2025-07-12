@@ -12,6 +12,8 @@ public class GameManager : Monosingleton<GameManager>
 
     public int _currentwave { get; private set; } = 1;
     public int _nextWaveCnt { get; private set; } = 3;
+
+    public bool _isWaiting;
     
 
     public bool isEnd { get; private set; }
