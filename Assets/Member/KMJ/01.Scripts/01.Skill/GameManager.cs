@@ -49,13 +49,14 @@ public class GameManager : MonoBehaviour
         if(isEnd == false)
         {
             _maxkillCnt[currentKillCnt] -= KillCnt;
-
             _killTxt.text = $"남은 킬 : {_maxkillCnt[currentKillCnt]}";
+
         
             if (_maxkillCnt[currentKillCnt] <= 0)
             {
                 _currentwave += 1;
                 currentKillCnt++;
+                 _killTxt.text = $"남은 킬 : {_maxkillCnt[currentKillCnt]}";
                 FadeUI.Instance.FindTxt("StageTxt").gameObject.SetActive(true);
                 FadeUI.Instance.FindTxt("StageTxt").alpha = 255f;
             
@@ -63,7 +64,7 @@ public class GameManager : MonoBehaviour
                 FadeUI.Instance.FadeTxt(0, 3, "StageTxt");
                 OnWaveChangeEvent?.Invoke(_currentwave);
                 ShowPanel();
-                if (_currentwave ==  30)
+                if (_currentwave == 25)
                 {
                     isEnd = true;
                 }

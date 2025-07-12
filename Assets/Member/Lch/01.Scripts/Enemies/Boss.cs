@@ -55,7 +55,7 @@ public class Boss : Entity
             return;
     }
 
-    private async void Update()
+    private void Update()
     {
         if (IsDead || !this || !gameObject) return;
 
@@ -69,29 +69,15 @@ public class Boss : Entity
                 bool isRight = transform.position.x >= 0;
                 TextMeshPro meshPro = isRight ? rightMeshPro : leftMeshPro;
                 GameObject textObject = isRight ? rightText : leftText;
+                
+                textObject.transform.DOScale(0.18f, 0.4f).SetEase(Ease.OutBounce);
+                meshPro.text = enemyTextList.text[_textCount];
 
-                // Tween ���� (���̱�)
-                if (textObject != null)
-                {
-                    textObject.transform.DOScale(0.15f, 0.4f).SetEase(Ease.OutBounce);
-                    meshPro.text = enemyTextList.text[_textCount];
-                }
-
-                try
-                {
-                    await Awaitable.WaitForSecondsAsync(1.5f);
-                }
-                finally
-                {
-                    if (this != null && textObject != null)
-                    {
-                        textObject.transform.DOScale(0, 0.1f).SetEase(Ease.OutBounce);
-                    }
-
-                    _currentTime = 0;
-                    _textCount = (_textCount + 1) % enemyTextList.text.Count;
-                    _hasPlayedTween = false;
-                }
+                DOVirtual.DelayedCall(5f, () => { });
+                textObject.transform.DOScale(0, 0.1f).SetEase(Ease.OutBounce);
+                _currentTime = 0;
+                _textCount = (_textCount + 1) % enemyTextList.text.Count;
+                _hasPlayedTween = false;
             }
         }
 

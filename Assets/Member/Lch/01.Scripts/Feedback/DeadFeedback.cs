@@ -1,7 +1,4 @@
 using DG.Tweening;
-using NUnit.Framework.Internal;
-using System.Threading.Tasks;
-using UnityEditor.EditorTools;
 using UnityEngine;
 
 public class DeadFeedback : Feedback

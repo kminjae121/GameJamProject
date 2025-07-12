@@ -32,6 +32,7 @@ public class BookSkillUpCompo : SkillUpCompo
             price += modifierValue;
             gameObject.SetActive(false);
             bookCompo.coolTime -= 0.2f;
+            priceTxt.text = $"가격 : {price}원";
             return;
          }
          else
@@ -44,6 +45,7 @@ public class BookSkillUpCompo : SkillUpCompo
             GameManager.Instance.MinusCoin(price);
             price += modifierValue;
             gameObject.SetActive(false);
+            priceTxt.text = $"가격 : {price}원";
             return;
          }
       }

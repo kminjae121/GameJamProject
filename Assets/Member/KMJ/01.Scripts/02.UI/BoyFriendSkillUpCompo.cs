@@ -34,6 +34,7 @@ public class BoyFriendSkillUpCompo : SkillUpCompo
                 price += modifierValue;
                 gameObject.SetActive(false);
                 _boyFriend.speed += modifierValues;
+                priceTxt.text = $"가격 : {price}원";
                 return;
             }
             else
@@ -46,6 +47,7 @@ public class BoyFriendSkillUpCompo : SkillUpCompo
                 GameManager.Instance.MinusCoin(price);
                 price += modifierValue;
                 gameObject.SetActive(false);
+                priceTxt.text = $"가격 : {price}원";
                 return;
             }
         }
