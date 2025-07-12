@@ -1,4 +1,5 @@
 using System.Collections;
+using DG.Tweening;
 using UnityEngine;
 
 public class SlangWord : SkillCompo
@@ -20,7 +21,9 @@ public class SlangWord : SkillCompo
         {
             yield return new WaitForSeconds(coolTime);
             
-            Instantiate(_slangPrefab, transform.position, Quaternion.identity);
+            GameObject obj = Instantiate(_slangPrefab, transform.position, Quaternion.identity);
+            obj.transform.localScale = Vector3.zero;
+            obj.transform.DOScale(1f, 0.7f).SetEase(Ease.OutBounce);
         }
     }
 }

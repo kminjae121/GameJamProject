@@ -29,6 +29,11 @@ public class ItemEarnAnimation : MonoBehaviour
         coinUIRect.DOMove(coinRect.transform.position, 1.5f).SetEase(Ease.InExpo)
             .SetUpdate(true).OnComplete(() =>
         {
+            GameManager.Instance.GetCoin(1);
+            coinRect.DOScale(1.5f, 0.2f).OnComplete(() =>
+            {
+                coinRect.DOScale(1f, 0.3f).SetUpdate(true);
+            });
             
             coinUI.SetActive(false);
         });
