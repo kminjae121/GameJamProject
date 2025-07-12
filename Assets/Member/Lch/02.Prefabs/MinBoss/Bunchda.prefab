@@ -223,7 +223,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -628,7 +628,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1004,7 +1004,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4098477843540609172}
-  - component: {fileID: 208458427996347549}
+  - component: {fileID: 6336101920764109453}
   m_Layer: 6
   m_Name: Movment
   m_TagString: Untagged
@@ -1027,7 +1027,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5945795808018172396}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &208458427996347549
+--- !u!114 &6336101920764109453
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1036,7 +1036,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8972815254457946806}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c72cf5c635033240bc78d77cf68200e, type: 3}
+  m_Script: {fileID: 11500000, guid: d1cf60d26460bb748a0fe451babb467f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rbCompo: {fileID: 6778999145495380665}

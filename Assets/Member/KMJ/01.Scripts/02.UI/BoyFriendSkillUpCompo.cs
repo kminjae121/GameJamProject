@@ -9,6 +9,6 @@ public class BoyFriendSkillUpCompo : SkillUpCompo
     {
         base.UpSkillLevel();
         
-            _boyFriend.speed += modifierValues;
+        _boyFriend.speed += modifierValues;
     }
 }

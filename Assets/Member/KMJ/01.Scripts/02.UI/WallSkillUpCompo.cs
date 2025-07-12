@@ -9,15 +9,9 @@ public class WallSkillUpCompo : SkillUpCompo
     public override void UpSkillLevel()
     {
         base.UpSkillLevel();
-        if (_skillSO != null)
-        {
-            
-        }
-        else
-        {
+
             _barrier.transform.localScale += new Vector3(2, 2, 0);
             _barrier.modifierValue += modifierValues;
-        }
 
     }
 }

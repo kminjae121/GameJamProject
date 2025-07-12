@@ -39,7 +39,8 @@ public class BoyFriendSkill : MonoBehaviour
     {
         if (((1 << other.gameObject.layer) & _whatIsEnemy) != 0)
         {
-            other.transform.GetComponentInChildren<EntityHealth>().ApplyDamage(_damageData,transform.position,null);
+            print(other.gameObject.name);
+            other.GetComponent<EntityHealth>().ApplyDamage(_damageData,transform.position,null);
         }
     }
 }
