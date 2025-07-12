@@ -26,6 +26,8 @@ namespace Member.KMJ._01.Scripts
 
         [SerializeField] private GameObject exitBtn;
         [SerializeField] private GameObject rerollBtn;
+
+        [SerializeField] private InputReader _inputReader;
         private void Awake()
         {
             instance = this;
@@ -114,6 +116,7 @@ namespace Member.KMJ._01.Scripts
             _rect.transform.DOScale(1f, 0.8f).SetEase(Ease.OutBack).SetUpdate(true);
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
+            _inputReader.OnDisable();
             isShow = true;
         }
 
@@ -128,6 +131,7 @@ namespace Member.KMJ._01.Scripts
                 Time.timeScale = 1;
                 Cursor.visible = false;
                 isShow = false;
+                _inputReader.OnEnable();
             });
         }
         
