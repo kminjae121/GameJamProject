@@ -12,6 +12,7 @@ public abstract class Enemy : Entity
 
     public override void OnDead()
     {
+        GameManager.Instance.AddKillCount(1);
         Destroy(gameObject);
     }
 
