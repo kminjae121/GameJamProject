@@ -126,11 +126,6 @@ namespace Member.KMJ._01.Scripts
                 Time.timeScale = 1;
                 Cursor.visible = false;
                 isShow = false;
-                FadeUI.Instance.FindTxt("StageTxt").gameObject.SetActive(true);
-                FadeUI.Instance.FindTxt("StageTxt").alpha = 255f;
-            
-                FadeUI.Instance.FindTxt("StageTxt").text = $"Stage{GameManager.Instance._currentwave}";
-                FadeUI.Instance.FadeTxt(0, 3, "StageTxt");
             });
         }
 
