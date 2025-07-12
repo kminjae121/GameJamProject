@@ -31,8 +31,8 @@ namespace Code.Combat
         {
             if(_entity is Enemy)
             {
-                float wave = value * 0.1f;
-                CurrentHealth = MaxHealth * wave;
+                float wave = value * 1.5f;
+                CurrentHealth = MaxHealth + wave;
             }
         }
 

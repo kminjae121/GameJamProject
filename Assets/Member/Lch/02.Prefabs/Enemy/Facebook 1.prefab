@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6542891024576765417, guid: 32426ca20131782479604993b9ceb65f, type: 3}
+      propertyPath: statOverrides.Array.data[1].overrideValue
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 7899142377363838248, guid: 32426ca20131782479604993b9ceb65f, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.15
