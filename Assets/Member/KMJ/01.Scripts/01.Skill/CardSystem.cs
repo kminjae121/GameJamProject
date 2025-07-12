@@ -19,6 +19,7 @@ namespace Member.KMJ._01.Scripts
 
         [SerializeField] private List<GameObject> _selectObj;
 
+        public GameObject _lockObj;
         private void Awake()
         {
             instance = this;
@@ -33,6 +34,11 @@ namespace Member.KMJ._01.Scripts
         private void Start()
         {
             
+        }
+
+        public void LockObject(GameObject lockObj)
+        {
+            _lockObj = lockObj.transform.parent.gameObject;
         }
 
         private void SelectSecond()
@@ -85,30 +91,49 @@ namespace Member.KMJ._01.Scripts
         public void RandomItem()
         {
             itemList.ToList().ForEach(UI => UI.SetActive(false));
-            int maxCount = itemList.Count;
 
-            int[] ran = new int[3];
+            List<GameObject> availableItems = new List<GameObject>(itemList);
 
-            while (true)
+            if (_lockObj != null)
             {
-                ran[0] = Random.Range(0, maxCount);
-                ran[1] = Random.Range(0, maxCount);
-                ran[2] = Random.Range(0, maxCount);
+                _lockObj.transform.SetSiblingIndex(0);
+                _lockObj.SetActive(true);
+                _selectObj[0] = _lockObj;
+                
+                availableItems.Remove(_lockObj);
+                
+                List<GameObject> randoms = availableItems.OrderBy(x => Random.value).Take(2).ToList();
 
-                if (ran[0] != ran[1] && ran[1] != ran[2] && ran[2] != ran[0])
-                    break;
+                for (int i = 0; i < 2; i++)
+                {
+                    GameObject obj = randoms[i];
+                    obj.transform.SetSiblingIndex(i + 1);
+                    obj.SetActive(true);
+                    _selectObj[i + 1] = obj;
+                }
             }
-
-            for (int i = 0; i < 3; i++)
+            else
             {
-                GameObject obj = itemList[ran[i]];
-                obj.transform.SetSiblingIndex(i);
-                obj.SetActive(true);
-            }
+                int maxCount = itemList.Count;
+                int[] ran = new int[3];
 
-            for (int i = 0; i < 3; i++)
-            {
-                _selectObj[i] = transform.GetChild(i).gameObject;
+                while (true)
+                {
+                    ran[0] = Random.Range(0, maxCount);
+                    ran[1] = Random.Range(0, maxCount);
+                    ran[2] = Random.Range(0, maxCount);
+
+                    if (ran[0] != ran[1] && ran[1] != ran[2] && ran[2] != ran[0])
+                        break;
+                }
+
+                for (int i = 0; i < 3; i++)
+                {
+                    GameObject obj = itemList[ran[i]];
+                    obj.transform.SetSiblingIndex(i);
+                    obj.SetActive(true);
+                    _selectObj[i] = obj;
+                }
             }
         }
     }
