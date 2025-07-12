@@ -717,7 +717,7 @@ MonoBehaviour:
   statOverrides:
   - stat: {fileID: 11400000, guid: 4dd32b34ad910a74782ee5a7a3258403, type: 2}
     isUseOverride: 1
-    overrideValue: 0.75
+    overrideValue: 0.5
   - stat: {fileID: 11400000, guid: eb2b424c4f843ab4c9719e67e94e1fdd, type: 2}
     isUseOverride: 1
     overrideValue: 500
@@ -929,6 +929,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70fb456f2cc377b49a85f1b3f4ea3aaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventChannel: {fileID: 0}
   damageText: {fileID: 3921705052374551305, guid: b78c412ab83a3ec4fa65e8899368ade2, type: 3}
   hpStat: {fileID: 11400000, guid: eb2b424c4f843ab4c9719e67e94e1fdd, type: 2}
   <CurrentHealth>k__BackingField: 0
