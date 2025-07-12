@@ -1,6 +1,7 @@
 using System;
 using Code.Combat;
 using Code.Entities;
+using DG.Tweening;
 using UnityEngine;
 
 namespace Code.Entities
@@ -27,8 +28,10 @@ namespace Code.Entities
         public async void InitProjectile(float angle)
         {
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-            await Awaitable.WaitForSecondsAsync(5f);
-            Destroy(gameObject);
+            DOVirtual.DelayedCall(5f, () =>
+            {
+                Destroy(gameObject);
+            });
         }
 
         private void OnTriggerEnter2D(Collider2D other)
