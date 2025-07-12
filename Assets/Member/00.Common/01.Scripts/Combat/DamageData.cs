@@ -7,7 +7,7 @@ namespace Code.Combat
     {
         public float damage;
         public bool isCritical;
-        public Vector3 hitPoint;
-        public Vector3 hitNormal;
+        public Vector2 hitPoint;
+        public Vector2 hitNormal;
     }
 }

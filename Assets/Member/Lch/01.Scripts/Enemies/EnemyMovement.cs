@@ -8,9 +8,11 @@ public class EnemyMovement : MonoBehaviour, IEntityComponent,IAfterInitialize
     private EntityStat _statCompo;
     public float _moveSpeed { get; set; }
     Vector3 _moveDir;
+    private Enemy _enemy;
 
     public void Initialize(Entity entity)
     {
+        _enemy = entity as Enemy;
         _statCompo = entity.GetCompo<EntityStat>();
     }
     public void AfterInitialize()
@@ -31,7 +33,10 @@ public class EnemyMovement : MonoBehaviour, IEntityComponent,IAfterInitialize
 
     private void Update()
     {
-        Move();
+        if(_enemy.IsDead == false)
+        {
+            Move();
+        }
     }
 
     private void Move()
