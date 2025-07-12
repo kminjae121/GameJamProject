@@ -505,7 +505,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2677176826352883569, guid: 2f275e199ba5efd4497e474fa5abd416, type: 3}
       propertyPath: clipList.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2677176826352883569, guid: 2f275e199ba5efd4497e474fa5abd416, type: 3}
       propertyPath: 'clipList.Array.data[0]'
@@ -519,6 +519,10 @@ PrefabInstance:
       propertyPath: 'clipList.Array.data[2]'
       value: 
       objectReference: {fileID: 8300000, guid: efd8e639416d4c4498fcb2c14bce22e9, type: 3}
+    - target: {fileID: 2677176826352883569, guid: 2f275e199ba5efd4497e474fa5abd416, type: 3}
+      propertyPath: 'clipList.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8300000, guid: ad4fd8db4c4e28641a4330c8a8e638e4, type: 3}
     - target: {fileID: 2813287401945208174, guid: 2f275e199ba5efd4497e474fa5abd416, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -655,6 +659,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8686084066163980144, guid: 2f275e199ba5efd4497e474fa5abd416, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8938107117388581653, guid: 2f275e199ba5efd4497e474fa5abd416, type: 3}
       propertyPath: m_Name
       value: AudioManager
@@ -664,6 +672,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f275e199ba5efd4497e474fa5abd416, type: 3}
+--- !u!114 &816446076 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4550352968342967599, guid: 2f275e199ba5efd4497e474fa5abd416, type: 3}
+  m_PrefabInstance: {fileID: 816446075}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &961698511
 GameObject:
   m_ObjectHideFlags: 0
@@ -1534,7 +1553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e752d6d40c0756a4eaaacf09f5e75a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  settingUI: {fileID: 547573505}
+  settingUI: {fileID: 816446076}
 --- !u!222 &2087593552
 CanvasRenderer:
   m_ObjectHideFlags: 0

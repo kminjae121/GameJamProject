@@ -45,18 +45,7 @@ public class BossMovemen : MonoBehaviour,IEntityComponent, IAfterInitialize
 
     private void Move()
     {
-        _timeElapsed += Time.deltaTime;
-        Vector2 forward = _moveDir.normalized;
-
-
-        Vector2 perpendicular = new Vector2(-forward.y, forward.x);
-
-
-        Vector2 sinOffset = perpendicular * Mathf.Sin(_timeElapsed * sinFrequency) * sinAmplitude;
-
-
-        Vector2 finalDir = forward + sinOffset;
-
-        rbCompo.linearVelocity = finalDir.normalized * _moveSpeed;
+        gameObject.transform.LookAt(_moveDir);
+        rbCompo.linearVelocity = _moveDir.normalized * _moveSpeed;
     }
 }
