@@ -410,6 +410,7 @@ MonoBehaviour:
   rbCompo: {fileID: 2624964775331698954}
   sprite: {fileID: 5627823332081626716}
   color: {r: 0.18238991, g: 0.16919819, b: 0.16919819, a: 1}
+  coin: 0
 --- !u!1 &6698126820870276548
 GameObject:
   m_ObjectHideFlags: 0
@@ -866,6 +867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70fb456f2cc377b49a85f1b3f4ea3aaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventChannel: {fileID: 11400000, guid: 3b0e5a13d32763d45bcf56c2ba81e87d, type: 2}
   damageText: {fileID: 3921705052374551305, guid: b78c412ab83a3ec4fa65e8899368ade2, type: 3}
   hpStat: {fileID: 11400000, guid: eb2b424c4f843ab4c9719e67e94e1fdd, type: 2}
   <CurrentHealth>k__BackingField: 0
