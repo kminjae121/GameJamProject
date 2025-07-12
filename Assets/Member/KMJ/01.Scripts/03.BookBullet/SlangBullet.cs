@@ -12,6 +12,7 @@ public class SlangBullet : MonoBehaviour
     [SerializeField] private Vector3 _bombSize;
     private DamageData _damage;
     [SerializeField] private float damage;
+    [SerializeField] private ParticleSystem _particle;
 
     private void Awake()
     {
@@ -78,9 +79,10 @@ public class SlangBullet : MonoBehaviour
             other.GetComponentInChildren<EntityHealth>().ApplyDamage(_damage,transform.position,null);
             Collider2D[] hit = Physics2D.OverlapBoxAll(transform.position, _bombSize, 0, _whatIsEnemy);
 
+            Instantiate(_particle,transform.position,Quaternion.identity);
             foreach (var hittable in hit)
             {
-                hittable.GetComponentInChildren<EntityHealth>().ApplyDamage(_damage,transform.position,null);
+                hittable.GetComponentInChildren<EntityHealth>().ApplyDamage(_damage, transform.position, null);
             }
             Destroy(gameObject);
         }

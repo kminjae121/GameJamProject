@@ -56,7 +56,9 @@ public class GameManager : MonoBehaviour
             {
                 _currentwave += 1;
                 currentKillCnt++;
-                 _killTxt.text = $"남은 킬 : {_maxkillCnt[currentKillCnt]}";
+                
+                
+                _killTxt.text = $"남은 킬 : {_maxkillCnt[currentKillCnt]}";
                 FadeUI.Instance.FindTxt("StageTxt").gameObject.SetActive(true);
                 FadeUI.Instance.FindTxt("StageTxt").alpha = 255f;
             

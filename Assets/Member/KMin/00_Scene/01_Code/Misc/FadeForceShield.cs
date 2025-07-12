@@ -13,8 +13,7 @@ namespace Member.KMin._00_Scene._01_Code.Misc
         private void Start()
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();
-            _spriteRenderer.DOFade(threshold, duration).SetLoops(-1, LoopType.Yoyo)
-                .SetEase(Ease.OutBack);
+            _spriteRenderer.DOFade(threshold, duration).SetLoops(-1, LoopType.Yoyo);
         }
     }
 }
