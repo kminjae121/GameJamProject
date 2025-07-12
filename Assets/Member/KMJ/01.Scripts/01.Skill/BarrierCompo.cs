@@ -5,7 +5,8 @@ public class BarrierCompo : MonoBehaviour
 {
     [SerializeField] private LayerMask _whatIsEnemy;
 
-    public float modifierValue { get; set; }
+    public float modifierValue { get; set; } = 2;
+    public Vector3 nextRange { get; set; }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (((1 << other.gameObject.layer) & _whatIsEnemy) != 0)

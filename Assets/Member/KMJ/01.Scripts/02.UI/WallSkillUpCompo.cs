@@ -11,10 +11,11 @@ public class WallSkillUpCompo : SkillUpCompo
         base.UpSkillLevel();
         if (_skillSO != null)
         {
-            _barrier.gameObject.SetActive(true);
+            
         }
         else
         {
+            _barrier.transform.localScale += new Vector3(2, 2, 0);
             _barrier.modifierValue += modifierValue;
         }
 
