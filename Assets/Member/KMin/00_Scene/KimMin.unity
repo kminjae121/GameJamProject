@@ -880,6 +880,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _skillSO: {fileID: 11400000, guid: c6253d92056f6cc4a99d0afb15b02c36, type: 2}
   _skillCompo: {fileID: 0}
+  _maxskillPoint: 0
   _skillimage: {fileID: 2092435290}
   _boyFriend: {fileID: 0}
   modifierValue: 3
@@ -993,7 +994,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _skillSO: {fileID: 11400000, guid: b980fe16dcf091a49aec4c01140d2df1, type: 2}
   _skillCompo: {fileID: 0}
+  _maxskillPoint: 0
   _skillimage: {fileID: 1951471212}
+  bookCompo: {fileID: 0}
 --- !u!114 &235730322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3266,8 +3269,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   killCnt: 0
-  <_maxkillCnt>k__BackingField: 1
-  <modifilerKillValue>k__BackingField: 1
+  <_maxkillCnt>k__BackingField: 1145
+  <modifilerKillValue>k__BackingField: 1583
   <waitingTime>k__BackingField: 0
   _isWaiting: 0
   _WaveTxt: {fileID: 461014207}
@@ -3881,6 +3884,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _skillSO: {fileID: 11400000, guid: b2a57818024bcf44589c9c7f84d2e0d4, type: 2}
   _skillCompo: {fileID: 0}
+  _maxskillPoint: 0
   _skillimage: {fileID: 1768784457}
   _barrier: {fileID: 0}
   modifierValue: 2
@@ -4324,6 +4328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _skillSO: {fileID: 11400000, guid: d29a0a72c0158fe4eb327391554d62a9, type: 2}
   _skillCompo: {fileID: 0}
+  _maxskillPoint: 0
   _skillimage: {fileID: 1780436458}
   _atkCompo: {fileID: 0}
 --- !u!114 &1437622641
