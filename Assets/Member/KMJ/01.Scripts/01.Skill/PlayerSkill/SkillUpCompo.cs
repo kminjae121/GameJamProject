@@ -16,7 +16,7 @@ public class SkillUpCompo : MonoBehaviour
     
     [SerializeField] private Image _skillimage;
 
-    private int price = 10;
+    [SerializeField] private int price = 10;
 
     [SerializeField] private int modifierValue;
     private void Awake()

@@ -4612,6 +4612,10 @@ PrefabInstance:
       propertyPath: _skillCompo
       value: 
       objectReference: {fileID: 331502666}
+    - target: {fileID: 280424986257279005, guid: d75c9679122792549a79fb973f039bc3, type: 3}
+      propertyPath: modifierValue
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 785221990038286114, guid: d75c9679122792549a79fb973f039bc3, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -4672,10 +4676,18 @@ PrefabInstance:
       propertyPath: _skillCompo
       value: 
       objectReference: {fileID: 331502666}
+    - target: {fileID: 3076982555997707520, guid: d75c9679122792549a79fb973f039bc3, type: 3}
+      propertyPath: modifierValue
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3376418568744212177, guid: d75c9679122792549a79fb973f039bc3, type: 3}
       propertyPath: _skillCompo
       value: 
       objectReference: {fileID: 331502666}
+    - target: {fileID: 3585555839800109612, guid: d75c9679122792549a79fb973f039bc3, type: 3}
+      propertyPath: price
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 3585555839800109612, guid: d75c9679122792549a79fb973f039bc3, type: 3}
       propertyPath: _atkCompo
       value: 
@@ -4685,8 +4697,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 331502666}
     - target: {fileID: 3585555839800109612, guid: d75c9679122792549a79fb973f039bc3, type: 3}
+      propertyPath: modifierValue
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3585555839800109612, guid: d75c9679122792549a79fb973f039bc3, type: 3}
       propertyPath: _maxskillPoint
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3885346987562509121, guid: d75c9679122792549a79fb973f039bc3, type: 3}
+      propertyPath: price
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3885346987562509121, guid: d75c9679122792549a79fb973f039bc3, type: 3}
       propertyPath: _barrier
@@ -4696,6 +4716,10 @@ PrefabInstance:
       propertyPath: _skillCompo
       value: 
       objectReference: {fileID: 331502666}
+    - target: {fileID: 3885346987562509121, guid: d75c9679122792549a79fb973f039bc3, type: 3}
+      propertyPath: modifierValue
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 4370193775935358069, guid: d75c9679122792549a79fb973f039bc3, type: 3}
       propertyPath: targetCompo
       value: 
