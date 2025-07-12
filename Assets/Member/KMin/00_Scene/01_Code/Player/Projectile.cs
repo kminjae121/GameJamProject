@@ -24,9 +24,11 @@ namespace Code.Entities
         private void MoveProjectile()
             => _rigidCompo.linearVelocity = transform.right * projectileSO.speed;
 
-        public void InitProjectile(float angle)
+        public async void InitProjectile(float angle)
         {
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            await Awaitable.WaitForSecondsAsync(5f);
+            Destroy(gameObject);
         }
 
         private void OnTriggerEnter2D(Collider2D other)
