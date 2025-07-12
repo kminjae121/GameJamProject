@@ -17,6 +17,6 @@ MonoBehaviour:
   icon: {fileID: 0}
   displayName: moveSpeed
   baseValue: 6
-  minValue: 4
+  minValue: 1
   maxValue: 15
   <IsPercent>k__BackingField: 0
