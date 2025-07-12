@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f563a0fb7f8bb52478ee45005d2a890f, type: 3}
-  m_Name: Flower
+  m_Script: {fileID: 11500000, guid: 131fdf72fa07c9c4e95be331d538205b, type: 3}
+  m_Name: LoveletterText
   m_EditorClassIdentifier: 
-  enemyName: Flower
-  enemy: {fileID: 6180697275781384503, guid: 08458a38524a5a948b9bf14f0fe62f13, type: 3}
-  SpawnLevel: 1
+  text: I Love you
