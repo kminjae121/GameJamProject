@@ -5,7 +5,7 @@ public class WallSkillUpCompo : SkillUpCompo
 {
     [SerializeField] private BarrierCompo _barrier;
 
-    [SerializeField] private float modifierValue;
+    [SerializeField] private float modifierValues;
     public override void UpSkillLevel()
     {
         base.UpSkillLevel();
@@ -16,7 +16,7 @@ public class WallSkillUpCompo : SkillUpCompo
         else
         {
             _barrier.transform.localScale += new Vector3(2, 2, 0);
-            _barrier.modifierValue += modifierValue;
+            _barrier.modifierValue += modifierValues;
         }
 
     }

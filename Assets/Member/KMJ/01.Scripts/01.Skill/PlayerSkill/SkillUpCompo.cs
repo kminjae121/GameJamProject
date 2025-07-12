@@ -16,6 +16,9 @@ public class SkillUpCompo : MonoBehaviour
     
     [SerializeField] private Image _skillimage;
 
+    private int price = 10;
+
+    [SerializeField] private int modifierValue;
     private void Awake()
     {
         var type = Type.GetType(_skillSO.className);
@@ -35,30 +38,36 @@ public class SkillUpCompo : MonoBehaviour
         
     public virtual void UpSkillLevel()
     {
-        if (_skillSO == null)
+        if (GameManager.Instance.coin >= price && GameManager.Instance.coin - price < 0)
         {
-            _skill.skillLevel+=1;
-            
-            _currentSkill+=1;
-            
-            if (_currentSkill == 2)
+            if (_skillSO == null)
             {
-                int myIndex = CardSystem.instance.itemList.IndexOf(gameObject);
-                if (myIndex >= 0)
+                _skill.skillLevel += 1;
+
+                _currentSkill += 1;
+
+                if (_currentSkill == _maxskillPoint)
                 {
-                    _countIdx = myIndex;
-                    CardSystem.instance.itemList.RemoveAt(_countIdx);
+                    int myIndex = CardSystem.instance.itemList.IndexOf(gameObject);
+                    if (myIndex >= 0)
+                    {
+                        _countIdx = myIndex;
+                        CardSystem.instance.itemList.RemoveAt(_countIdx);
+                    }
+
+                    gameObject.SetActive(false);
                 }
-                gameObject.SetActive(false);
-            }   
-        }
-        else
-        {
-            _skillCompo.AddSkill(_skillSO);
-            Color color = _skillimage.color;
-            color.a = Mathf.Clamp01(1);
-            _skillimage.color = color;
-            _skillSO = null;
+            }
+            else
+            {
+                _skillCompo.AddSkill(_skillSO);
+                Color color = _skillimage.color;
+                color.a = Mathf.Clamp01(1);
+                _skillimage.color = color;
+                _skillSO = null;
+            }
+
+            price += modifierValue;
         }
     }
 }
