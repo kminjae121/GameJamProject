@@ -69,10 +69,10 @@ public class MinBoss : Entity
                 TextMeshPro meshPro = isRight ? rightMeshPro : leftMeshPro;
                 GameObject textObject = isRight ? rightText : leftText;
 
-                // Tween ½ÃÀÛ (º¸ÀÌ±â)
+                // Tween ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½Ì±ï¿½)
                 if (textObject != null)
                 {
-                    textObject.transform.DOScale(0.2f, 0.4f).SetEase(Ease.OutBounce);
+                    textObject.transform.DOScale(0.1f, 0.4f).SetEase(Ease.OutBounce);
                     meshPro.text = enemyTextList.text[_textCount];
                 }
 

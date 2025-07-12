@@ -1,4 +1,6 @@
+using Blade.Core;
 using Code.Entities;
+using Member.KMin._00_Scene._01_Code.Misc;
 using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -7,6 +9,7 @@ namespace Code.Combat
 {
     public class EntityHealth : MonoBehaviour, IEntityComponent, IAfterInitialize, IDamageable
     {
+        [SerializeField] private GameEventChannel eventChannel;
         private Entity _entity;
         private EntityStat _entityStat;
         private ActionData _actionData;
@@ -66,6 +69,11 @@ namespace Code.Combat
             if (CurrentHealth <= 0)
             {
                 _entity.OnDeadEvent?.Invoke();
+
+                if (_entity is not Player)
+                {
+                    eventChannel.RaiseEvent(EnemyEventChannel.EnemyDeadEvent.Initializer(transform.position));
+                }
             }
 
             _entity.OnHitEvent?.Invoke();
