@@ -3025,7 +3025,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _skillSO: {fileID: 11400000, guid: b980fe16dcf091a49aec4c01140d2df1, type: 2}
   _skillCompo: {fileID: 1757113970}
-  _maxskillPoint: 7
+  _maxskillPoint: 10
   _skillimage: {fileID: 129735640}
   modifierValue: 0
   bookCompo: {fileID: 1757113966}
@@ -8633,7 +8633,7 @@ MonoBehaviour:
   _skillimage: {fileID: 1276512620}
   modifierValue: 0
   _boyFriend: {fileID: 1734103771}
-  modifierValues: 0
+  modifierValues: 0.5
 --- !u!1 &1874430205
 GameObject:
   m_ObjectHideFlags: 0
