@@ -63,7 +63,7 @@ public class Enemy : Entity
 
     private async void Update()
     {
-        if (IsDead) return;
+        if (IsDead || !this || !gameObject) return;
 
         if (_isShow)
         {
@@ -76,8 +76,12 @@ public class Enemy : Entity
                 TextMeshPro meshPro = isRight ? rightMeshPro : leftMeshPro;
                 GameObject textObject = isRight ? rightText : leftText;
 
-                textObject.transform.DOScale(0.2f, 0.4f).SetEase(Ease.OutBounce);
-                meshPro.text = enemyTextList.text[_textCount];
+                // Tween 시작 (보이기)
+                if (textObject != null)
+                {
+                    textObject.transform.DOScale(0.2f, 0.4f).SetEase(Ease.OutBounce);
+                    meshPro.text = enemyTextList.text[_textCount];
+                }
 
                 try
                 {
@@ -85,7 +89,10 @@ public class Enemy : Entity
                 }
                 finally
                 {
-                    textObject.transform.DOScale(0, 0.1f).SetEase(Ease.OutBounce);
+                    if (this != null && textObject != null)
+                    {
+                        textObject.transform.DOScale(0, 0.1f).SetEase(Ease.OutBounce);
+                    }
 
                     _currentTime = 0;
                     _textCount = (_textCount + 1) % enemyTextList.text.Count;

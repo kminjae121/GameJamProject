@@ -18,7 +18,7 @@ public class BoyFriendSkill : MonoBehaviour
 
     private void Awake()
     {
-        _damageData.damage = 1f;
+        _damageData.damage = 20f;
     }
 
     private void Update()
