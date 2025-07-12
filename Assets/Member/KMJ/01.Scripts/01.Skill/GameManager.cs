@@ -43,21 +43,29 @@ public class GameManager : Monosingleton<GameManager>
 
     public void AddKillCount(int KillCnt)
     {
-        _maxkillCnt[currentKillCnt] -= KillCnt;
-
-        _killTxt.text = $"남은 킬 : {_maxkillCnt[currentKillCnt]}";
-        
-        if (_maxkillCnt[currentKillCnt] <= 0)
+        if(isEnd == false)
         {
-            _currentwave += 1;
-            currentKillCnt++;
-            FadeUI.Instance.FindTxt("StageTxt").gameObject.SetActive(true);
-            FadeUI.Instance.FindTxt("StageTxt").alpha = 255f;
+            _maxkillCnt[currentKillCnt] -= KillCnt;
+
+            _killTxt.text = $"남은 킬 : {_maxkillCnt[currentKillCnt]}";
+        
+            if (_maxkillCnt[currentKillCnt] <= 0)
+            {
+                _currentwave += 1;
+                currentKillCnt++;
+                FadeUI.Instance.FindTxt("StageTxt").gameObject.SetActive(true);
+                FadeUI.Instance.FindTxt("StageTxt").alpha = 255f;
             
-            FadeUI.Instance.FindTxt("StageTxt").text = $"Wave{_currentwave}";
-            FadeUI.Instance.FadeTxt(0, 3, "StageTxt");
-            ShowPanel();
+                FadeUI.Instance.FindTxt("StageTxt").text = $"Wave{_currentwave}";
+                FadeUI.Instance.FadeTxt(0, 3, "StageTxt");
+                OnWaveChangeEvent?.Invoke(_currentwave);
+                ShowPanel();
+                if (_maxkillCnt[currentKillCnt] ==  30)
+                {
+                    isEnd = true;
+                }
             
+            }
         }
     }
 
@@ -74,7 +82,7 @@ public class GameManager : Monosingleton<GameManager>
             level++;
             _nextWaveCnt += 3;
             _WaveTxt.text = $"Level : {level}";
-            OnWaveChangeEvent?.Invoke(level);
+           
             CardSystem.instance.Show();
         }
         else

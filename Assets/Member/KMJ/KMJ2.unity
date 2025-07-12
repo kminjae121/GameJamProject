@@ -2070,6 +2070,54 @@ PrefabInstance:
       propertyPath: _killTxt
       value: 
       objectReference: {fileID: 882026104}
+    - target: {fileID: 8148057681681697430, guid: 1d8c5b0540108a042be8fa1b2f477eaf, type: 3}
+      propertyPath: <_maxkillCnt>k__BackingField.Array.size
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148057681681697430, guid: 1d8c5b0540108a042be8fa1b2f477eaf, type: 3}
+      propertyPath: '<_maxkillCnt>k__BackingField.Array.data[19]'
+      value: 44
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148057681681697430, guid: 1d8c5b0540108a042be8fa1b2f477eaf, type: 3}
+      propertyPath: '<_maxkillCnt>k__BackingField.Array.data[20]'
+      value: 46
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148057681681697430, guid: 1d8c5b0540108a042be8fa1b2f477eaf, type: 3}
+      propertyPath: '<_maxkillCnt>k__BackingField.Array.data[21]'
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148057681681697430, guid: 1d8c5b0540108a042be8fa1b2f477eaf, type: 3}
+      propertyPath: '<_maxkillCnt>k__BackingField.Array.data[22]'
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148057681681697430, guid: 1d8c5b0540108a042be8fa1b2f477eaf, type: 3}
+      propertyPath: '<_maxkillCnt>k__BackingField.Array.data[23]'
+      value: 52
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148057681681697430, guid: 1d8c5b0540108a042be8fa1b2f477eaf, type: 3}
+      propertyPath: '<_maxkillCnt>k__BackingField.Array.data[24]'
+      value: 54
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148057681681697430, guid: 1d8c5b0540108a042be8fa1b2f477eaf, type: 3}
+      propertyPath: '<_maxkillCnt>k__BackingField.Array.data[25]'
+      value: 56
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148057681681697430, guid: 1d8c5b0540108a042be8fa1b2f477eaf, type: 3}
+      propertyPath: '<_maxkillCnt>k__BackingField.Array.data[26]'
+      value: 58
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148057681681697430, guid: 1d8c5b0540108a042be8fa1b2f477eaf, type: 3}
+      propertyPath: '<_maxkillCnt>k__BackingField.Array.data[27]'
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148057681681697430, guid: 1d8c5b0540108a042be8fa1b2f477eaf, type: 3}
+      propertyPath: '<_maxkillCnt>k__BackingField.Array.data[28]'
+      value: 62
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148057681681697430, guid: 1d8c5b0540108a042be8fa1b2f477eaf, type: 3}
+      propertyPath: '<_maxkillCnt>k__BackingField.Array.data[29]'
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8642154688712058982, guid: 1d8c5b0540108a042be8fa1b2f477eaf, type: 3}
       propertyPath: m_Name
       value: Manager
