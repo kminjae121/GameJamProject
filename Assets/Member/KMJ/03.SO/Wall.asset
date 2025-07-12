@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f563a0fb7f8bb52478ee45005d2a890f, type: 3}
-  m_Name: Flower
+  m_Script: {fileID: 11500000, guid: be83f9f6a5d6d9b4db55ab52fb2e4341, type: 3}
+  m_Name: Wall
   m_EditorClassIdentifier: 
-  enemyName: Flower
-  enemy: {fileID: 6180697275781384503, guid: 08458a38524a5a948b9bf14f0fe62f13, type: 3}
-  SpawnLevel: 1
+  skillName: Wall
+  skillUIImage: {fileID: 0}
+  className: Wall
+  skillType: 1

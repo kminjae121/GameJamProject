@@ -4,12 +4,7 @@ public class SkillCompo : MonoBehaviour
 {
     public EntityAnimatorTrigger _triggerCompo;
 
-    [SerializeField] protected LayerMask _whatIsEnemy;
-
     public int skillLevel { get; set; } = 1;
-    [field: SerializeField] public Vector3 _skillSize { get; set; }
-    
-    [SerializeField] protected float _circleSize;
 
     [SerializeField] protected Entity _entity;
     
