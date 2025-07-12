@@ -36,6 +36,7 @@ namespace Code.Player
                 data.damage = projectileSO.attackDamage;
                 data.hitPoint = collision.contacts[0].point;
                 data.hitNormal = collision.contacts[0].normal;
+                damageable.ApplyDamage(data, data.hitNormal);
                 
                 Destroy(gameObject);
             }

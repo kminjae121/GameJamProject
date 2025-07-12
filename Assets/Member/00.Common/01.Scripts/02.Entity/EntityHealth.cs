@@ -11,7 +11,7 @@ namespace Code.Combat
         private EntityStat _entityStat;
 
         //[SerializeField] private GameEventChannelSO eventChannel;
-        [SerializeField] private TextMeshProUGUI damageText;
+        [SerializeField] private GameObject damageText;
         [SerializeField] private StatSO hpStat;
         [field:SerializeField] public float CurrentHealth { get; private set; }
         public float MaxHealth { get; private set; }
@@ -45,8 +45,7 @@ namespace Code.Combat
         {
             Vector2 position = _entity.transform.position;
             position += Random.insideUnitCircle * 0.3f;
-            
-            Debug.Log(damageData.damage);
+
             CurrentHealth = Mathf.Clamp(CurrentHealth - damageData.damage, 0f, MaxHealth);
 
             if (CurrentHealth <= 0)
@@ -54,22 +53,22 @@ namespace Code.Combat
                 _entity.OnDeadEvent?.Invoke();
                 CurrentHealth = MaxHealth;
             }
-            
+
             _entity.OnHitEvent?.Invoke();
 
-            if (dealer is Entities.Player)
+            if (dealer is Enemy)
+                return; 
+            
+            TextMeshProUGUI text = Instantiate(damageText, position, Quaternion.identity).GetComponent<TextMeshProUGUI>();
+            
+            if (damageData.isCritical)
             {
-                TextMeshProUGUI text = Instantiate(damageText, position, Quaternion.identity);
-                
-                if (damageData.isCritical)
-                {
-                    damageText.transform.localScale *= 1.2f;
-                    damageText.color = Color.red;
-                }
-                
-                await Awaitable.WaitForSecondsAsync(1f);
-                Destroy(text);
+                text.transform.localScale *= 1.2f;
+                text.color = Color.red;
             }
+
+            await Awaitable.WaitForSecondsAsync(1f);
+            Destroy(text);
         }
     }
 }
