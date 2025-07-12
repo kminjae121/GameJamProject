@@ -49,6 +49,7 @@ namespace MaskTransitions
             individualTransitionTime = transitionTime / 2;
 
             SetupMaxSize();
+            AudioManager.Instance.PlayBGM("BGM");
         }
 
         #region Setup
