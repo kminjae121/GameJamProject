@@ -4,7 +4,7 @@ public class BoyFriendSkillUpCompo : SkillUpCompo
 {
     [SerializeField] private BoyFriendSkill _boyFriend;
 
-    [SerializeField] private float modifierValue;
+    [SerializeField] private float modifierValues;
     public override void UpSkillLevel()
     {
         base.UpSkillLevel();
@@ -15,7 +15,7 @@ public class BoyFriendSkillUpCompo : SkillUpCompo
         }
         else
         {
-            _boyFriend.speed += modifierValue;
+            _boyFriend.speed += modifierValues;
         }
     }
 }

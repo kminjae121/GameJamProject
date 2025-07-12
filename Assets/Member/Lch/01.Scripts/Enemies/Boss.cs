@@ -1,10 +1,10 @@
 using Code.Combat;
 using DG.Tweening;
-using System.Threading.Tasks;
 using TMPro;
+using Unity.AppUI.UI;
 using UnityEngine;
 
-public class Enemy : Entity
+public class Boss : Entity
 {
     [SerializeField] private StatSO attackDamageStat;
     [SerializeField] private GameObject rightText;
@@ -12,11 +12,15 @@ public class Enemy : Entity
     [SerializeField] private TextMeshPro leftMeshPro;
     [SerializeField] private TextMeshPro rightMeshPro;
     [SerializeField] private EnemyTextSO enemyTextList;
+    [SerializeField] private EnemySpawnDataList spawnDataList;
+    [SerializeField] private float radius = 15;
+    [SerializeField] private float spawnTime;
     [SerializeField] private float showTextTime;
     protected EnemyMovement movement;
     private EntityStat _statCompo;
     private bool _isShow;
     private float _currentTime;
+    private float _currentSpawnerTime;
     private int _textCount;
     private bool _hasPlayedTween = false;
 
@@ -62,9 +66,9 @@ public class Enemy : Entity
         if (_isShow)
         {
             _currentTime += Time.deltaTime;
-            if(_currentTime > showTextTime && !_hasPlayedTween)
+            if (_currentTime > showTextTime && !_hasPlayedTween)
             {
-                _hasPlayedTween=true;
+                _hasPlayedTween = true;
                 if (transform.position.x >= 0)
                 {
                     rightText.transform.DOScale(0.1f, 0.4f).SetEase(Ease.OutBounce);
@@ -76,19 +80,28 @@ public class Enemy : Entity
                     leftMeshPro.text = enemyTextList.text[_textCount];
                 }
 
-                if (_hasPlayedTween)
-                {
-                    rightText.transform.DOScale(0, 0.4f).SetEase(Ease.OutBounce);
-                    leftText.transform.DOScale(0, 0.4f).SetEase(Ease.OutBounce);
-                }
                 _currentTime = 0;
                 _hasPlayedTween = false;
                 _textCount++;
+                rightText.transform.DOScale(0, 0.4f).SetEase(Ease.OutBounce);
+                leftText.transform.DOScale(0, 0.4f).SetEase(Ease.OutBounce);
                 if (_textCount >= enemyTextList.text.Count)
                 {
                     _textCount = 0;
                 }
             }
+        }
+
+        _currentSpawnerTime += Time.deltaTime;
+        if(_currentSpawnerTime > spawnTime)
+        {
+            int spawnEnemy = Random.Range(0, spawnDataList.datas.Count);
+            Vector3 spawnPos = Random.insideUnitCircle.normalized * radius;
+
+            Enemy enemy = spawnDataList.datas[spawnEnemy].enemy;
+            enemy = Instantiate(enemy, spawnPos + transform.position, Quaternion.identity);
+
+            _currentSpawnerTime = 0;
         }
     }
 
@@ -96,7 +109,7 @@ public class Enemy : Entity
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if(collision.gameObject.TryGetComponent(out IDamageable damageable))
+            if (collision.gameObject.TryGetComponent(out IDamageable damageable))
             {
                 DamageData damageData = new DamageData();
                 damageData.damage = _statCompo.GetStat(attackDamageStat).Value;
@@ -108,5 +121,11 @@ public class Enemy : Entity
                 Destroy(gameObject);
             }
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, radius);
     }
 }
