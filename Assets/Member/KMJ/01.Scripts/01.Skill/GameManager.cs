@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
     protected void Awake()
     {
         Instance = this;
-        _coinTxt.text = $": {this.coin}";
+        _coinTxt.text = $"Coin : {this.coin}";
         _killTxt.text = $"남은 킬 : {_maxkillCnt[currentKillCnt]}";
         _WaveTxt.text = $"Level : {level}";
     }
@@ -76,11 +76,13 @@ public class GameManager : MonoBehaviour
     public void GetCoin(int coin)
     {
         this.coin += coin;
+        _coinTxt.text = $"Coin : {this.coin}";
     }
 
     public void MinusCoin(int coin)
     {
         this.coin -= coin;
+        _coinTxt.text = $"Coin : {this.coin}";
     }
     
     private void ShowPanel()
