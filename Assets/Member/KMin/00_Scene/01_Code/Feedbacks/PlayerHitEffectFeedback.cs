@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Code.Feedbacks
@@ -13,7 +14,14 @@ namespace Code.Feedbacks
             effect.transform.position = transform.position;
 
             await Awaitable.WaitForSecondsAsync(effectDuration);
-            Destroy(effect.gameObject);
+
+            try
+            {
+                Destroy(effect.gameObject);
+            }
+            catch (Exception e)
+            {
+            }
         }
 
         public override void StopFeedback()

@@ -1,12 +1,52 @@
 using System.Collections.Generic;
+using Member.KMJ._01.Scripts;
 using UnityEngine;
 
 public class BookSkillUpCompo : SkillUpCompo
 {
    [SerializeField] private Book bookCompo;
-   public override void UpSkillLevel()
+   
+   public void UpSkillLevel()
    {
-      base.UpSkillLevel();
-      bookCompo.coolTime -= 0.2f;
+      if (GameManager.Instance.coin >= price)
+      {
+         if (_skillSO == null)
+         {
+            _skill.skillLevel += 1;
+
+            _currentSkill += 1;
+
+
+            if (_currentSkill >= _maxskillPoint)
+            {
+               int myIndex = CardSystem.instance.itemList.IndexOf(gameObject);
+               if (myIndex >= 0)
+               {
+                  _countIdx = myIndex;
+                  CardSystem.instance.itemList.RemoveAt(_countIdx);
+               }
+
+               gameObject.SetActive(false);
+            }
+            GameManager.Instance.MinusCoin(price);
+            price += modifierValue;
+            gameObject.SetActive(false);
+            bookCompo.coolTime -= 0.2f;
+            return;
+         }
+         else
+         {
+            _skillCompo.AddSkill(_skillSO);
+            Color color = _skillimage.color;
+            color.a = 1;
+            _skillimage.color = color;
+            _skillSO = null;
+            GameManager.Instance.MinusCoin(price);
+            price += modifierValue;
+            gameObject.SetActive(false);
+            return;
+         }
+      }
+      else return;
    }
 }

@@ -5,9 +5,10 @@ using Member.KMJ._01.Scripts;
 using TMPro;
 using UnityEngine;
 
-public class GameManager : Monosingleton<GameManager>
+public class GameManager : MonoBehaviour
 {
     public int killCnt;
+    public static GameManager Instance;
     [field: SerializeField] public List<int> _maxkillCnt { get; private set; }
     
     [field: SerializeField] public int modifilerKillValue { get; set; }
@@ -35,14 +36,12 @@ public class GameManager : Monosingleton<GameManager>
 
     public bool isEnd { get; private set; } = false;
 
-    protected override void Awake()
+    protected void Awake()
     {
+        Instance = this;
+        _coinTxt.text = $": {this.coin}";
         _killTxt.text = $"남은 킬 : {_maxkillCnt[currentKillCnt]}";
         _WaveTxt.text = $"Level : {level}";
-        
-        _coinTxt.text = $": {this.coin}";
-        
-        base.Awake();
     }
 
     public void AddKillCount(int KillCnt)
@@ -77,17 +76,11 @@ public class GameManager : Monosingleton<GameManager>
     public void GetCoin(int coin)
     {
         this.coin += coin;
-        _coinTxt.text = $": {this.coin}";
     }
 
     public void MinusCoin(int coin)
     {
-        if (this.coin - coin < 0)
-            return;
-        
         this.coin -= coin;
-        
-        _coinTxt.text = $": {this.coin}";
     }
     
     private void ShowPanel()
