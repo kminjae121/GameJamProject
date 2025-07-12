@@ -16,7 +16,6 @@ namespace Member.KMJ._01.Scripts
         [field: SerializeField] public List<GameObject> itemList { get; set; }
 
         public bool isShow { get; set; } = false;
-        // [SerializeField] private PlayerInputSO _inputReader;
 
         [SerializeField] private List<GameObject> _selectObj;
 
@@ -24,13 +23,13 @@ namespace Member.KMJ._01.Scripts
 
         [SerializeField] private Sprite _lockSprite;
         [SerializeField] private Sprite _unLockSprite;
+
+        [SerializeField] private GameObject exitBtn;
+        [SerializeField] private GameObject rerollBtn;
         private void Awake()
         {
             instance = this;
             _rect = GetComponent<RectTransform>();
-            // _inputReader.OnFirstSelect += SelectFirst;
-            //  _inputReader.OnSecondSelect += SelectSecond;
-            //_inputReader.OnThridSelect += SelectThrid;
             
             Hide();
         }
@@ -110,8 +109,9 @@ namespace Member.KMJ._01.Scripts
             RandomItem();
             Time.timeScale = 0;
             _rect.localScale = Vector3.zero;
+            rerollBtn.SetActive(true);
+            exitBtn.SetActive(true);
             _rect.transform.DOScale(1f, 0.8f).SetEase(Ease.OutBack).SetUpdate(true);
-            
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             isShow = true;
@@ -122,11 +122,19 @@ namespace Member.KMJ._01.Scripts
             _rect.transform.DOScale(0f, 0.5f).SetEase(Ease.InBack).SetUpdate(true).OnComplete(() =>
             {
                 itemList.ToList().ForEach(UI => UI.SetActive(false));
+                rerollBtn.SetActive(false);
+                exitBtn.SetActive(false);
                 isShow = false;
                 Time.timeScale = 1;
                 Cursor.visible = false;
                 isShow = false;
             });
+        }
+        
+        public void Reroll()
+        {
+            Show();
+            GameManager.Instance.MinusCoin(10);
         }
 
         public void RandomItem()
