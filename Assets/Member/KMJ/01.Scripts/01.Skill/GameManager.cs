@@ -10,7 +10,11 @@ public class GameManager : Monosingleton<GameManager>
     [field: SerializeField] public int modifilerKillValue { get; set; }
     public int level{ get; set; }
 
+    [field: SerializeField] public float waitingTime { get; set; }
+    [SerializeField] private float _endwaitingTime { get; set; }
+    
     public int _currentwave { get; private set; } = 1;
+    
     public int _nextWaveCnt { get; private set; } = 3;
 
     public bool _isWaiting;
