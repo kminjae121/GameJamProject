@@ -15,7 +15,7 @@ public class InputReader : ScriptableObject, Controls.IPlayerActions
     public event Action<float> OnScrollEvent;
     
     public event Action OnAttackEvent;
-    private void OnEnable()
+    public void OnEnable()
     {
         if (_controls == null)
         {
@@ -26,7 +26,7 @@ public class InputReader : ScriptableObject, Controls.IPlayerActions
         _controls.Player.Enable();
     }
 
-    private void OnDisable()
+    public void OnDisable()
     {
         _controls.Player.Disable();
     }
