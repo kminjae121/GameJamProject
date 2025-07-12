@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class SkillUpCompo : MonoBehaviour
 {
-    [SerializeField] private SkillSO _skillSO;
+    [SerializeField] protected SkillSO _skillSO;
     [SerializeField] private EntitySkillCompo _skillCompo;
     private SkillCompo _skill;
     private int _countIdx;

@@ -1,5 +1,6 @@
 using DG.Tweening;
 using NUnit.Framework.Internal;
+using System.Threading.Tasks;
 using UnityEditor.EditorTools;
 using UnityEngine;
 
@@ -24,11 +25,12 @@ public class DeadFeedback : Feedback
         Vector2 knockBackDirection = actionData.HitDir;
 
         rbCompo.AddForce(knockBackDirection * 3f,ForceMode2D.Impulse);
+        Destroy(_playEffect.gameObject);
         StopFeedback();
     }
 
     public override void StopFeedback()
     {
-         Destroy(_playEffect);
+         
     }
 }
