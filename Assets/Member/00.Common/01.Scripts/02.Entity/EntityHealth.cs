@@ -21,8 +21,18 @@ namespace Code.Combat
             _entity = entity;
             _entityStat = entity.GetCompo<EntityStat>();
             _actionData = entity.GetCompo<ActionData>();
+            GameManager.Instance.OnWaveChangeEvent += HandleWaveChange;
         }
-        
+
+        private void HandleWaveChange(int value)
+        {
+            if(_entity is Enemy)
+            {
+                float wave = value * 0.1f;
+                CurrentHealth = MaxHealth * wave;
+            }
+        }
+
         public void AfterInitialize()
         {
             CurrentHealth = MaxHealth = _entityStat.SubscribeStat(hpStat, HandleMaxHpChange, hpStat.Value);

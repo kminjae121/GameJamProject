@@ -6,6 +6,8 @@ using UnityEngine;
 public class GameManager : Monosingleton<GameManager>
 {
     public int killCnt;
+
+    public event Action<int> OnWaveChangeEvent;
     [field: SerializeField] public int _maxkillCnt { get; private set; }
     
     [field: SerializeField] public int modifilerKillValue { get; set; }
@@ -24,6 +26,7 @@ public class GameManager : Monosingleton<GameManager>
     [SerializeField] private TextMeshProUGUI _WaveTxt;
     [SerializeField] private TextMeshProUGUI _killTxt;
     
+
 
     [field: SerializeField] public bool isEnd { get; private set; } = true;
 
@@ -54,6 +57,7 @@ public class GameManager : Monosingleton<GameManager>
         {
             level++;
             _WaveTxt.text = $"Level : {level}";
+            OnWaveChangeEvent?.Invoke(level);
             CardSystem.instance.Show();
         }
         else
