@@ -66,6 +66,11 @@ public class GameManager : Monosingleton<GameManager>
     {
         this.coin += coin;
     }
+
+    public void MinusCoin(int coin)
+    {
+        this.coin -= coin;
+    }
     
     private void ShowPanel()
     {

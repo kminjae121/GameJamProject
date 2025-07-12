@@ -14,10 +14,14 @@ public class UIOpen : MonoBehaviour
             {
                 isOpen = false;
                 _soundUI.SetActive(true);
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
             }
             else if (isOpen == false)
             {
                 CloseUI();
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
             }
         }
     }
