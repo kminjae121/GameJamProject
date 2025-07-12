@@ -18,8 +18,8 @@ public class GameManager : Monosingleton<GameManager>
 
 
     public int _currentwave { get; private set; } = 1;
-    
-    public int coin { get; set; }
+
+    [field: SerializeField] public int coin { get; set; } = 0;
     public int _nextWaveCnt { get; private set; } = 3;
 
     public bool _isWaiting;
