@@ -39,9 +39,18 @@ public class GameManager : MonoBehaviour
     protected void Awake()
     {
         Instance = this;
-        _coinTxt.text = $"Coin : {this.coin}";
-        _killTxt.text = $"남은 킬 : {_maxkillCnt[currentKillCnt]}";
-        _WaveTxt.text = $"Level : {level}";
+        _coinTxt.text = $"코인 : {this.coin}";
+        _killTxt.text = $"남은 적 : {_maxkillCnt[currentKillCnt]}";
+        _WaveTxt.text = $"레벨 : {level}";
+    }
+
+    private void Start()
+    {
+        FadeUI.Instance.FindTxt("StageTxt").gameObject.SetActive(true);
+        FadeUI.Instance.FindTxt("StageTxt").alpha = 255f;
+            
+        FadeUI.Instance.FindTxt("StageTxt").text = $"Wave{_currentwave}";
+        FadeUI.Instance.FadeTxt(0, 3, "StageTxt");
     }
 
     public void AddKillCount(int KillCnt)
@@ -49,7 +58,7 @@ public class GameManager : MonoBehaviour
         if(isEnd == false)
         {
             _maxkillCnt[currentKillCnt] -= KillCnt;
-            _killTxt.text = $"남은 킬 : {_maxkillCnt[currentKillCnt]}";
+            _killTxt.text = $"남은 적 : {_maxkillCnt[currentKillCnt]}";
 
         
             if (_maxkillCnt[currentKillCnt] <= 0)
@@ -58,7 +67,7 @@ public class GameManager : MonoBehaviour
                 currentKillCnt++;
                 
                 
-                _killTxt.text = $"남은 킬 : {_maxkillCnt[currentKillCnt]}";
+                _killTxt.text = $"남은 적 : {_maxkillCnt[currentKillCnt]}";
                 FadeUI.Instance.FindTxt("StageTxt").gameObject.SetActive(true);
                 FadeUI.Instance.FindTxt("StageTxt").alpha = 255f;
             
@@ -79,7 +88,7 @@ public class GameManager : MonoBehaviour
     public void GetCoin(int coin)
     {
         this.coin += coin;
-        _coinTxt.text = $"Coin : {this.coin}";
+        _coinTxt.text = $"코인 : {this.coin}";
     }
 
     public void MinusCoin(int coin)
@@ -88,7 +97,7 @@ public class GameManager : MonoBehaviour
             return;
         
         this.coin -= coin;
-        _coinTxt.text = $"Coin : {this.coin}";
+        _coinTxt.text = $"코인 : {this.coin}";
     }
     
     private void ShowPanel()
@@ -97,7 +106,7 @@ public class GameManager : MonoBehaviour
         {
             level++;
             _nextWaveCnt += 3;
-            _WaveTxt.text = $"Level : {level}";
+            _WaveTxt.text = $"레벨 : {level}";
            
             CardSystem.instance.Show();
         }
