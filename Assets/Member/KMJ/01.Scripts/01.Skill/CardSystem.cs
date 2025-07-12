@@ -56,8 +56,6 @@ namespace Member.KMJ._01.Scripts
                 {
                     img.sprite = _unLockSprite;
                 }
-                
-                
             }
         }
         
@@ -112,7 +110,7 @@ namespace Member.KMJ._01.Scripts
             RandomItem();
             Time.timeScale = 0;
             _rect.localScale = Vector3.zero;
-            _rect.transform.DOScale(1f, 0.5f);
+            _rect.transform.DOScale(1f, 0.8f).SetEase(Ease.OutBack).SetUpdate(true);
             
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
@@ -121,17 +119,19 @@ namespace Member.KMJ._01.Scripts
 
         public void Hide()
         {
-            _rect.localScale = Vector3.zero;
-            itemList.ToList().ForEach(UI => UI.SetActive(false));
-            isShow = false;
-            Time.timeScale = 1;
-            Cursor.visible = false;
-            isShow = false;
-            FadeUI.Instance.FindTxt("StageTxt").gameObject.SetActive(true);
-            FadeUI.Instance.FindTxt("StageTxt").alpha = 255f;
+            _rect.transform.DOScale(0f, 0.5f).SetEase(Ease.InBack).SetUpdate(true).OnComplete(() =>
+            {
+                itemList.ToList().ForEach(UI => UI.SetActive(false));
+                isShow = false;
+                Time.timeScale = 1;
+                Cursor.visible = false;
+                isShow = false;
+                FadeUI.Instance.FindTxt("StageTxt").gameObject.SetActive(true);
+                FadeUI.Instance.FindTxt("StageTxt").alpha = 255f;
             
-            FadeUI.Instance.FindTxt("StageTxt").text = $"Stage{GameManager.Instance._currentwave}";
-            FadeUI.Instance.FadeTxt(0, 3, "StageTxt");
+                FadeUI.Instance.FindTxt("StageTxt").text = $"Stage{GameManager.Instance._currentwave}";
+                FadeUI.Instance.FadeTxt(0, 3, "StageTxt");
+            });
         }
 
         public void RandomItem()
