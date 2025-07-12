@@ -17,7 +17,7 @@ public class PlayerAttackCompo : MonoBehaviour, IEntityComponent, IAfterInitiali
     private EntityStat _statCompo;
 
     [SerializeField] private float _atkDamage;
-    [field: SerializeField] public int shootCnt { get; set; } = 2;
+    [field: SerializeField] public int shootCnt { get; set; } = 1;
     private Vector3 _mousePos;
     private float _angle;
 
