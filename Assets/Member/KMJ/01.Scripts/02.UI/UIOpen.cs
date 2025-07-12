@@ -23,8 +23,6 @@ public class UIOpen : MonoBehaviour
             else if (isOpen == false)
             {
                 CloseUI();
-                Cursor.visible = false;
-                Cursor.lockState = CursorLockMode.Locked;
             }
         }
     }

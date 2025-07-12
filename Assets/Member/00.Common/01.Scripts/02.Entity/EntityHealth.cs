@@ -24,6 +24,11 @@ namespace Code.Combat
             _entity = entity;
             _entityStat = entity.GetCompo<EntityStat>();
             _actionData = entity.GetCompo<ActionData>();
+           
+        }
+
+        private void Awake()
+        {
             GameManager.Instance.OnWaveChangeEvent += HandleWaveChange;
         }
 

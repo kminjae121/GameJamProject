@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Threading.Tasks;
+using MaskTransitions;
 
 public class TilteUI : MonoBehaviour
 {
@@ -11,8 +13,10 @@ public class TilteUI : MonoBehaviour
         settingUI.gameObject.SetActive(false);
     }
 
-    public void StartBnt()
+    public async void StartBnt()
     {
+        TransitionManager.Instance.PlayTransition(1.5f);
+        await Awaitable.WaitForSecondsAsync(0.5f);
         SceneManager.LoadScene(2);
     }
 

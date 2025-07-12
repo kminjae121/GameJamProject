@@ -129,7 +129,6 @@ namespace Member.KMJ._01.Scripts
                 exitBtn.SetActive(false);
                 isShow = false;
                 Time.timeScale = 1;
-                Cursor.visible = false;
                 isShow = false;
                 _inputReader.OnEnable();
             });
