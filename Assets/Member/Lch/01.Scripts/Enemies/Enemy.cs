@@ -34,8 +34,8 @@ public abstract class Enemy : Entity
                 DamageData damageData = new DamageData();
                 damageData.damage = _statCompo.GetStat(attackDamageStat).Value;
                 damageData.isCritical = false;
-                damageData.hitPoint = transform.position;
-                damageData.hitNormal = transform.position.normalized;
+                damageData.hitPoint = collision.contacts[0].point;
+                damageData.hitNormal = collision.contacts[0].normal;
                 damageable.ApplyDamage(damageData, transform.position);
                 Destroy(gameObject);
             }
