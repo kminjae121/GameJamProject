@@ -72,7 +72,7 @@ namespace Code.Combat
             }
 
             await Awaitable.WaitForSecondsAsync(1f);
-            Destroy(text);
+            Destroy(text.gameObject);
         }
     }
 }
