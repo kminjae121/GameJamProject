@@ -1,12 +1,11 @@
 using Code.Player;
+using UnityEngine;
 
 public class MultipleShoot : SkillCompo
 {
-    private PlayerAttackCompo _playerAttackCompo;
+    [SerializeField] private PlayerAttackCompo _playerAttackCompo;
     public override void GetSkill()
     {
-        _playerAttackCompo = _entity.GetComponentInChildren<PlayerAttackCompo>();
-        
         _playerAttackCompo.shootCnt += 1;
         base.GetSkill();
     }
