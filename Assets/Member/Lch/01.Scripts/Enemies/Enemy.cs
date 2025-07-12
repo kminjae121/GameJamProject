@@ -72,7 +72,7 @@ public class Enemy : Entity
             {
                 _hasPlayedTween = true;
 
-                bool isRight = transform.position.x >= 0;
+                bool isRight = transform.position.x > 0;
                 TextMeshPro meshPro = isRight ? rightMeshPro : leftMeshPro;
                 GameObject textObject = isRight ? rightText : leftText;
 

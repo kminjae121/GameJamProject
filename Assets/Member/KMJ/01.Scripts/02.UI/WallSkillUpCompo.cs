@@ -34,6 +34,7 @@ public class WallSkillUpCompo : SkillUpCompo
                 price += modifierValue;
                 gameObject.SetActive(false);
                 _barrier.transform.localScale += new Vector3(0.5f, 0.5f, 0);
+                priceTxt.text = $"가격 : {price}원";
                 return;
             }
             else
@@ -46,6 +47,7 @@ public class WallSkillUpCompo : SkillUpCompo
                 GameManager.Instance.MinusCoin(price);
                 price += modifierValue;
                 gameObject.SetActive(false);
+                priceTxt.text = $"가격 : {price}원";
                 return;
             }
         }

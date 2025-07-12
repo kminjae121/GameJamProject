@@ -23,7 +23,7 @@ public class PlayerAttackCompo : MonoBehaviour, IEntityComponent, IAfterInitiali
     private Vector3 _mousePos;
     private Vector2 _direction;
     private float _angle;
-
+    [SerializeField] private ProjectileSO _projectile;
     private float _time;
     private bool _canAttack;
 
@@ -39,7 +39,12 @@ public class PlayerAttackCompo : MonoBehaviour, IEntityComponent, IAfterInitiali
 
         _time = Time.time;
     }
-    
+
+    private void Start()
+    {
+        _projectile.attackDamage = 15;
+    }
+
     public void AfterInitialize()
     {
         _atkDamage = _statCompo.SubscribeStat(atkDamage, HandleAttackDamageChange, atkDamage.Value);
@@ -89,6 +94,7 @@ public class PlayerAttackCompo : MonoBehaviour, IEntityComponent, IAfterInitiali
         }
         else if(shootCnt == 2)
         {
+            _projectile.attackDamage = 10;
             for (int i = 1; i <= 3; i++)
             {
                 Projectile projectile = Instantiate(projectilePrefab, firePos, quaternion.identity).GetComponent<Projectile>();
@@ -107,6 +113,7 @@ public class PlayerAttackCompo : MonoBehaviour, IEntityComponent, IAfterInitiali
         }
         else if (shootCnt == 3)
         {
+            _projectile.attackDamage = 5;
             for (int i = 1; i <= 5; i++)
             {
                 Projectile projectile = Instantiate(projectilePrefab, firePos, quaternion.identity).GetComponent<Projectile>();
@@ -130,7 +137,7 @@ public class PlayerAttackCompo : MonoBehaviour, IEntityComponent, IAfterInitiali
                     projectile.InitProjectile(_angle);
             }
         }
-        
+        print(_projectile.attackDamage);
         int a =  Random.Range(1, 3);
         
         if (a == 1)
