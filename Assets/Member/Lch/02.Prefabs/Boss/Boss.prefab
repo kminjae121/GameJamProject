@@ -370,6 +370,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2681765711948692109}
   - component: {fileID: 7445906824186521239}
+  - component: {fileID: 4876003413924905091}
   m_Layer: 7
   m_Name: DeadFeedback
   m_TagString: Untagged
@@ -411,6 +412,21 @@ MonoBehaviour:
   sprite: {fileID: 5627823332081626716}
   color: {r: 0.18238991, g: 0.16919819, b: 0.16919819, a: 1}
   coin: 0
+--- !u!114 &4876003413924905091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6637619601234500090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c73345366fe472841a7087cd3228c064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverParticle: {fileID: 5085892959979356135, guid: 4abcfc4dc8ecaf248849f5d32d999ba9, type: 3}
+  canvas: {fileID: 0}
+  sceneName: ClearScene
 --- !u!1 &6698126820870276548
 GameObject:
   m_ObjectHideFlags: 0
@@ -837,6 +853,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4876003413924905091}
+        m_TargetAssemblyTypeName: BossDeadFeedback, Assembly-CSharp
+        m_MethodName: CreateFeedback
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
