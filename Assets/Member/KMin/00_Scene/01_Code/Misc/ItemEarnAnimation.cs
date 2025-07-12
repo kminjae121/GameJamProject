@@ -25,7 +25,7 @@ public class ItemEarnAnimation : MonoBehaviour
         coinUIRect.transform.position = screenPos;
 
         coinUIRect.transform.localScale = Vector2.one * 2;
-        coinUIRect.transform.DOScale(1f, 1f);
+        coinUIRect.transform.DOScale(1f, 1f).SetUpdate(true);
         coinUIRect.DOMove(coinRect.transform.position, 1.5f).SetEase(Ease.InExpo)
             .SetUpdate(true).OnComplete(() =>
         {
