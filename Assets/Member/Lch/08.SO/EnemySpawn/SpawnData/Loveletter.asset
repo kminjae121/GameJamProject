@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Loveletter
   m_EditorClassIdentifier: 
   enemyName: Loveletter
-  enemy: {fileID: 4242563786286812857, guid: 14a8d04cd54ab5a419b87b8db22b1a52, type: 3}
+  enemy: {fileID: 6047861842506227483, guid: 61ec4d114e179bb4593f92bb5e7b45ee, type: 3}
   SpawnLevel: 1

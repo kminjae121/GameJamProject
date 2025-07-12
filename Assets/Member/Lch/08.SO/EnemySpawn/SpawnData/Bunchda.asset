@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Bunchda
   m_EditorClassIdentifier: 
   enemyName: Bunchda
-  enemy: {fileID: 801363834027840510, guid: 32426ca20131782479604993b9ceb65f, type: 3}
+  enemy: {fileID: 2722546415526486568, guid: 32426ca20131782479604993b9ceb65f, type: 3}
   SpawnLevel: 1

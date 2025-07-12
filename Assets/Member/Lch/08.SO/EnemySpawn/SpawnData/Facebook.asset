@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Facebook
   m_EditorClassIdentifier: 
   enemyName: Facebook
-  enemy: {fileID: 3310059209390275136, guid: a21e6286d194e11409f78d2007cf92ea, type: 3}
+  enemy: {fileID: 5209635035153685828, guid: fd3f1ed0a9b1b524da8f2564f51fb6b7, type: 3}
   SpawnLevel: 1
