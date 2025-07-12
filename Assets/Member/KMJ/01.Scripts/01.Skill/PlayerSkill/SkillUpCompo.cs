@@ -8,16 +8,15 @@ public class SkillUpCompo : MonoBehaviour
 {
     [SerializeField] private SkillSO _skillSO;
     [SerializeField] private EntitySkillCompo _skillCompo;
-    [SerializeField] private string skillCompoName;
     private SkillCompo _skill;
-    [SerializeField] private int _countIdx;
-    [SerializeField] private List<Vector3> _skillRange;
+    private int _countIdx;
     private int _currentSkill = 0;
+    
     [SerializeField] private Image _skillimage;
 
     private void Awake()
     {
-        var type = Type.GetType(skillCompoName);
+        var type = Type.GetType(_skillSO.className);
             
         var components = _skillCompo.GetComponentsInChildren(type, true);
 
@@ -37,9 +36,8 @@ public class SkillUpCompo : MonoBehaviour
         if (_skillSO == null)
         {
             _skill.skillLevel+=1;
-           // _skill.currentSkillEffectNameIdx+=1;
+            
             _currentSkill+=1;
-            _skill._skillSize = _skillRange[_currentSkill];
             
             if (_currentSkill == 2)
             {
@@ -55,9 +53,9 @@ public class SkillUpCompo : MonoBehaviour
         else
         {
             _skillCompo.AddSkill(_skillSO);
-            //Color color = _skillimage.color;
-            //color.a = Mathf.Clamp01(1);
-            //_skillimage.color = color;
+            Color color = _skillimage.color;
+            color.a = Mathf.Clamp01(1);
+            _skillimage.color = color;
             _skillSO = null;
         }
     }

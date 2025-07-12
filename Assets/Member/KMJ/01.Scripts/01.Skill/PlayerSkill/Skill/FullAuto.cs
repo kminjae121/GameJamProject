@@ -1,16 +1,25 @@
 using UnityEngine;
 
-public class FullAuto : MonoBehaviour
+public class FullAuto : SkillCompo
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public override void GetSkill()
     {
-        
+        base.GetSkill();
+    }
+    
+    
+    protected override void Skill()
+    {
+        base.Skill();
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void SkillFeedback()
     {
-        
+        base.SkillFeedback();
+    }
+
+    public override void EventDefault()
+    {
+        base.EventDefault();
     }
 }

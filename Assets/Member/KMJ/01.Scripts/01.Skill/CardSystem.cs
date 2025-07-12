@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
@@ -25,7 +26,13 @@ namespace Member.KMJ._01.Scripts
             // _inputReader.OnFirstSelect += SelectFirst;
             //  _inputReader.OnSecondSelect += SelectSecond;
             //_inputReader.OnThridSelect += SelectThrid;
+            
             Hide();
+        }
+
+        private void Start()
+        {
+            
         }
 
         private void SelectSecond()
@@ -68,6 +75,12 @@ namespace Member.KMJ._01.Scripts
             Time.timeScale = 1;
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
+            isShow = false;
+            FadeUI.Instance.FindTxt("StageTxt").gameObject.SetActive(true);
+            FadeUI.Instance.FindTxt("StageTxt").alpha = 255f;
+            
+            FadeUI.Instance.FindTxt("StageTxt").text = $"Stage{GameManager.Instance._currentwave}";
+            FadeUI.Instance.FadeTxt(0, 3, "StageTxt");
         }
 
         public void RandomItem()

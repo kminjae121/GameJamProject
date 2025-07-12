@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 918cc078bbf745d289091f26dfee11d5, type: 3}
-  m_Name: TestProjectile
+  m_Script: {fileID: 11500000, guid: be83f9f6a5d6d9b4db55ab52fb2e4341, type: 3}
+  m_Name: FullAuto
   m_EditorClassIdentifier: 
-  attackDamage: 5
-  speed: 25
+  skillName: FullAuto
+  skillUIImage: {fileID: 0}
+  className: FullAuto
+  skillType: 0

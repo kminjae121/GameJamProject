@@ -9,8 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 918cc078bbf745d289091f26dfee11d5, type: 3}
-  m_Name: TestProjectile
+  m_Script: {fileID: 11500000, guid: 4ebc8d1284b25d44fbf10d1fb0b8f5b6, type: 3}
+  m_Name: EntityHealth
   m_EditorClassIdentifier: 
-  attackDamage: 5
-  speed: 25
+  statName: Helth
+  description: 
+  icon: {fileID: 0}
+  displayName: 
+  baseValue: 0
+  minValue: 0
+  maxValue: 1000
+  <IsPercent>k__BackingField: 0
