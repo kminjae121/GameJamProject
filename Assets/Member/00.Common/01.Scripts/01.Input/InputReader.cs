@@ -12,6 +12,7 @@ public class InputReader : ScriptableObject, Controls.IPlayerActions
     public event Action OnMoveEvent;
     public event Action OnClickEvent;
     public event Action<Vector2> OnPointerEvent;
+    public event Action<float> OnScrollEvent;
     
     public event Action OnAttackEvent;
     private void OnEnable()
@@ -54,5 +55,11 @@ public class InputReader : ScriptableObject, Controls.IPlayerActions
     {
         if(context.performed)
             OnClickEvent?.Invoke();
+    }
+
+    public void OnDelta(InputAction.CallbackContext context)
+    {
+        if(context.performed)
+            OnScrollEvent?.Invoke(context.ReadValue<float>());
     }
 }
