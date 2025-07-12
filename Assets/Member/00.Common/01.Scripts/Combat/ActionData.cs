@@ -7,6 +7,8 @@ public class ActionData : MonoBehaviour, IEntityComponent
 
     public Vector2 HitDir { get; set; }
 
+    public bool IsStunned { get; set; }
+
     private Entity _entity;
     public void Initialize(Entity entity)
     {

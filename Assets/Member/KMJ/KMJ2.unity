@@ -1821,12 +1821,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 268694710}
   - {fileID: 331502664}
   - {fileID: 530236250}
   - {fileID: 2139719151}
   - {fileID: 340916488}
   - {fileID: 1165479108}
-  - {fileID: 268694710}
   - {fileID: 280296352}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3152,6 +3152,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: boyFriend
       objectReference: {fileID: 0}
+    - target: {fileID: 1441701404709347972, guid: d24ebb21579c53c4cbe93de1e08a78cc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5245768259739950751, guid: d24ebb21579c53c4cbe93de1e08a78cc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3192,6 +3196,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7313518772659718597, guid: d24ebb21579c53c4cbe93de1e08a78cc, type: 3}
+      propertyPath: _channel
+      value: 
+      objectReference: {fileID: 11400000, guid: 3b0e5a13d32763d45bcf56c2ba81e87d, type: 2}
     - target: {fileID: 7313518772659718597, guid: d24ebb21579c53c4cbe93de1e08a78cc, type: 3}
       propertyPath: _girlFriendTrans
       value: 

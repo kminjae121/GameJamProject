@@ -19,6 +19,7 @@ namespace Code.Entities
         
         public override void CreateFeedback()
         {
+            Debug.Log("sdffsdfsfdSDF");
             _spriteRenderer.sprite = hitSprite;
             _spriteRenderer.DOColor(hitColor, 0.2f);
             

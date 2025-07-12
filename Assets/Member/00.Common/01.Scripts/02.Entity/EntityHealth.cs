@@ -63,6 +63,7 @@ namespace Code.Combat
             _actionData.HitNormal = damageData.hitNormal;
             _actionData.HitPoint = damageData.hitPoint;
             _actionData.HitDir = direction;
+            _actionData.IsStunned = damageData.isStun;
 
             CurrentHealth = Mathf.Clamp(CurrentHealth - damageData.damage, 0f, MaxHealth);
 
