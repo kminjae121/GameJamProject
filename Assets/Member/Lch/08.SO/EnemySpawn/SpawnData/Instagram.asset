@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Instagram
   enemy: {fileID: 7620760439922234244, guid: 882031bf8355114478aae5b35db8d1bb, type: 3}
-  SpawnLevel: 1
+  SpawnLevel: 2

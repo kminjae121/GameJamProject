@@ -76,11 +76,14 @@ public class Enemy : Entity
                     leftMeshPro.text = enemyTextList.text[_textCount];
                 }
 
+                if (_hasPlayedTween)
+                {
+                    rightText.transform.DOScale(0, 0.4f).SetEase(Ease.OutBounce);
+                    leftText.transform.DOScale(0, 0.4f).SetEase(Ease.OutBounce);
+                }
                 _currentTime = 0;
                 _hasPlayedTween = false;
                 _textCount++;
-                rightText.transform.DOScale(0, 0.4f).SetEase(Ease.OutBounce);
-                leftText.transform.DOScale(0, 0.4f).SetEase(Ease.OutBounce);
                 if (_textCount >= enemyTextList.text.Count)
                 {
                     _textCount = 0;

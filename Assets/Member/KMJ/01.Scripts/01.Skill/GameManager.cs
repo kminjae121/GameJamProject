@@ -19,13 +19,12 @@ public class GameManager : Monosingleton<GameManager>
     public int _nextWaveCnt { get; private set; } = 3;
 
     public bool _isWaiting;
-
-    public int coin ;
     
     [SerializeField] private TextMeshProUGUI _WaveTxt;
     [SerializeField] private TextMeshProUGUI _killTxt;
+    
 
-    public bool isEnd { get; private set; } = false;
+    public bool isEnd { get; private set; } = true;
 
     protected override void Awake()
     {
@@ -55,11 +54,6 @@ public class GameManager : Monosingleton<GameManager>
             level++;
             _WaveTxt.text = $"Level : {level}";
             CardSystem.instance.Show();
-
-            if (_currentwave >= 30)
-            {
-                isEnd = true;
-            }
         }
         else
             return;

@@ -6,11 +6,13 @@ using Random = UnityEngine.Random;
 
 public class SpawnManager : Monosingleton<SpawnManager>
 {
-    [SerializeField] private EnemySpawnDataList spawnDataList; 
+    [SerializeField] private EnemySpawnDataList spawnDataList;
+    [SerializeField] private Boss bossPrefab;
     [SerializeField] private float radius = 15;
     private float _spawnTime;
     private float _currentSpawnTime;
     private List<Enemy> _spawnEnemyList = new List<Enemy>();
+    private float _count = 0;
 
     private void Start()
     {
@@ -19,20 +21,37 @@ public class SpawnManager : Monosingleton<SpawnManager>
 
     private void Update()
     {
-        _currentSpawnTime += Time.deltaTime;
-
-        foreach(EnemySpawnData data in spawnDataList.datas)
+        if(GameManager.Instance._isWaiting == false)
         {
-            if(data.SpawnLevel <= GameManager.Instance._currentwave)
+            if (GameManager.Instance.isEnd == false)
             {
-                _spawnEnemyList.Add(data.enemy);
+                _currentSpawnTime += Time.deltaTime;
+
+                foreach (EnemySpawnData data in spawnDataList.datas)
+                {
+                    if (data.SpawnLevel <= GameManager.Instance._currentwave)
+                    {
+                        _spawnEnemyList.Add(data.enemy);
+                    }
+                }
+
+                if (_currentSpawnTime >= _spawnTime)
+                {
+                    SpawnEnemy();
+                }
+            }
+            else
+            {
+                if(_count == 0)
+                {
+
+                    Vector3 spawnPos = Random.insideUnitCircle.normalized * radius;
+                    Boss boss = Instantiate(bossPrefab, spawnPos, Quaternion.identity);
+                    _count++;
+                }
             }
         }
-
-        if(_currentSpawnTime >= _spawnTime)
-        {
-            SpawnEnemy();
-        }
+        
     }
 
     private void SpawnEnemy()
