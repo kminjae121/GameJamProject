@@ -7,8 +7,8 @@ public class BoyFriend : SkillCompo
     
     public override void GetSkill()
     {
-        _boyFriend.SetActive(true);    
         base.GetSkill();
+        _boyFriend.SetActive(true);    
     }
     
     

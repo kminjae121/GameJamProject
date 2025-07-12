@@ -38,7 +38,7 @@ public class SkillUpCompo : MonoBehaviour
         
     public virtual void UpSkillLevel()
     {
-        if (GameManager.Instance.coin >= price && GameManager.Instance.coin - price < 0)
+        if (GameManager.Instance.coin >= price)
         {
             if (_skillSO == null)
             {
@@ -46,7 +46,7 @@ public class SkillUpCompo : MonoBehaviour
 
                 _currentSkill += 1;
 
-                if (_currentSkill == _maxskillPoint)
+                if (_currentSkill >= _maxskillPoint)
                 {
                     int myIndex = CardSystem.instance.itemList.IndexOf(gameObject);
                     if (myIndex >= 0)
