@@ -24,7 +24,7 @@ public class DeadFeedback : Feedback
 
         Vector2 knockBackDirection = actionData.HitDir;
 
-        rbCompo.AddForce(knockBackDirection * 3f,ForceMode2D.Impulse);
+        rbCompo.AddForce(knockBackDirection * 6f,ForceMode2D.Impulse);
         Destroy(_playEffect.gameObject);
         StopFeedback();
     }

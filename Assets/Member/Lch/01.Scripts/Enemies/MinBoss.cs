@@ -62,12 +62,12 @@ public class MinBoss : Entity
                 _hasPlayedTween = true;
                 if (transform.position.x >= 0)
                 {
-                    rightText.transform.DOScale(0.2f, 0.4f).SetEase(Ease.OutBounce);
+                    rightText.transform.DOScale(0.1f, 0.4f).SetEase(Ease.OutBounce);
                     rightMeshPro.text = enemyTextList.text[_textCount];
                 }
                 else
                 {
-                    leftText.transform.DOScale(0.2f, 0.4f).SetEase(Ease.OutBounce);
+                    leftText.transform.DOScale(0.1f, 0.4f).SetEase(Ease.OutBounce);
                     leftMeshPro.text = enemyTextList.text[_textCount];
                 }
 
