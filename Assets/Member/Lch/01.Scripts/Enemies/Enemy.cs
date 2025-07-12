@@ -1,4 +1,6 @@
 using Code.Combat;
+using DG.Tweening;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class Enemy : Entity
@@ -16,13 +18,16 @@ public class Enemy : Entity
 
     public override void OnDead()
     {
+        IsDead = true;
         GameManager.Instance.AddKillCount(1);
         Destroy(gameObject);
     }
+       
 
     public override void OnHit()
     {
-        
+        if (IsDead)
+            return;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
