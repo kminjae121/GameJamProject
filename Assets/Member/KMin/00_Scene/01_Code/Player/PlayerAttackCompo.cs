@@ -3,7 +3,7 @@ using Code.Entities;
 using Unity.Mathematics;
 using UnityEngine;
 
-public class PlayerAttackCompo : MonoBehaviour, IEntityComponent
+public class PlayerAttackCompo : MonoBehaviour, IEntityComponent, IAfterInitialize
 {
     [SerializeField] private InputReader playerInput;
     [SerializeField] private LayerMask whatIsEnemy;
@@ -11,10 +11,12 @@ public class PlayerAttackCompo : MonoBehaviour, IEntityComponent
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private Transform projectileParent;
 
+    [SerializeField] private StatSO atkDamage;
+    [SerializeField] private StatSO atkcoolTime;
+
     private EntityStat _statCompo;
 
-    [SerializeField] private StatSO _atkDamage;
-    [SerializeField] private StatSO _atkcoolTime;
+    [SerializeField] private float _atkDamage;
     [field: SerializeField] public int shootCnt { get; set; } = 2;
     private Vector3 _mousePos;
     private float _angle;
@@ -28,6 +30,17 @@ public class PlayerAttackCompo : MonoBehaviour, IEntityComponent
     {
         playerInput.OnPointerEvent += HandlePointer;
         playerInput.OnClickEvent += HandleClick;
+    }
+    
+    public void AfterInitialize()
+    {
+        _atkDamage = _statCompo.SubscribeStat(atkDamage, HandleAttackDamageChange, atkDamage.Value);
+    }
+
+    private void HandleAttackDamageChange(StatSO stat, float currentvalue, float prevvalue)
+    {
+        float changed = currentvalue - prevvalue;
+        _atkDamage += changed;
     }
 
     private void HandleClick() => SpawnProjectile();

@@ -7861,6 +7861,8 @@ MonoBehaviour:
   arrowObject: {fileID: 0}
   projectilePrefab: {fileID: 7775947042608301330, guid: 653ec31778dcf3646a1aeecc71a07faa, type: 3}
   projectileParent: {fileID: 1092762910}
+  atkDamage: {fileID: 0}
+  atkcoolTime: {fileID: 0}
   <shootCnt>k__BackingField: 1
 --- !u!1 &1678185145
 GameObject:
@@ -9953,6 +9955,8 @@ MonoBehaviour:
   arrowObject: {fileID: 484499011}
   projectilePrefab: {fileID: 7775947042608301330, guid: 653ec31778dcf3646a1aeecc71a07faa, type: 3}
   projectileParent: {fileID: 0}
+  atkDamage: {fileID: 11400000, guid: 8e752a7d143f1e3418ceb31782255fbb, type: 2}
+  atkcoolTime: {fileID: 11400000, guid: 7ad0fc27040596e49bd916076bdb2581, type: 2}
   <shootCnt>k__BackingField: 2
 --- !u!1 &1984517818
 GameObject:
