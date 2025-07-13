@@ -35,7 +35,7 @@ public class Enemy : Entity
     private void Start()
     {
         int textShowIndx = Random.Range(0, 11);
-        if (textShowIndx <= 3)
+        if (textShowIndx <= 5)
         {
             _isShow = true;
 
@@ -79,7 +79,7 @@ public class Enemy : Entity
                 textObject.transform.DOScale(0.2f, 0.4f).SetEase(Ease.OutBounce);
                 meshPro.text = enemyTextList.text[_textCount];
 
-                DOVirtual.DelayedCall(5f, () => { });
+                DOVirtual.DelayedCall(2f, () => { });
                 textObject.transform.DOScale(0, 0.1f).SetEase(Ease.OutBounce);
 
                 _currentTime = 0;
