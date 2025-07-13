@@ -16,10 +16,15 @@ public class OnMousePointerButtonEnter : MonoBehaviour, IPointerEnterHandler, IP
             _seq.Kill();
         }
 
-        _seq = DOTween.Sequence();
-        _seq.Append(transform.DOScale(1.25f, duration * 0.45f));
-        _seq.Append(transform.DOScale(0.8f, duration * 0.3f));
-        _seq.Append(transform.DOScale(1.05f, duration * 0.45f));
+        float enterDelay = 0.4f;
+
+        DOVirtual.DelayedCall(enterDelay, () =>
+        {
+            _seq = DOTween.Sequence();
+            _seq.Append(transform.DOScale(1.25f, duration * 0.45f));
+            _seq.Append(transform.DOScale(0.8f, duration * 0.3f));
+            _seq.Append(transform.DOScale(1.05f, duration * 0.45f));
+        });
 
     }
 
