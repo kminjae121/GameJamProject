@@ -1614,7 +1614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d44202fd02ec4d48aff301a3798f343b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: KimMin
+  sceneName: KMJ2
 --- !u!114 &2142555030
 MonoBehaviour:
   m_ObjectHideFlags: 0
