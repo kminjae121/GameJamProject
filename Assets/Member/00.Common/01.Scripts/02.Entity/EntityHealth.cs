@@ -3,6 +3,7 @@ using Code.Entities;
 using Member.KMin._00_Scene._01_Code.Misc;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
 namespace Code.Combat
@@ -17,6 +18,8 @@ namespace Code.Combat
         //[SerializeField] private GameEventChannelSO eventChannel;
         [SerializeField] private GameObject damageText;
         [SerializeField] private StatSO hpStat;
+
+        public UnityEvent<float, float> OnHealthChangeEvent;
         [field:SerializeField] public float CurrentHealth { get; private set; }
         public float MaxHealth { get; private set; }
         public void Initialize(Entity entity)
@@ -82,6 +85,7 @@ namespace Code.Combat
                 }
             }
 
+             OnHealthChangeEvent?.Invoke(CurrentHealth, MaxHealth);
             _entity.OnHitEvent?.Invoke();
             
             GameObject text = Instantiate(damageText, position, Quaternion.identity);

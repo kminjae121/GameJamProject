@@ -3095,6 +3095,9 @@ MonoBehaviour:
   eventChannel: {fileID: 0}
   damageText: {fileID: 3921705052374551305, guid: b78c412ab83a3ec4fa65e8899368ade2, type: 3}
   hpStat: {fileID: 11400000, guid: 2eb3854d97fd17044b40da6f47bbfe9b, type: 2}
+  OnHealthChangeEvent:
+    m_PersistentCalls:
+      m_Calls: []
   <CurrentHealth>k__BackingField: 0
 --- !u!70 &1511234680
 CapsuleCollider2D:
