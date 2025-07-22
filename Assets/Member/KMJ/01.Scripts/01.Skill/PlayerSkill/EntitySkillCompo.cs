@@ -83,6 +83,11 @@ public class EntitySkillCompo : MonoBehaviour, IEntityComponent, IAfterInitializ
         SkillList.Values.ToList().ForEach(skill => skill.SkillUpdate());
     }
 
+    private void OnDestroy()
+    {
+        DefaltSkill();
+    }
+
 
     public void DefaltSkill()
     {

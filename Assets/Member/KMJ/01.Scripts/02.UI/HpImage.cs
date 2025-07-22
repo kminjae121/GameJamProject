@@ -16,7 +16,7 @@ public class HpImage : MonoBehaviour
 
     private void Update()
     {
-        _image.fillAmount = Mathf.Lerp(_prevHp,  1 - health.CurrentHealth / health.MaxHealth, 1f);
+        _image.fillAmount = Mathf.Lerp(_prevHp,  1 - health.CurrentHealth / health.MaxHealth, 1f); 
         _prevHp = 1 - health.CurrentHealth / health.MaxHealth;
     }
 }
