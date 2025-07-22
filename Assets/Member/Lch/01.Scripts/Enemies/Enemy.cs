@@ -8,7 +8,7 @@ using Random = UnityEngine.Random;
 
 public class Enemy : Entity
 {
-    [SerializeField] private StatSO attackDamageStat;
+    [SerializeField] protected StatSO attackDamageStat;
     [SerializeField] private GameObject rightText;
     [SerializeField] private GameObject leftText;
     [SerializeField] private TextMeshPro leftMeshPro;
@@ -16,7 +16,7 @@ public class Enemy : Entity
     [SerializeField] private EnemyTextSO enemyTextList;
     [SerializeField] private float showTextTime;
     protected EnemyMovement movement;
-    private EntityStat _statCompo;
+    protected EntityStat _statCompo;
     private bool _isShow;
     private float _currentTime;
     private int _textCount;

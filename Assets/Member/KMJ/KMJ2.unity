@@ -844,7 +844,7 @@ PrefabInstance:
     - target: {fileID: 3317294760117919140, guid: c9e81d6f9c1cb344f8b3ca89c148fd10, type: 3}
       propertyPath: '_skillList.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: b2a57818024bcf44589c9c7f84d2e0d4, type: 2}
+      objectReference: {fileID: 11400000, guid: d3c72f085bc7c0a4eb4e3d0dadaaa2cd, type: 2}
     - target: {fileID: 4181964819938381463, guid: c9e81d6f9c1cb344f8b3ca89c148fd10, type: 3}
       propertyPath: _boyFriend
       value: 
@@ -904,6 +904,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8893436242683131609, guid: c9e81d6f9c1cb344f8b3ca89c148fd10, type: 3}
       insertIndex: -1
       addedObject: {fileID: 650020935}
+    - targetCorrespondingSourceObject: {fileID: 8893436242683131609, guid: c9e81d6f9c1cb344f8b3ca89c148fd10, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 650020936}
   m_SourcePrefab: {fileID: 100100000, guid: c9e81d6f9c1cb344f8b3ca89c148fd10, type: 3}
 --- !u!4 &331502664 stripped
 Transform:
@@ -1950,6 +1953,22 @@ MonoBehaviour:
   <currentcoolTime>k__BackingField: 0
   _slangPrefab: {fileID: 978593960268035859, guid: 50f9d50066e971f47912625689f026bb, type: 3}
   <coolTime>k__BackingField: 8
+--- !u!114 &650020936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650020931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b82d431166dfa84ea88a43908c4e1f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <skillCoolTime>k__BackingField: 0
+  <currentcoolTime>k__BackingField: 0
+  _healObject: {fileID: 11400000, guid: 06141ba177b27e0418f4a758b47f1238, type: 2}
+  _spawnDataList: {fileID: 11400000, guid: b0fc2e5fe259cea4fbea5e22bedddb6e, type: 2}
 --- !u!1 &691735848
 GameObject:
   m_ObjectHideFlags: 0
@@ -2405,6 +2424,10 @@ PrefabInstance:
       propertyPath: radius
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 100350292241365016, guid: 969a7c9001675b040b82614fcad7fa93, type: 3}
+      propertyPath: spawnDataList
+      value: 
+      objectReference: {fileID: 11400000, guid: 21ea81a2cfb786342886fe83d5d179ff, type: 2}
     - target: {fileID: 3474216632489079927, guid: 969a7c9001675b040b82614fcad7fa93, type: 3}
       propertyPath: m_Name
       value: EnemySpawn (1)
@@ -2811,7 +2834,7 @@ MonoBehaviour:
   statOverrides:
   - stat: {fileID: 11400000, guid: 2eb3854d97fd17044b40da6f47bbfe9b, type: 2}
     isUseOverride: 1
-    overrideValue: 5
+    overrideValue: 4
   - stat: {fileID: 11400000, guid: 8e752a7d143f1e3418ceb31782255fbb, type: 2}
     isUseOverride: 1
     overrideValue: 10
@@ -6143,6 +6166,10 @@ PrefabInstance:
     - target: {fileID: 4019325574016432840, guid: d75c9679122792549a79fb973f039bc3, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4193540252523576421, guid: d75c9679122792549a79fb973f039bc3, type: 3}
+      propertyPath: m_FillAmount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4370193775935358069, guid: d75c9679122792549a79fb973f039bc3, type: 3}
       propertyPath: targetCompo
